@@ -1,5 +1,5 @@
 untitled.tex
-section_Introduction__.tex
+section_Introduction_The_discovery_of__.tex
 section_Observations__.tex
 section_Results_subsection_Spectra_subsection__.tex
 section_discussion_subsection_Emission_Physics__.tex
