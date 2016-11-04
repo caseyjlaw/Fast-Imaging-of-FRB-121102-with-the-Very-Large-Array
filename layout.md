@@ -2,4 +2,5 @@ untitled.tex
 section_Introduction_The_discovery_of__.tex
 section_Observations__.tex
 section_Results_subsection_Spectra_subsection__.tex
+figures/sgram_57623/sgram_57623.png
 section_discussion_subsection_Emission_Physics__.tex
