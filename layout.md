@@ -1,6 +1,6 @@
 untitled.tex
 section_Introduction_The_discovery_of__.tex
-section_Observations__.tex
+section_Observations_All_observations_in__.tex
 section_Results_subsection_Spectra_subsection__.tex
 figures/sgram_57623/sgram_57623.png
 figures/sgram_57633_scan7/sgram_57633_scan7.png
