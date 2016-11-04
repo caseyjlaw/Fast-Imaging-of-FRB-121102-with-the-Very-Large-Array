@@ -7,6 +7,7 @@ figures/sgram_57633_scan7/sgram_57633_scan7.png
 figures/sgram_57633_scan13/sgram_57633_scan13.png
 figures/sgram_57643/sgram_57643.png
 figures/sgram_57645/sgram_57645.png
+figures/sgram_57646/sgram_57646.png
 figures/spec_57633_scan13/spec_57633_scan13.png
 figures/spec_57633_scan7/spec_57633_scan7.png
 figures/spec_57633_scan1/spec_57633_scan1.png
