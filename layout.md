@@ -7,4 +7,5 @@ figures/sgram_57633_scan7/sgram_57633_scan7.png
 figures/sgram_57633_scan13/sgram_57633_scan13.png
 figures/spec_57633_scan13/spec_57633_scan13.png
 figures/spec_57633_scan7/spec_57633_scan7.png
+figures/spec_57633_scan1/spec_57633_scan1.png
 section_discussion_subsection_Emission_Physics__.tex
