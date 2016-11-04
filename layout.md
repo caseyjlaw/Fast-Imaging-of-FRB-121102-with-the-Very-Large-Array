@@ -4,6 +4,7 @@ section_Observations__.tex
 section_Results_subsection_Spectra_subsection__.tex
 figures/sgram_57623/sgram_57623.png
 figures/sgram_57633_scan7/sgram_57633_scan7.png
+figures/sgram_57633_scan13/sgram_57633_scan13.png
 figures/spec_57633_scan13/spec_57633_scan13.png
 figures/spec_57633_scan7/spec_57633_scan7.png
 section_discussion_subsection_Emission_Physics__.tex
