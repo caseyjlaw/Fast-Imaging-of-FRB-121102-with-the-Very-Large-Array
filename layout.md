@@ -19,4 +19,5 @@ figures/spec_57643/spec_57643.png
 figures/spec_57645/spec_57645.png
 figures/spec_57646/spec_57646.png
 figures/spec_57648/spec_57648.png
+figures/spec_57649/spec_57649.png
 section_discussion_subsection_Emission_Physics__.tex
