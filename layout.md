@@ -9,7 +9,7 @@ figures/sgram_57638/SNsifHTAwAAAABJRU5ErkJggg==.png
 figures/sgram_57643/ByyJY pXnKzSAAAAAElFTkSuQmCC.png
 figures/sgram_57645/WeHVPLBbyLMTz4OOlN1htkteQSm1G42z3FnUj65g2qamustYaNgtpIWFRZuF3UJaWFi0WVgBZmFh0WZhBZiFhUWbhRVgFhYWbRZWgFlYWLRZWAFmYWHRZmEFmIWFRZuFFWAWFhZtFlaAWVhYtFn8f1leowxNG7FAAAAAAElFTkSuQmCC.png
 figures/sgram_57646/sgram_57646.png
-figures/sgram_57648/sgram_57648.png
+figures/sgram_57648/wcNpoCH7Ru9IwAAAABJRU5ErkJggg==.png
 figures/sgram_57649/sgram_57649.png
 figures/spec_57633_scan13/wG09pYbqGeEBgAAAABJRU5ErkJggg==.png
 figures/spec_57633_scan7/w9p1Hol8tjPMwAAAABJRU5ErkJggg==.png
