@@ -14,7 +14,7 @@ figures/sgram_57649/sgram_57649.png
 figures/spec_57633_scan13/wG09pYbqGeEBgAAAABJRU5ErkJggg==.png
 figures/spec_57633_scan7/w9p1Hol8tjPMwAAAABJRU5ErkJggg==.png
 figures/spec_57633_scan1/RCO96HcLwHwAAAAASUVORK5CYII=.png
-figures/spec_57638/spec_57638.png
+figures/spec_57638/3F9gYqUBQUzIiIiUtE0z4yIiIhUNAUzIiIiUtEUzIiIiEhFUzAjIiIiFU3BjIiIiFQ0BTMiIiJS0RTMiIiISEVTMCMiIiIV7f8DPJFdRMlzP8kAAAAASUVORK5CYII=.png
 figures/spec_57643/spec_57643.png
 figures/spec_57645/spec_57645.png
 figures/spec_57646/spec_57646.png
