@@ -6,7 +6,7 @@ figures/sgram_57623/wdhon31DgByGAAAAABJRU5ErkJggg==.png
 figures/sgram_57633_scan7/CYB6ZiuVxOwRJkdWGKhxyqMulioqKNUVdLlVUVKwp6iBTUVGxpqiDTEVFxZqiDjIVFRVrijrIVFRUrCnqIFNRUbGmqINMRUXFmqIOMhUVFWuKOshUVFSsKf4fBqDnk0ad9EMAAAAASUVORK5CYII=.png
 figures/sgram_57633_scan13/A5B5dKGf2kaYAAAAAElFTkSuQmCC.png
 figures/sgram_57638/SNsifHTAwAAAABJRU5ErkJggg==.png
-figures/sgram_57643/sgram_57643.png
+figures/sgram_57643/ByyJY pXnKzSAAAAAElFTkSuQmCC.png
 figures/sgram_57645/sgram_57645.png
 figures/sgram_57646/sgram_57646.png
 figures/sgram_57648/sgram_57648.png
