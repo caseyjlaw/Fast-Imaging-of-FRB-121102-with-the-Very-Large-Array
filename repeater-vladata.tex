@@ -32,7 +32,7 @@
 The highly-dispersed, millisecond radio transients known as Fast Radio Bursts have recently emerged as a new class...
 
 The discovery of repeating bursts from FRB121102 has shown that at least some FRBs are not cataclysmic and opened potential for studying a homogenous sample of bursts...
-Our recent coordinated campaign with the Very Large Array and Arecibo Observatory has made the first direct, arcsecond-scale localization of an FRB and unambiguously associated it with counterparts in other observations. This campaign detected nine bursts at the VLA from 2.5 to 3.5~GHz and many more at Arecibo near 1.4~GHz. The coordination of these observations allow us to refine our picture of the physical processes in FRB121102. 
+Our recent coordinated campaign with the Very Large Array and Arecibo Observatory has made the first direct, arcsecond-scale localization of an FRB and unambiguously associated it with counterparts in other observations. This campaign detected nine bursts at the VLA from 2.5 to 3.5~GHz and many more at Arecibo, GBT, and Effelsberg. The coordination of these observations allow us to refine our picture of the physical processes in FRB121102. 
 
 With so many bursts, we can make the first reliable measures of burst flux distribution and temporal statistics...
 
@@ -44,10 +44,10 @@ The connection of FRB121102 to the overall population...
 The discovery of Fast Radio Bursts, a new class of millisecond-duration, highly-dispersed radio transients, has opened a whole new playground in astrophysics. 
 
 \begin{itemize}
- \item FRB extreme brightness and emission physics
+ \item FRBs, extreme brightness, emission physics
  \item Extragalactic counterpart and potential utility as probes
- \item Concern that repeater is an anomalous FRB
- \item Potential for repeater to infer properties of FRB population
+ \item Repeating FRB as good target
+ \item Potential to infer properties of FRB population
 \end{itemize}
 
 \section{Observations}
@@ -57,11 +57,19 @@ All observations in August and Septmeber were searched in quasi real-time by a p
 
 Burst detections and localizations were made within hours of data being recorded.
 
-\subsection{Detections}
+\subsection{Arecibo}
+
+\subsection{Effelsberg}
+
+\subsection{Green Bank Telescope}
+
+\section{Results}
+
+\subsection{VLA Detections}
 
 Figure \ref{fig:sgram} shows the spectrograms of all nine bursts detected by \rf.
 
-Computational notebooks to reproduce the transient detection and localization can be found at \url{https://github.com/caseyjlaw/FRB121102}. Data are available at \url{https://doi.org/xxx}.
+Computational notebooks to reproduce the transient detection and localization can be found at \url{https://github.com/caseyjlaw/FRB121102}. VLA data are available at \url{https://doi.org/10.7910/DVN/TLDKXG}.
 
 \begin{figure*}[htb]
 \begin{center}
@@ -87,10 +95,9 @@ Computational notebooks to reproduce the transient detection and localization ca
 \end{center}
 \end{figure*}
 
-\section{Results}
+\subsection{Multi-Telescope Burst Spectra}
 
-\subsection{Dispersion}
-
+\subsection{VLA Spectra}
 After detection, we refined the analysis of each burst offline. We used a fine dispersion grid to find the best-fit DM for each burst.
 
 Table?
@@ -105,8 +112,6 @@ Table?
 57649 (DM$=552$ pc cm$^{-3}$).
 
 Dispersion measure changes between bursts significant?
-
-\subsection{Spectra}
 
 Burst spectra are shown in Figure \ref{fig:spec}...
 
@@ -134,14 +139,7 @@ Burst spectra are shown in Figure \ref{fig:spec}...
 \end{center}
 \end{figure*}
 
-
-\subsection{Circular Polarization}
-
-The VLA S-band recievers natively measure circular polarization. The fast VLA interferometric data recorded only dual-circular visibilities and did not perform polarimetric calibration, so only crude polarimetric constraints are possible and only on circular polarization.
-
-Bursts were located 2.27 arcmin away from pointing center. Beam squint in S-band has a maximum of 3.5\% roughly 10 arcmin away from the pointing center (Perley et al 2016, VLA memo)...
-
-Can variation in circular pol between bursts be caused by beam-dependent effects? If not, then we can claim some modest circular pol that varies burst-to-burst.
+The VLA S-band recievers natively measure circular polarization, although observations did not include polarization calibration procedures. Crude constraints on circular polarization are possible by comparing the burst intensity in right and left-hand polarized data products. The apparent circular polarization fraction ($(RR-LL)/(RR+LL)$) for the most significant bursts are all less than 3\%. FRB121102 was located 2.3 arcmin away from pointing center, where systematic effects have been measured as large as 3\% (Perley et al 2016, VLA memo). We conclude that the S-band bursts seen by the VLA have a circular polarization of less than 3\%.
 
 \subsection{Brightness Distribution}
 
@@ -160,7 +158,6 @@ Figure \ref{fig:logns} shows the flux distribution of the nine VLA bursts. Flatn
 Doubts were cast on the first FRB detection (``Lorimer burst'') due to its unusually high brightness. The lack of lower-significance detections suggested that this burst was unlikely to be part of any astrophysical population...
 
 \subsection{Temporal Statistics}
-
 Burst detections were made very inhomogenously though the roughly 60 hours of observing toward FRB 121102. In the first $\sim8$\ hours of observing at L-band and the first $\sim25$\ hours observing at S-band no bursts were detected. Finally, in the last $\sim27$ hours of S-band observing, all nine bursts were detected. Data quality are relatively high and RFI did not significantly impact sensitivity, so the inhomogeneous burst distribution not an observational artifact.
 
 \section{discussion}
