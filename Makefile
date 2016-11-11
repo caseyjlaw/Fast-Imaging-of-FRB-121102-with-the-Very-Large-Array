@@ -1,0 +1,5 @@
+all:
+	pdflatex repeater-vladata
+	pdflatex repeater-vladata
+	bibtex repeater-vladata
+	pdflatex repeater-vladata
