@@ -53,17 +53,22 @@ The discovery of Fast Radio Bursts, a new class of millisecond-duration, highly-
 \section{Observations}
 \subsection{\rf}
 
-All observations in August and Septmeber were searched in quasi real-time by a prototype version of \rf. \rf is a real-time, fast imaging transient search system. The current, prototype runs on existing hardware of the VLA correlator backend, while the future \rf will run on a dedicated GPU cluster. The transient search pipeline software is called ``rtpipe''\footnote{See \url{https://github.com/caseyjlaw/rtpipe}} and is mostly written in Python.
+All observations in August and Septmeber were searched in quasi real-time by a prototype version of \rf. \rf\ is a real-time, fast imaging transient search system. The current, prototype runs on existing hardware of the VLA correlator backend, while the future \rf\ will run on a dedicated GPU cluster. The transient search pipeline software is called ``rtpipe''\footnote{See \url{https://github.com/caseyjlaw/rtpipe}} and is mostly written in Python.
 
 Burst detections and localizations were made within hours of data being recorded.
 
 \subsection{Arecibo}
 
+% from the first paper
+During the joint Arecibo-VLA campaign, Arecibo observed with the L-wide receiver, which has an observational frequency range of 1.15 to 1.73~GHz and a full width at half maximum beam size of 3.3 arcmin. The PUPPI pulsar backend was used to record total intensity spectra with time and frequency resolutions of 10.24~$\mu$s and 1.5625~MHz, respectively, and full Stokes polarization information. Each frequency channel was coherently dedispersed to 557~\dmu, thereby eliminating intra-channel dispersion smearing. PUPPI covers a total of 800~MHz of bandwidth centred at 1380.78125~MHz, but only $\sim$ 620~MHz of this band is usable due to radio frequency interference and receiver sensitivity roll-off at the band edges.
+
 \subsection{Effelsberg}
 
-last two bursts (with bad filter in place)
+
 
 \subsection{AMI}
+
+
 
 \section{Results}
 
@@ -71,7 +76,8 @@ last two bursts (with bad filter in place)
 
 Figure \ref{fig:sgram} shows the spectrograms of all nine bursts detected by \rf.
 
-Computational notebooks to reproduce the transient detection and localization can be found at \url{https://github.com/caseyjlaw/FRB121102}. VLA data are available at \url{https://doi.org/10.7910/DVN/TLDKXG}.
+Computational notebooks to reproduce the transient detection and localization can be found at \url{https://github.com/caseyjlaw/FRB121102}. Time cut-out visibility data are available at \url{https://doi.org/10.7910/DVN/TLDKXG}. Original visibility data are available under VLA program codes 16A-459 and 16A-496 and can be downloaded at \url{http://archive.nrao.edu}.
+
 
 \begin{figure*}[htb]
 \begin{center}
@@ -98,6 +104,12 @@ Computational notebooks to reproduce the transient detection and localization ca
 \end{figure*}
 
 \subsection{Multi-Telescope Burst Spectra}
+
+Arecibo had coverage for 57638, 57643, 57645, 57648, and 57649. For 57643 observing was at C band only. At 57648, a burst is seen at 3757s, coincident with the VLA burst.
+
+Effelsberg had simultaneous coverage for bursts on MJD 57648 and 57649. No simultaneous detections.
+
+AMI had simultaneous coverage for bursts on 57643, 57645, 57648, and 57649.
 
 \subsection{VLA Spectra}
 After detection, we refined the analysis of each burst offline. We used a fine dispersion grid to find the best-fit DM for each burst.
@@ -191,6 +203,13 @@ Constraints on repetition assuming "red spectrum" for whole population. Simulati
 
 \subsection{Emission Physics and Burst Energetics}
 
+% from first paper
+For a nominal Gpc distance $D$ corresponding to redshifts $z\lesssim 0.3$, the received fluence $A_{\nu}$ from each burst implies  a burst energy
+$$E_{\rm burst} = 4\pi D^2 (\delta\Omega/4\pi) A_{\nu} \Delta\nu
+\approx 10^{38}\, {\rm erg}\,(\delta\Omega/4\pi) D_{\rm Gpc}^2  (A_{\nu} / 0.1\ {\rm Jy\ ms}) \Delta\nu_{\rm GHz}.$$
+The unknown  emission solid angle $\delta\Omega$
+could be very small due to relativistic beaming, and together with a distance possibly much smaller than 1~Gpc, could reduce the energy requirement significantly.  However, the {\it total} energy emitted could be larger depending on the duration of the emission in the source frame and other model-dependent details.
+Either way, the burst energies from \frb\ are not inconsistent with those that might be expected from the magnetosphere of a compact object\cite{cw16}.
 
 
 \subsection{Observing Strategies}
