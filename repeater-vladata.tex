@@ -61,7 +61,12 @@ We can also assume that \frb is representative and use it to constrain the physi
 Given that FRBs are now known to be useful probes of the IGM, there is strong justification for continuing searches for new detections and localizations. The relatively faint counterpart to \frb argues that direct localization of the radio burst will continue to be the best way to find optical hosts to measure distances. Our multi-telescope constraints on burst spectra, measurement of host properties, burst rate estimates, and other properties will inform new strategies for finding FRBs...
 
 \section{Observations}
+The data presented here were obtained from multiple programs and telescopes, but the central goal was to interferometrically localize \frb with the VLA. We ultimately settled on a strategy based on simultaneous observing between the VLA and Arecibo observatories with other observatories added on a best-effort basis. The hope was that Arecibo could be used to define times of bursts for which we could selectively search with the VLA. This would reduce the trials factor that limited sensitivity and potentially provide detections at multiple independent bands. Below, we summarize these observations, with a focus on those conducted simultaneous with VLA burst detections from \frb.
+
 \subsection{VLA}
+The \frb observing campaign started in late 2015 with a 10~hr campaign observed at 1.4~GHz. In April through May 2016, we conducted a 40~hr campaign at 3.0~GHz in coordination with Arecibo. We concluded with a new, 40~hr, coordinated campaign from August through September 2016. In this last campaign, the first 34 hours of VLA observations were made at 3.0~GHz, while the last 6 hours were observed at 6~GHz.
+
+All VLA fast-sampled data were observed with 5~ms sampling, 256 channels, and dual-circular polarization \citep[as in]{2015ApJ...807...16L}. To maximize sensitivity, the channel spectral width was set to maintain sensitivity to the known DM of \frb, while maximizing the total bandwidth. The total bandwidth at L (1.4~GHz), S (3.0~GHz), and C (6.0~GHz) bands was 256~MHz, 1.0~GHz, and 2.0~GHz, respectively.
 
 All observations in August and Septmeber were searched in quasi real-time by a prototype version of \rf. \rf\ is a real-time, fast imaging transient search system. The current, prototype runs on existing hardware of the VLA correlator backend, while the future \rf\ will run on a dedicated GPU cluster. The transient search pipeline software is called ``rtpipe''\footnote{See \url{https://github.com/caseyjlaw/rtpipe}} and is mostly written in Python.
 
@@ -70,7 +75,7 @@ Burst detections and localizations were made within hours of data being recorded
 \subsection{Arecibo}
 
 % from the first paper
-During the joint Arecibo-VLA campaign, Arecibo observed with the L-wide receiver, which has an observational frequency range of 1.15 to 1.73~GHz and a full width at half maximum beam size of 3.3 arcmin. The PUPPI pulsar backend was used to record total intensity spectra with time and frequency resolutions of 10.24~$\mu$s and 1.5625~MHz, respectively, and full Stokes polarization information. Each frequency channel was coherently dedispersed to 557~\dmu, thereby eliminating intra-channel dispersion smearing. PUPPI covers a total of 800~MHz of bandwidth centred at 1380.78125~MHz, but only $\sim$ 620~MHz of this band is usable due to radio frequency interference and receiver sensitivity roll-off at the band edges.
+During the joint Arecibo-VLA campaign, Arecibo observed with the L-wide receiver, which has an observational frequency range of 1.15 to 1.73~GHz and a full width at half maximum beam size of 3.3 arcmin. The PUPPI pulsar backend was used to record total intensity spectra with time and frequency resolutions of 10.24~$\mu$s and 1.5625~MHz, respectively, and full Stokes polarization information. Each frequency channel was coherently dedispersed to 557 pc cm$^{-3}$, thereby eliminating intra-channel dispersion smearing. PUPPI covers a total of 800~MHz of bandwidth centred at 1380.78125~MHz, but only $\sim$ 620~MHz of this band is usable due to radio frequency interference and receiver sensitivity roll-off at the band edges.
 
 \subsection{Effelsberg}
 
