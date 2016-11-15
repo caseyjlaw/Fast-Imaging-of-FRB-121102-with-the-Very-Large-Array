@@ -15,11 +15,12 @@
 \hypersetup{colorlinks=false,pdfborder={0 0 0},}
 
 \newcommand{\rf}{\emph{realfast}}
+\newcommand{\frb}{\emph{FRB 121102}}
 
 \begin{document}
 
-\title{FRB 121102: Very Large Array Burst Properties and Implications for Overall FRB Population}
-\shorttitle{FRB 121102 Burst Properties}
+\title{\frb: Very Large Array Burst Properties and Implications for Overall FRB Population}
+\shorttitle{\frb Burst Properties}
 \shortauthors{Law et al.}
 
 \author{Casey J. Law\altaffilmark{1}}
@@ -31,27 +32,36 @@
 \begin{abstract}
 The highly-dispersed, millisecond radio transients known as Fast Radio Bursts have recently emerged as a new class...
 
-The discovery of repeating bursts from FRB121102 has shown that at least some FRBs are not cataclysmic and opened potential for studying a homogenous sample of bursts...
-Our recent coordinated campaign with the Very Large Array and Arecibo Observatory has made the first direct, arcsecond-scale localization of an FRB and unambiguously associated it with counterparts in other observations. This campaign detected nine bursts at the VLA from 2.5 to 3.5~GHz and many more at Arecibo, GBT, and Effelsberg. The coordination of these observations allow us to refine our picture of the physical processes in FRB121102. 
+The discovery of repeating bursts from \frb has shown that at least some FRBs are not cataclysmic and opened potential for studying a homogenous sample of bursts...
+Our recent coordinated campaign with the Very Large Array and Arecibo Observatory has made the first direct, arcsecond-scale localization of an FRB and unambiguously associated it with counterparts in other observations. This campaign detected nine bursts at the VLA from 2.5 to 3.5~GHz and many more at Arecibo, GBT, and Effelsberg. The coordination of these observations allow us to refine our picture of the physical processes in \frb.
 
 With so many bursts, we can make the first reliable measures of burst flux distribution and temporal statistics...
 
-The connection of FRB121102 to the overall population...
+The connection of \frb to the overall population...
 
 \end{abstract}
 
 \section{Introduction}
-The discovery of Fast Radio Bursts, a new class of millisecond-duration, highly-dispersed radio transients, has opened a whole new playground in astrophysics. 
+Fast Radio Bursts (FRBs) are a new class of millisecond-duration radio transient with a dispersion measure (DM) that implies it originate outside of our Galaxy. At extragalactic (and potentially cosmological) distances, they are not only unusually luminous, but they provide a new tracer of other galaxies and the intergalactic medium (IGM). In this way, FRBs have opened a whole new playground in astrophysics \citep{}. However, that potential has been hamstrung by the lack of a definitive association of an FRB to an extragalactic host.
 
+This paper is part of a series that presents the first localization and host identification of an FRB (CITE, CITE, ...). \frb, also known as the ``repeating FRB'', was first detected in November 2012 by the Arecibo Observatory \citep{2014ApJ...790..101S}. In mid 2015, new Arecibo observations revealed a series of bursts at the same DM and sky position demonstrating that FRBs are capable of repetition \citep{2016Natur.531..202S}. Beginning in August of 2015, we made the first of nine detections of \frb with the Very Large Array (CITE) and localized it with a precision of 0.1\arcsec. Deep radio and optical observing shows that \frb is unambiguously associated with a persistent radio and optical source at a redshift of 0.193 (CITE).
+
+\frb has now been localized three orders of magnitude better than any other FRB and placed at a cosmological distance. Its lookback (luminosity) distance is 746 (972) Mpc \citep{planck15} is orders of magnitude larger than any other millisecond transient. This shows that FRBs:
 \begin{itemize}
- \item FRBs, extreme brightness, emission physics
- \item Extragalactic counterpart and potential utility as probes
- \item Repeating FRB as good target
- \item Potential to infer properties of FRB population
+ \item are extremely luminous, 
+ \item have a significant DM contribution from the IGM, and
+ \item can be used to probe the IGM and their host galaxy.
 \end{itemize}
+The promise of the first reported FRB is being realized \citep{2007Sci...318..777L}.
+
+The cosmological distance for \frb could have wide-ranging implications for the FRB population as a whole. However, it has not been demonstrated that \frb is representative of the overall FRB population. In fact, the unambiguous repetition of its bursts is unique among all FRBs \citep{2015MNRAS.454..457P}, so it is natural to ask whether \frb is representative. An important first step is to demonstrate that the properties of \frb are consistent with the significant body of facts for the overall population \citep{2015MNRAS.451.3278M, 2016MPLA...3130013K}. The repeating nature of \frb provides us with several statistical tests we can use to test this connection.
+
+We can also assume that \frb is representative and use it to constrain the physical processes at play in the overall FRB population. Although we now know that FRBs are luminous, it is not yet clear what process generates the radio bursts themselves \citep{2014PhRvD..89j3009K, 2014ApJ...785L..26L, 2016MNRAS.457..232C}. The simultaneous \frb observing campaign with the VLA, Arecibo, Effelsberg, GBT, and AMI gives a more complete picture of the spectral structure of FRBs. FRB repetition also has strong implications for the number of FRB-generating systems in the universe \citep{2016MNRAS.458L..89C}.
+
+Given that FRBs are now known to be useful probes of the IGM, there is strong justification for continuing searches for new detections and localizations. The relatively faint counterpart to \frb argues that direct localization of the radio burst will continue to be the best way to find optical hosts to measure distances. Our multi-telescope constraints on burst spectra, measurement of host properties, burst rate estimates, and other properties will inform new strategies for finding FRBs...
 
 \section{Observations}
-\subsection{\rf}
+\subsection{VLA}
 
 All observations in August and Septmeber were searched in quasi real-time by a prototype version of \rf. \rf\ is a real-time, fast imaging transient search system. The current, prototype runs on existing hardware of the VLA correlator backend, while the future \rf\ will run on a dedicated GPU cluster. The transient search pipeline software is called ``rtpipe''\footnote{See \url{https://github.com/caseyjlaw/rtpipe}} and is mostly written in Python.
 
@@ -110,6 +120,16 @@ Arecibo had coverage for 57638, 57643, 57645, 57648, and 57649. For 57643 observ
 Effelsberg had simultaneous coverage for bursts on MJD 57648 and 57649. No simultaneous detections.
 
 AMI had simultaneous coverage for bursts on 57643, 57645, 57648, and 57649.
+
+%\begin{table}
+%\caption{Caption}
+%\centering
+%\begin{tabular}{llll}
+%\hline
+%Field       & RA          & Dec   & Lon. \\ \hline
+%\end{tabular}
+%\label{fields}
+%\end{table} 
 
 \subsection{VLA Spectra}
 After detection, we refined the analysis of each burst offline. We used a fine dispersion grid to find the best-fit DM for each burst.
@@ -210,6 +230,10 @@ $$E_{\rm burst} = 4\pi D^2 (\delta\Omega/4\pi) A_{\nu} \Delta\nu
 The unknown  emission solid angle $\delta\Omega$
 could be very small due to relativistic beaming, and together with a distance possibly much smaller than 1~Gpc, could reduce the energy requirement significantly.  However, the {\it total} energy emitted could be larger depending on the duration of the emission in the source frame and other model-dependent details.
 Either way, the burst energies from \frb\ are not inconsistent with those that might be expected from the magnetosphere of a compact object\cite{cw16}.
+
+\subsection{Extending FRB 121102 to Other FRBs}
+
+FRB 121102 has a DMhost of xx. Assuming other FRBs have a comparable DMhost, what can we infer about the population as a whole?
 
 
 \subsection{Observing Strategies}
