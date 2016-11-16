@@ -197,25 +197,29 @@ Figure \ref{fig:logns} shows the flux distribution of the nine VLA bursts. Flatn
 Doubts were cast on the first FRB detection (``Lorimer burst'') due to its unusually high brightness. The lack of lower-significance detections suggested that this burst was unlikely to be part of any astrophysical population...
 
 \subsection{Temporal Statistics}
-Burst detections were made very inhomogenously though the roughly 60 hours of observing toward FRB 121102. In the first $\sim8$\ hours of observing at L-band and the first $\sim25$\ hours observing at S-band no bursts were detected. Finally, in the last $\sim27$ hours of S-band observing, all nine bursts were detected. Data quality are relatively high and RFI did not significantly impact sensitivity, so the inhomogeneous burst distribution not an observational artifact.
 
-\cite{2016MNRAS.458L..89C}
+Burst detections were made very inhomogenously though the roughly 63 hours of observing toward FRB 121102. Data quality are relatively high and RFI did not significantly impact sensitivity, so the inhomogeneous burst distribution not an observational artifact.
 
-\begin{figure}[htb]
-\begin{center}
-\includegraphics[width=0.9\columnwidth]{lombscargle}
-\caption{Lomb-Scargle periodogram with 95\% limit on power from last observing campaign
-\label{fig:ls}}
-\end{center}
-\end{figure}
+In the first $\sim25$\ hours observing at S-band no bursts were detected, while nine bursts were detected in the last $\sim30$ hours of S-band observing. Assuming the burst detection probability follows a stationary Poisson distribution, the nondetection in the first half of S-band limits the FRB rate to $\rm{R}<0.12$ hour$^{-1}$. The mean detection rate for the last part of the campaign was $\rm{R}=0.3$ hour$^{-1}$. The inconsistency shows that the detection probability is not stationary.
 
-Bursts seem to drop throughout last campaign. The nominal rate is 1e-4 per second, but a someone higher rate is inferred from modeling shown in Figure \ref{fig:rate}.
+Moreover, there is weak evidence that the \frb burst rate changes during the last part of the campaign. We modeled the event detection probability as a Poisson probability with a rate parameter that scales linearly with time as $R=a + b*(\rm{MJD} - 57623)$. We then calculated the probability of measuring the observed event rate as $\Pi P_i(R)$. Figure \ref{fig:rate} shows the ($a$, $b$) parameter space with contours of 50, 90, and 95\% confidence contours. 
 
 \begin{figure}[htb]
 \begin{center}
 \includegraphics[width=0.9\columnwidth]{event_rate_contours}
 \caption{Rate versus rate change during last campaign.
 \label{fig:rate}}
+\end{center}
+\end{figure}
+
+Figure \ref{fig:ls} shows a Lomb-Scargle periodogram...
+Lots of excess power corresponding to periods shorter than 1 hour.
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=0.9\columnwidth]{lombscargle}
+\caption{Lomb-Scargle periodogram with 95\% limit on power from last observing campaign
+\label{fig:ls}}
 \end{center}
 \end{figure}
 
@@ -229,7 +233,7 @@ Flat luminosity distribution of FRB121102 and overall population
 
 Does local (100 Mpc) population with flat luminosity distribution reproduce observed properties? Imagine also how log N/log S cut-offs and scattering biases the intrinsic into the observed distribution (Macquart and Johnston)
 
-Discussion of ``red spectrum'' and Connor \& Pen. Bursts predict bursts therefore repetition constraints of other FRBs are likely weaker than claimed...
+Discussion of ``red spectrum'' and \citet{2016MNRAS.458L..89C}. Bursts predict bursts therefore repetition constraints of other FRBs are likely weaker than claimed...
 
 Intrinsic versus refractive scintillation
 
@@ -257,6 +261,9 @@ Targeting known FRBs is optimal
 
 Wide, low-sensitivity searches are best way to conduct a blind search
 
+\cite{2016MNRAS.458L..89C}
+
+
 \section{Conclusions}
 
 
@@ -265,7 +272,7 @@ Wide, low-sensitivity searches are best way to conduct a blind search
 
 \section*{Acknowledgements}
 We thank ...
-This project was supported by the University of California Office of the President under Lab Fees Research Program Award 237863. The National Radio Astronomy Observatory is a facility of the National Science Foundation operated under cooperative agreement by Associated Universities, Inc. 
+This project was supported by the University of California Office of the President under Lab Fees Research Program Award 237863. The National Radio Astronomy Observatory is a facility of the National Science Foundation operated under cooperative agreement by Associated Universities, Inc.. This research made use of Astropy, a community-developed core Python package for Astronomy (Astropy Collaboration, 2013).
 
 \bibliography{fasttrants.bib}
 
