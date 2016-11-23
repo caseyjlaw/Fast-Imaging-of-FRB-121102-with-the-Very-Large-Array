@@ -54,7 +54,7 @@ Given that FRBs are now known to be useful probes of the IGM, there is strong ju
 \begin{figure*}[t]
 \begin{center}
 \includegraphics[width=2\columnwidth]{timeline}
-\caption{Summary of observing coverage during the multi-telescope observing campaign. Uncircled symbols show days with observations and circles show detections of \frb. Only the coincident Arecibo burst is currently circled (**change?**). The black dashed line shows the VLA burst detections with simultaneous coverage with other telescopes.
+\caption{Summary of observing coverage and detections of \frb\ during the multi-telescope observing campaign. Symbols show days with observations and symbols with circles show detections of \frb. Multiple circles indicate multiple burst detections, except for Arecibo, which typically has multiple detections per observing session (a detailed analysis is left for a future paper). The black dashed lines show the VLA burst detections with simultaneous coverage at other telescopes. The solid black line shows the simultaneous burst detection at VLA and Arecibo.
 \label{fig:multi}}
 \end{center}
 \end{figure*}
@@ -125,15 +125,25 @@ Figure \ref{fig:sgram} shows the spectrograms of all nine bursts detected by \rf
 
 We used a fine dispersion grid to find the best-fit DM for each burst. Table \ref{tab:spec} shows the best-fit DM values... Dispersion measure changes between bursts significant?
 
-%\begin{table}
-%\caption{Caption}
-%\centering
-%\begin{tabular}{llll}
-%\hline
-%Field       & RA          & Dec   & Lon. \\ \hline
-%\end{tabular}
-%\label{tab:spec}
-%\end{table} 
+\begin{table}
+\caption{Spectral Modeling of Bursts}
+\centering
+\begin{tabular}{llll}
+\hline
+Burst & Peak & Center & Width \\
+(MJD) & (Jy *not normed yet*) & (ch) & (ch) \\ \hline
+57623 & 33 & 69 & 32 \\
+57633, scan 7 & 260 & 163 & 55 \\
+57633, scan 13 & & & \\
+57638 & & & \\
+57643 & 55 & 69 & 56 \\
+57645 & & & \\
+57646 & & & \\
+57648 & & & \\
+57649 & & & \\ \hline
+\end{tabular}
+\label{tab:spec}
+\end{table} 
 
 \subsubsection{Spectral modeling}
 After detection, we refined the analysis of each burst offline. Burst spectra are shown in Figure \ref{fig:spec}...

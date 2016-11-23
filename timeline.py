@@ -39,6 +39,8 @@ def putdot(ax, i):
 		ax.scatter(pltx, plty, marker='o', s=300, linewidth=2, facecolor='none', edgecolor='k')
 		if int(burst[i]) > 1:
 			ax.scatter(pltx, plty, marker='o', s=600, linewidth=2, facecolor='none', edgecolor='k')
+			if int(burst[i]) > 2:
+				ax.scatter(pltx, plty, marker='o', s=900, linewidth=2, facecolor='none', edgecolor='k')
 
 	ax.scatter(pltx, plty, marker=psym[tel[i]], s=100, linewidth=3, facecolor=pcol[tel[i]], edgecolor='none')
 
@@ -69,9 +71,11 @@ ax.set_ylim( (-0.4, 3.4) )
 ax.tick_params(labelright='off', labelleft='off')
 
 # boxes for simultaneous coverage of VLA bursts
-axhspan(-0.2, 3.2, 0.67, 0.701, fill=False, linestyle='dashed') # 57643
-axhspan(-0.2, 3.2, 0.726, 0.757, fill=False, linestyle='dashed') # 57645
-axhspan(-0.2, 3.2, 0.812, 0.873, fill=False, linestyle='dashed') # 57648 57649
+axhspan(0., 3., 0.6855, 0.6855, fill=False, linestyle='dashed') # 57643
+axhspan(0., 3., 0.743, 0.743, fill=False, linestyle='dashed') # 57645
+axhspan(0., 3., 0.8285, 0.8285, fill=False, linestyle='dashed') # 57648 57649
+axhspan(2., 3., 0.8285, 0.8285, fill=False, lw=3, linestyle='solid') # 57648 57649
+axhspan(0., 3., 0.857, 0.857, fill=False, linestyle='dashed') # 57648 57649
 
 ax.set_yticks( [0, 1, 2, 3] )
 #ax0.spines['left'].set_visible(True)
