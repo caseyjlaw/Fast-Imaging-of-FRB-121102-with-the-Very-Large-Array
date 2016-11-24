@@ -1,5 +1,6 @@
-\documentclass{emulateapj}
-\usepackage[colorlinks,urlcolor=blue,citecolor=blue,linkcolor=blue]{hyperref} 
+\documentclass[twocolumn]{aastex61}
+%\documentclass{emulateapj}
+%\usepackage[colorlinks,urlcolor=blue,citecolor=blue,linkcolor=blue]{hyperref} 
 \usepackage{graphicx,natbib}
 \citestyle{aa}
 \usepackage[space]{grffile}
@@ -17,17 +18,100 @@
 
 \begin{document}
 
-\title{\frb: Properties of VLA Bursts and Implications for Overall FRB Population}
+\title{\frb: Multi-Telescope Burst Properties and Implications for FRB Population}
 \shorttitle{\frb\ Burst Properties}
 \shortauthors{Law et al.}
 
-\author{Casey J. Law\altaffilmark{1}}
-\author{Dewey}
-\author{Cheetham}\author{Howe}
-\altaffiltext{1}{Dept of Astronomy and Radio Astronomy Lab, Univ. of California, Berkeley, CA}
+\author[0000-0002-4119-9963]{C.~J.~Law}
+\affiliation{Dept of Astronomy and Radio Astronomy Lab, University of California, Berkeley, CA 94720, USA}
+
+\author{R.~S.~Wharton}
+\affiliation{Cornell Center for Astrophysics and Planetary Science and Department of Astronomy, Cornell University, Ithaca, NY 14853, USA}
+
+\author{M.~A.~McLaughlin}
+\affiliation{Department of Physics and Astronomy, West Virginia University, Morgantown, WV 26506, USA}
+\affiliation{Center for Gravitational Waves and Cosmology, West Virginia University, Chestnut Ridge Research Building, Morgantown, WV 26505}
+
+\author{J.~M.~Cordes}
+\affiliation{Cornell Center for Astrophysics and Planetary Science and Department of Astronomy, Cornell University, Ithaca, NY 14853, USA}
+
+%\author{M.~W.~Abruzzo}
+%\affiliation{Haverford College, 370 Lancaster Ave, Haverford, PA 19041, USA}
+
+%\author{C.~G.~Bassa}
+%\affiliation{ASTRON, Netherlands Institute for Radio Astronomy, Postbus 2, 7990 AA, Dwingeloo, The Netherlands}
+
+%\author{S.~Bogdanov}
+%\affiliation{Columbia Astrophysics Laboratory, Columbia University,  New York, NY 10027, USA}
+
+\author{G.~C.~Bower}
+\affiliation{Academia Sinica Institute of Astronomy and Astrophysics, 645 N. A'ohoku Place, Hilo, HI 96720, USA}
+
+\author{S.~Burke-Spolaor}
+\affiliation{National Radio Astronomy Observatory, Socorro, NM 87801, USA}
+\affiliation{Department of Physics and Astronomy, West Virginia University, Morgantown, WV 26506, USA}
+\affiliation{Center for Gravitational Waves and Cosmology, West Virginia University, Chestnut Ridge Research Building, Morgantown, WV 26505}
+
+\author{B.~J.~Butler}
+\affiliation{National Radio Astronomy Observatory, Socorro, NM 87801, USA}
+\author{S.~Chatterjee}
+\affiliation{Cornell Center for Astrophysics and Planetary Science and Department of Astronomy, Cornell University, Ithaca, NY 14853, USA}
+
+\author{P.~Demorest}
+\affiliation{National Radio Astronomy Observatory, Socorro, NM 87801, USA}
+
+\author{J.~W.~T.~Hessels}
+\affiliation{ASTRON, Netherlands Institute for Radio Astronomy, Postbus 2, 7990 AA, Dwingeloo, The Netherlands}
+\affiliation{Anton Pannekoek Institute for Astronomy, University of Amsterdam, Science Park 904, 1098 XH Amsterdam, The Netherlands}
+
+\author{R.~Fender}
+\affiliation{University of Oxford, UK}
+
+%\author{V.~M.~Kaspi}
+%\affiliation{Department of Physics and McGill Space Institute, McGill University, 3600 University St., Montreal, QC H3A 2T8, Canada}
+
+%\author{A.~Keimpema}
+%\affiliation{Joint Institute for VLBI ERIC, Postbus 2, 7990 AA Dwingeloo, The Netherlands}
+
+%\author{H.~J.~van~Langevelde}
+%\affiliation{Joint Institute for VLBI ERIC, Postbus 2, 7990 AA Dwingeloo, The Netherlands}
+%\affiliation{Sterrewacht Leiden, Leiden University, Postbus 9513, 2300 RA, Leiden, the Netherlands}
+
+\author{T.~J.~W.~Lazio}
+\affiliation{Jet Propulsion Laboratory, California Institute of Technology, Pasadena, CA 91109, USA}
+
+%\author[0000-0001-9814-2354]{B.~Marcote}
+%\affiliation{Joint Institute for VLBI ERIC, Postbus 2, 7990 AA Dwingeloo, The Netherlands}
+
+\author{K.~Mooley}
+\affiliation{University of Oxford, UK}
+
+%\author{Z.~Paragi}
+%\affiliation{Joint Institute for VLBI ERIC, Postbus 2, 7990 AA Dwingeloo, The Netherlands}
+
+%\author{S.~M.~Ransom}
+%\affiliation{National Radio Astronomy Observatory, Charlottesville, VA 22903, USA}
+
+\author{M.~Rupen}
+\affiliation{National Research Council of Canada, Herzberg Astronomy and Astrophysics, Dominion Radio Astrophysical Observatory, P.O. Box 248, Penticton, BC V2A 6J9, Canada}
+
+\author{L.~G.~Spitler}
+\affiliation{Max-Planck-Institut f\"ur Radioastronomie, Auf dem H\"ugel 69, D-53121 Bonn, Germany}
+
+\author{P.~Scholz}
+\affiliation{National Research Council of Canada, Herzberg Astronomy and Astrophysics, Dominion Radio Astrophysical Observatory, P.O. Box 248, Penticton, BC V2A 6J9, Canada}
+
+\author{A.~Seymour}
+\affiliation{Arecibo Observatory, HC3 Box 53995, Arecibo, PR 00612, USA}
+\affiliation{Max-Planck-Institut f\"ur Radioastronomie, Auf dem H\"ugel 69, Bonn, D-53121, Germany}
+
+%\author{S.~P.~Tendulkar}
+%\affiliation{Department of Physics and McGill Space Institute, McGill University, 3600 University St., Montreal, QC H3A 2T8, Canada}
+
+
 
 \begin{abstract}
-The millisecond radio transients known as Fast Radio Bursts have recently emerged as a mysterious, new class of astrophysical transient. The discovery of repeating bursts from \frb\ has shown that at least some FRBs are not cataclysmic and opened potential for studying a FRB properties via a homogenous sample of bursts. With the recent localization of \frb with the Very Large Array has helped measure its distance and intrinsic properties of the bursting source and its multiwavelength associations. This localization was made with 9 bursts seen by the VLA in coordination the Arecibo, Effelsberg, and AMI-LA observatories. We present a detailed analysis of these bursts, including the first simultaneous detection of an FRB with multiple telescopes. We show that the burst spectra typically have a broad Gaussian shape on the scale of $\sim500$~MHz with fine spectral structure consistent with either scintillation or nanosecond temporal structure. We present the first burst flux distribution and temporal statistics for \frb and argue that it is consistent with the broader FRB population...
+The millisecond radio transients known as Fast Radio Bursts have recently emerged as a mysterious, new class of astrophysical transient. The discovery of repeating bursts from \frb\ has shown that at least some FRBs are not cataclysmic and opened potential for studying FRB properties via a homogenous sample of bursts. The recent localization of \frb\ with the Very Large Array has helped measure its distance and a host of intrinsic properties. This localization was made with 9 bursts seen by the VLA in coordination the Arecibo, Effelsberg, and AMI-LA observatories. We present a detailed analysis of these bursts, including the first simultaneous detection of an FRB with multiple telescopes. We show that the burst spectra typically have a broad Gaussian shape on the scale of $\sim500$~MHz with fine spectral structure consistent with either scintillation or unresolved temporal structure. We present the luminosity distribution and temporal statistics for \frb\ and argue that the whole FRB population is adequately described by a single class similar to \frb. We close with thoughts on optimal strategies to make new interferometric localizations of FRBs.
 \end{abstract}
 
 \section{Introduction}
@@ -59,14 +143,14 @@ Given that FRBs are now known to be useful probes of the IGM, there is strong ju
 \end{center}
 \end{figure*}
 
-The data presented here were obtained from multiple programs and telescopes, but the central goal was to interferometrically localize \frb\ with the VLA. The observing strategy was to ensure simultaneous observing between the VLA and Arecibo observatories and add other observatories added on a best-effort basis. The hope was that Arecibo could be used to define times of bursts for which we could selectively search with the VLA. This would reduce the trials factor that limited sensitivity and potentially provide detections at multiple independent bands. Below, we summarize these observations, with a focus on those conducted simultaneous with VLA burst detections from \frb.
+The data presented here were obtained from multiple programs and telescopes, but the central goal was to interferometrically localize \frb\ with the VLA. The observing strategy was to ensure simultaneous observing between the VLA and Arecibo observatories and add other observatories added on a best-effort basis. We coordinated observing between the VLA, Arecibo, Effelsberg, and AMI-LA telescopes, as shown in figure \ref{fig:multi}. Below, we summarize these observations, with a focus on those conducted simultaneous with VLA burst detections from \frb.
 
 \subsection{VLA}
-The \frb\ observing campaign started in late 2015 with a 10~hr campaign observed at 1.4~GHz in the compact D configuration. In April through May 2016, we conducted a 40~hr campaign at 3.0~GHz in the C and CnB configurations in coordination with Arecibo. We concluded with a new, 40~hr, coordinated campaign from August through September 2016 in the B configuration and during the move to the most extended A configuration. In this last campaign, the first 34 hours of VLA observations were made at 3.0~GHz, while the last 6 hours were observed at 6~GHz.
+The \frb\ observing campaign started in late 2015 with a 10~hr campaign observed at 1.4~GHz in the compact D configuration. In April through May 2016, we conducted a 40~hr campaign at 3~GHz in the C and CnB configurations in coordination with Arecibo. We concluded with a new, 40~hr, coordinated campaign from August through September 2016 in the B configuration and during the move to the most extended A configuration. In this last campaign, the first 34 hours of VLA observations were made at 3~GHz, while the last 6 hours were observed at 6~GHz. This paper focuses on the data collected at 3~GHz, which includes all burst detections.
 
-All VLA fast-sampled data were observed with 5~ms sampling, 256 channels, and dual-circular polarization \citep[as in]{2015ApJ...807...16L}. To maximize sensitivity, the channel frequency width was set to maintain sensitivity to the known DM of \frb, while maximizing the total bandwidth. The total bandwidth at L (1.4~GHz), S (3.0~GHz), and C (6.0~GHz) bands was 256~MHz, 1.0~GHz, and 2.0~GHz, respectively.
+All VLA fast-sampled data were observed with 5~ms sampling, 256 channels, and dual-circular polarization \citep[as in]{2015ApJ...807...16L}. To maximize sensitivity, the channel frequency width was set to maintain sensitivity to the known DM of \frb, while maximizing the total bandwidth. The total bandwidth at L (1.4~GHz), S (3~GHz), and C (6~GHz) bands was 256~MHz, 1024~MHz, and 2048~MHz, respectively. The 3~GHz data recorded data in 8 spectral windows with 32 channels each.
 
-Observations in August and Septmeber were searched by a prototype version of \rf\footnote{See \url{http://realfast.io}.}. \rf\ is a real-time, fast imaging transient search system. The current, prototype runs on existing, CPU-based hardware of the VLA correlator backend, while the future \rf\ will run on a dedicated GPU cluster. The transient search pipeline software is called ``rtpipe''\footnote{See \url{https://github.com/caseyjlaw/rtpipe}} and is mostly written in Python. The transient search pipeline is described in \citet{2015ApJ...807...16L} and performs data calibration, flagging, dedispersion, and imaging. Images were formed for each integration at DMs of 0, 546, 556.9, 560, and 565 pc cm$^{-3}$. Gain calibration is read from the "telcal" system, which uses phase-only calibration on the previous gain calibrator.
+Observations in August and Septmeber were searched by a prototype version of \rf\footnote{See \url{http://realfast.io}.}. \rf\ is a real-time, fast imaging transient search system. The current, prototype runs on existing, CPU-based hardware of the VLA correlator backend, while the future \rf\ will run on a dedicated GPU cluster. The transient search pipeline software is called \emph{rtpipe}\footnote{See \url{https://github.com/caseyjlaw/rtpipe}} and is mostly written in Python. The transient search pipeline is described in \citet{2015ApJ...807...16L} and performs data calibration, flagging, dedispersion, and imaging. Images were formed for each integration at DMs of 0, 546, 556.9, 560, and 565 pc cm$^{-3}$. Gain calibration is read from the "telcal" system, which uses phase-only calibration on the previous gain calibrator. A flux scale is calculated for each spectral window from an observation on *xx* and applied to all burst spectra.
 
 Burst detections and localizations were made within hours of data being recorded. The transient search starts when data are recorded, but this prototype of \rf\ is a factor of several times slower than real-time, so we refer to the detection as "quasi real-time". Each image with a pixel higher than 6.4$\sigma$ has some rudimentary data saved to capture both real and thermal-noise candidates as a check of data quality. For each image with a pixel higher than 7.4$\sigma$, \rf\ generates a candidate visualization with an image and spectrum. More detailed analysis, including improved calibration and localization, is conducted offline. 
 
@@ -77,76 +161,95 @@ Computational notebooks to reproduce the transient detection and localization ca
 % copied from the first paper
 During the joint Arecibo-VLA campaign, Arecibo observed with the L-wide receiver, which has an observational frequency range of 1.15 to 1.73~GHz and a full width at half maximum beam size of 3.3 arcmin. The PUPPI pulsar backend was used to record total intensity spectra with time and frequency resolutions of 10.24~$\mu$s and 1.5625~MHz, respectively, and full Stokes polarization information. Each frequency channel was coherently dedispersed to 557 pc cm$^{-3}$, thereby eliminating intra-channel dispersion smearing. PUPPI covers a total of 800~MHz of bandwidth centred at 1380.78125~MHz, but only $\sim$ 620~MHz of this band is usable due to radio frequency interference and receiver sensitivity roll-off at the band edges.
 
-4 observations during VLA bursts... One simultaneous detection. Lots more activity at Arecibo overall.
+In total, twelve Arecibo observations had some simultaneous coverage with the VLA. Four of those observations were simultaneous with bursts detected with the VLA and one of those observations detected the same VLA burst. During the first VLA burst with Arecibo coverage (MJD 57643), the PUPPI system failed so data were recorded with {\color{red} xx (Jason?)} at C band. No detection was made in that Arecibo data. Overall, there were many more bursts detected at Arecibo and a more detailed analysis will be presented in a future paper.
 
 \subsection{Effelsberg}
 
 % copied from Laura's paper
-Observations were conducted at an observing frequency of 4.6 to 5.1~GHz. The S60mm receiver has a system equivalent flux density of 18 Jy and a full-width half-max (FWHM) beam size of 2.4\arcmin at 4.85~GHz. Pulsar search mode data were recorded with the PFFTS backend. Total intensity spectra were recorded with a time resolution of 65.5~$\mu$s and a bandwidth of 500~MHz divided into 128 frequency channels. Due to a configuation error, a filter was added that limited the bandwidth to 100-MHz filter centered on 4.85 GHz for Sept 16--18. Note, the inter-channel DM smearing time for 560~pc cm$^{-3}$\ is $\sim$0.2 msec at 4.6 GHz.
+Observations were conducted at an observing frequency of 4.6 to 5.1~GHz. The S60mm receiver has a system equivalent flux density of 18 Jy and a full-width half-max (FWHM) beam size of 2.4\arcmin at 4.85~GHz. Pulsar search mode data were recorded with the PFFTS backend. Total intensity spectra were recorded with a time resolution of 65.5~$\mu$s and a bandwidth of 500~MHz divided into 128 frequency channels. Note, the inter-channel DM smearing time for 560~pc cm$^{-3}$\ is $\sim$0.2 msec at 4.6 GHz.
 
-100~MHz BW filter in place for two sessions coincident with VLA...
-
-2 observations during VLA bursts...
+Five Effelsberg observations had some simultaneous coverage with the VLA, of which two were simultaneous with VLA bursts. Unfortunately, due to a configuration error, a 100~MHz bandwidth filter centered at 4.85~GHz was in place for both of these sessions. The sensitivity was about two times worse than the nominal value. No burst was detected in either observation.
 
 \subsection{AMI}
 
-4 observations during VLA bursts... Upper limit on burst flux density limits any significant "afterglow". Deep image sensitivity is limited by confusion and is approximately equal to the flux density observed by VLA (CITE).
+{\color{red} Kunal to provide description of AMI-LA}
+
+Six AMI-LA observations had some simultaneous coverage with the VLA, of which four covered VLA bursts. The upper limit on burst flux density limits any significant "afterglow". Deep image sensitivity is limited by confusion and is approximately equal to the flux density observed by VLA (CITE). {\color{red} Details from Kunal}
 
 \section{Results}
+
+\subsection{Multi-Telescope Burst Spectrum}
+As shown in Figure \ref{fig:multi}, only one burst from \frb\ was detected simultaneously at more than one observatory. The VLA burst on 57648 was detected at Arecibo with a significance of {\color{red} xx$\sigma$ (Jason)} The relative time delay between the VLA and Arecibo is {\color{red} xx (Jason)} ms...
+
+Figure **to do** shows the dynamic spectrum formed from the phased VLA and Arecibo data... 
+This simultaneous detection of a burst from roughly 1 to 4~GHz shows that some bursts cover more than an octave of frequency. This is one of three bursts with similar spectral coverage at Arecibo, so the other nondetections imply that those bursts had a smaller spectral coverage. In fact, as described in \S \ref{sec:spec}, most of the VLA bursts appear to be fully contained in the band from 2.5 to 3.5~GHz, which implies a much smaller spectral coverage for typical bursts.
+
+**Insert figure of VLA/AO dynamic spectrum on 57648**
+
+%\begin{figure}[htb]
+%\begin{center}
+%\includegraphics[width=0.9\columnwidth]{}
+%\caption{
+%\label{fig:}}
+%\end{center}
+%\end{figure}
 
 \subsection{VLA Bursts}
 
 \subsubsection{Dynamic Spectra}
-Figure \ref{fig:sgram} shows the spectrograms of all nine bursts detected by \rf.
+\label{sec:spec}
+Figure \ref{fig:sgram} shows the spectrograms of all nine bursts detected by the VLA. We improved on the initial analysis presented in (CITE) by using a better calibration scheme and optimizing the image SNR over a fine DM grid. Table \ref{tab:spec} shows the improved burst parameters using this new scheme. 
 
 \begin{figure*}[htb]
 \begin{center}
  \begin{minipage}{2\columnwidth}
-  \includegraphics[width=0.25\columnwidth]{sgram_57623.png}
-  \includegraphics[width=0.25\columnwidth]{sgram_57633_scan7.png}
-  \includegraphics[width=0.25\columnwidth]{sgram_57633_scan13.png}
+  \includegraphics[width=0.18\columnwidth]{sgram_57623.png}
+  \includegraphics[width=0.18\columnwidth]{sgram_57633_scan7.png}
+  \includegraphics[width=0.18\columnwidth]{sgram_57633_scan13.png}
+  \includegraphics[width=0.18\columnwidth]{sgram_57638.png}
+  \includegraphics[width=0.18\columnwidth]{sgram_57643.png}
  \end{minipage}
 
  \begin{minipage}{2\columnwidth}
-  \includegraphics[width=0.25\columnwidth]{sgram_57638.png}
-  \includegraphics[width=0.25\columnwidth]{sgram_57643.png}
-  \includegraphics[width=0.25\columnwidth]{sgram_57645.png}
+  \includegraphics[width=0.18\columnwidth]{sgram_57645.png}
+  \includegraphics[width=0.18\columnwidth]{sgram_57646.png}
+  \includegraphics[width=0.18\columnwidth]{sgram_57648.png}
+  \includegraphics[width=0.18\columnwidth]{sgram_57649.png}
  \end{minipage}
 
- \begin{minipage}{2\columnwidth}
-  \includegraphics[width=0.25\columnwidth]{sgram_57646.png}
-  \includegraphics[width=0.25\columnwidth]{sgram_57648.png}
-  \includegraphics[width=0.25\columnwidth]{sgram_57649.png}
- \end{minipage}
- \caption{Spectrograms (time vs frequency intensity maps) for all nine VLA bursts. Note that bursts are detected in 5~ms images generated from dedispersed visibilities.
+ \caption{Spectrograms (time vs frequency intensity maps) for the nine VLA bursts. Starting at the top left, the correspond to bursts 57623, 57633.68, 57633.70, 57638, 57643, 57645, 57646, 57648, and 57649. Note that bursts are detected in 5~ms images generated from dedispersed visibilities.
  \label{fig:sgram}}
 \end{center}
 \end{figure*}
 
-We used a fine dispersion grid to find the best-fit DM for each burst. Table \ref{tab:spec} shows the best-fit DM values... Dispersion measure changes between bursts significant?
+The optimal DM values range from 552 to 572 pc cm$^{-3}$ for all bursts and from 552 to 561 pc cm$^{-3}$ for bursts with SNR$>30$. The expectation is that the VLA 3~GHz observing band will lose 10\% of its sensitivity for DM in error by roughly 10 pc cm$^{-3}$ \citep{2003ApJ...596.1142C}. However, the peak DM can be determined with a much higher precision (scaling linearly with the significance of the burst). We tested this model by simulating a burst with SNR$=30$ and measuring its detection significance as a function of DM. The simulation parameters were reproduced at the known DM with a precision of roughly 1 pc cm$^{-3}$. This suggests that the measured variation in DM for \frb is intrinsic to the bursts, rather than due to measurement uncertainty. This is consistent with the observation of intrinsic burst spectrotemporal structure that varies between bursts (CITE: WEIRD BURST).
 
-\begin{table}
-\caption{Spectral Modeling of Bursts}
+\begin{table*}
+\caption{Properties of Bursts from \frb}
 \centering
-\begin{tabular}{llll}
+\begin{tabular}{lcccccc}
 \hline
-Burst & Peak & Center & Width \\
-(MJD) & (Jy *not normed yet*) & (ch) & (ch) \\ \hline
-57623 & 33 & 69 & 32 \\
-57633, scan 7 & 260 & 163 & 55 \\
-57633, scan 13 & & & \\
-57638 & & & \\
-57643 & 55 & 69 & 56 \\
-57645 & & & \\
-57646 & & & \\
-57648 & & & \\
-57649 & & & \\ \hline
+Date     & S$_{\rm{int}}$ & Image SNR & DM$_{\rm{opt}}$ & S$_{\rm{peak}}$ & Center & FWHM \\
+(MJD)    & (mJy) &  & (pc cm$^{-3})$ & (mJy) & (GHz) & (MHz) \\ \hline
+57623    & 258 & 38 & 561 & 0.41             & 2.8 & 300 \\
+57633.68 & 2000 & 179 & 554 & 1.90           & 3.2 & 520 \\
+57633.70 & 105 & 15 & 559 & $>$0.188          & $<$2.5 & $>$350 \\
+57638    & 65  & 12 & 556 & 0.07             & 3.1 & 410 \\
+57643    & 375 & 100 & 560 & 0.39            & 2.8 & 520 \\
+57645    & 38  & 13 & 572 & 0.06             & 2.8 & 210 \\
+57646    & 69  & 20 & 555 & $>$0.16          & $<$2.5 & $>$400 \\
+57648\tablenotemark{a}    & 97  & 25 & 559 & 0.11 & 2.9 & 420 \\
+57649    & 110 & 36 & 552 & 0.07             & 2.9 & 880 \\ \hline
 \end{tabular}
+\tablenotetext{a}{Detected simultaneously with Arecibo between 1.15 and 1.73~GHz.}
 \label{tab:spec}
-\end{table} 
+\end{table*} 
 
 \subsubsection{Spectral modeling}
-After detection, we refined the analysis of each burst offline. Burst spectra are shown in Figure \ref{fig:spec}...
+After finding an optimal burst DM, we extract a spectrum from the integration with peak SNR. **need to confirm that bursts were unresolved in time**
+
+Burst spectra are shown in Figure \ref{fig:spec}...
+
 
 \begin{figure*}[h!]
 \begin{center}
@@ -167,17 +270,7 @@ After detection, we refined the analysis of each burst offline. Burst spectra ar
   \includegraphics[width=0.3\columnwidth]{spec_57648.png}
   \includegraphics[width=0.3\columnwidth]{spec_57649.png}
  \end{minipage}
-\caption{Spectra of nine bursts seen by the VLA from 2.5 to 3.5~GHz.  **LABELS ALL SAME FREQ. SOME SHOULD START HIGHER FOR DROPPED CHANNELS**
-%Table?
-%57623 (DM$=561$ pc cm$^{-3}$)
-%57633, Scan 7 (DM$=554$ pc cm$^{-3}$)
-%57633, Scan 13 (DM$=559$ pc cm$^{-3}$)
-%57638 (DM$=554$ pc cm$^{-3}$)
-%57643 (DM$=559$ pc cm$^{-3}$)
-%57645 (DM$=572$ pc cm$^{-3}$)
-%57646 (DM$=573$ pc cm$^{-3}$)
-%57648 (DM$=559$ pc cm$^{-3}$)
-%57649 (DM$=552$ pc cm$^{-3}$).
+\caption{Spectra of nine bursts seen by the VLA from 2.5 to 3.5~GHz. Orthongonal circular polarizations (RR and LL) are plotted separately. **LABELS ALL SAME FREQ. SOME SHOULD START HIGHER FOR DROPPED CHANNELS**
 \label{fig:spec}}
 \end{center}
 \end{figure*}
@@ -185,7 +278,7 @@ After detection, we refined the analysis of each burst offline. Burst spectra ar
 We fit a Gaussian model to each burst to estimate their characteristic width and peak flux... As shown in Table \ref{tab:spec}, the typical frequency scale is xx MHz...
 
 \subsubsection{Spectral Autocorrelation}
-The spectral autocorrelation is used to infer both intrinsic and scintillation properties \citep{}. Figure \ref{fig:acf} shows the spectral autocorrellation for the MJD 57633, scan 7 burst. Some marginal evidence of spectral correlation on the scale of the channel resolution (4~MHz)?
+The spectral autocorrelation is used to infer both intrinsic and scintillation properties \citep{}. Figure \ref{fig:acf} shows the spectral autocorrellation for the MJD 57633.68 burst. Some marginal evidence of spectral correlation on the scale of the channel resolution (4~MHz)?
 
 \begin{figure}[htb]
 \begin{center}
@@ -198,21 +291,7 @@ The spectral autocorrelation is used to infer both intrinsic and scintillation p
 \subsubsection{Circular Polarization}
 The VLA S-band recievers natively measure circular polarization, although observations did not include polarization calibration procedures. Crude constraints on circular polarization are possible by comparing the burst intensity in right and left-hand polarized data products. The apparent circular polarization fraction ($(RR-LL)/(RR+LL)$) for the most significant bursts are all less than 3\%. FRB121102 was located 2.3 arcmin away from pointing center, where systematic effects have been measured as large as 3\% (Perley et al 2016, VLA memo). We conclude that the S-band bursts seen by the VLA have a circular polarization of less than 3\%.
 
-\subsection{Multi-Telescope Burst Spectra}
-See Figure \ref{fig:multi} for coverage of VLA bursts... Arecibo had coverage for 57648 VLA burst and sees a coincident burst. No other coincident bursts seen. **Make figure of VLA/AO dynamic spectrum on 57648**
-
-%\begin{figure}[htb]
-%\begin{center}
-%\includegraphics[width=0.9\columnwidth]{}
-%\caption{
-%\label{fig:}}
-%\end{center}
-%\end{figure}
-
-Given measured band for VLA/AO detection/limits, plus in-band VLA detections, we can characterize typical burst spectrum as an envelope of width xx MHz. The center frequency can fall at any GHz band.
-
 \subsection{Brightness Distribution}
-
 The bursts seen by the VLA range in significance from 10 to 150$\sigma$. Table \ref{tab:spec} shows the estimated burst luminosity from spectral modeling...
 
 Figure \ref{fig:logns} shows the flux distribution of the nine VLA bursts. Quantify flatness...
@@ -280,7 +359,7 @@ $$E_{\rm burst} = 4\pi D^2 (\delta\Omega/4\pi) A_{\nu} \Delta\nu
 \approx 10^{38}\, {\rm erg}\,(\delta\Omega/4\pi) D_{\rm Gpc}^2  (A_{\nu} / 0.1\ {\rm Jy\ ms}) \Delta\nu_{\rm GHz}.$$
 The unknown  emission solid angle $\delta\Omega$
 could be very small due to relativistic beaming, and together with a distance possibly much smaller than 1~Gpc, could reduce the energy requirement significantly.  However, the {\it total} energy emitted could be larger depending on the duration of the emission in the source frame and other model-dependent details.
-Either way, the burst energies from \frb\ are not inconsistent with those that might be expected from the magnetosphere of a compact object\cite{cw16}.
+Either way, the burst energies from \frb\ are not inconsistent with those that might be expected from the magnetosphere of a compact object\cite{2016MNRAS.457..232C}.
 
 
 
@@ -294,7 +373,7 @@ Given that bursts have $<1$~GHz-scale spectra, wide bandwidths improve odds of d
 
 \section{Conclusions}
 
-
+ % include timeline and science scope for new localizations? realfast plug and reference cosmology papers, contingency on DMhost, etc.
 
 \bibliographystyle{apj}
 
