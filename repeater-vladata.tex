@@ -25,16 +25,6 @@
 \author[0000-0002-4119-9963]{C.~J.~Law}
 \affiliation{Dept of Astronomy and Radio Astronomy Lab, University of California, Berkeley, CA 94720, USA}
 
-\author{R.~S.~Wharton}
-\affiliation{Cornell Center for Astrophysics and Planetary Science and Department of Astronomy, Cornell University, Ithaca, NY 14853, USA}
-
-\author{M.~A.~McLaughlin}
-\affiliation{Department of Physics and Astronomy, West Virginia University, Morgantown, WV 26506, USA}
-\affiliation{Center for Gravitational Waves and Cosmology, West Virginia University, Chestnut Ridge Research Building, Morgantown, WV 26505}
-
-\author{J.~M.~Cordes}
-\affiliation{Cornell Center for Astrophysics and Planetary Science and Department of Astronomy, Cornell University, Ithaca, NY 14853, USA}
-
 %\author{M.~W.~Abruzzo}
 %\affiliation{Haverford College, 370 Lancaster Ave, Haverford, PA 19041, USA}
 
@@ -55,6 +45,9 @@
 \author{B.~J.~Butler}
 \affiliation{National Radio Astronomy Observatory, Socorro, NM 87801, USA}
 \author{S.~Chatterjee}
+\affiliation{Cornell Center for Astrophysics and Planetary Science and Department of Astronomy, Cornell University, Ithaca, NY 14853, USA}
+
+\author{J.~M.~Cordes}
 \affiliation{Cornell Center for Astrophysics and Planetary Science and Department of Astronomy, Cornell University, Ithaca, NY 14853, USA}
 
 \author{P.~Demorest}
@@ -83,6 +76,10 @@
 %\author[0000-0001-9814-2354]{B.~Marcote}
 %\affiliation{Joint Institute for VLBI ERIC, Postbus 2, 7990 AA Dwingeloo, The Netherlands}
 
+\author{M.~A.~McLaughlin}
+\affiliation{Department of Physics and Astronomy, West Virginia University, Morgantown, WV 26506, USA}
+\affiliation{Center for Gravitational Waves and Cosmology, West Virginia University, Chestnut Ridge Research Building, Morgantown, WV 26505}
+
 \author{K.~Mooley}
 \affiliation{University of Oxford, UK}
 
@@ -108,6 +105,8 @@
 %\author{S.~P.~Tendulkar}
 %\affiliation{Department of Physics and McGill Space Institute, McGill University, 3600 University St., Montreal, QC H3A 2T8, Canada}
 
+\author{R.~S.~Wharton}
+\affiliation{Cornell Center for Astrophysics and Planetary Science and Department of Astronomy, Cornell University, Ithaca, NY 14853, USA}
 
 
 \begin{abstract}
@@ -117,7 +116,7 @@ The millisecond radio transients known as Fast Radio Bursts have recently emerge
 \section{Introduction}
 Fast Radio Bursts (FRBs) are a new class of millisecond-duration radio transient with a dispersion measure (DM) that implies that they originate outside of our Galaxy. At extragalactic (and potentially cosmological) distances, they are not only unusually luminous, but they provide a new tracer of other galaxies and the intergalactic medium (IGM). In this way, FRBs have opened a whole new playground in astrophysics \citep[e.g.,][]{2014A&A...562A.137F, 2014ApJ...780L..33M, 2016MNRAS.457..232C}. However, that potential has been hamstrung by the lack of a definitive association of an FRB to an extragalactic host.
 
-This paper is part of a series that presents the first localization and host identification of an FRB (CITE, CITE, ...). \frb, also known as the ``repeating FRB'', was first detected in November 2012 by the Arecibo Observatory \citep{2014ApJ...790..101S}. In mid 2015, new Arecibo observations revealed a series of bursts at the same DM and sky position demonstrating that FRBs are capable of repetition \citep{2016Natur.531..202S}. Beginning in August of 2015, we made the first of nine detections of \frb\ with the Very Large Array (CITE) and localized it with a precision of 0.1\arcsec. Deep radio and optical observing shows that \frb\ is unambiguously associated with a persistent radio and optical source at a redshift of 0.193 (CITE).
+This paper is part of a series that presents the first localization and host identification of an FRB (CITE: LOC, OPT, EVN, RADIO CPART, XRAY, EFF, WEIRD). \frb, also known as the ``repeating FRB'', was first detected in November 2012 by the Arecibo Observatory \citep{2014ApJ...790..101S}. In mid 2015, new Arecibo observations revealed a series of bursts at the same DM and sky position demonstrating that FRBs are capable of repetition \citep{2016Natur.531..202S}. Beginning in August of 2015, we made the first of nine detections of \frb\ with the Very Large Array (CITE: LOC) and localized it with a precision of 0.1\arcsec. Deep radio and optical observing shows that \frb\ is unambiguously associated with a persistent radio and optical source at a redshift of 0.193 (CITE: OPT, EVN).
 
 \frb\ has now been localized three orders of magnitude better than any other FRB and placed at a cosmological distance. Its lookback and luminosity distances are 746 and 972 Mpc \citep{planck15}, which are orders of magnitude larger than any other millisecond transient. This shows that FRBs:
 \begin{itemize}
@@ -150,7 +149,7 @@ The \frb\ observing campaign started in late 2015 with a 10~hr campaign observed
 
 All VLA fast-sampled data were observed with 5~ms sampling, 256 channels, and dual-circular polarization \citep[as in]{2015ApJ...807...16L}. To maximize sensitivity, the channel frequency width was set to maintain sensitivity to the known DM of \frb, while maximizing the total bandwidth. The total bandwidth at L (1.4~GHz), S (3~GHz), and C (6~GHz) bands was 256~MHz, 1024~MHz, and 2048~MHz, respectively. The 3~GHz data recorded data in 8 spectral windows with 32 channels each.
 
-Observations in August and Septmeber were searched by a prototype version of \rf\footnote{See \url{http://realfast.io}.}. \rf\ is a real-time, fast imaging transient search system. The current, prototype runs on existing, CPU-based hardware of the VLA correlator backend, while the future \rf\ will run on a dedicated GPU cluster. The transient search pipeline software is called \emph{rtpipe}\footnote{See \url{https://github.com/caseyjlaw/rtpipe}} and is mostly written in Python. The transient search pipeline is described in \citet{2015ApJ...807...16L} and performs data calibration, flagging, dedispersion, and imaging. Images were formed for each integration at DMs of 0, 546, 556.9, 560, and 565 pc cm$^{-3}$. Gain calibration is read from the "telcal" system, which uses phase-only calibration on the previous gain calibrator. A flux scale is calculated for each spectral window from an observation on *xx* and applied to all burst spectra.
+Observations in August and Septmeber were searched by a prototype version of \rf\footnote{See \url{http://realfast.io}.}. \rf\ is a real-time, fast imaging transient search system. The current, prototype runs on existing, CPU-based hardware of the VLA correlator backend, while the future \rf\ will run on a dedicated GPU cluster. The transient search pipeline software is called \emph{rtpipe}\footnote{See \url{https://github.com/caseyjlaw/rtpipe}} and is mostly written in Python. The transient search pipeline is described in \citet{2015ApJ...807...16L} and performs data calibration, flagging, dedispersion, and imaging. Images were formed for each integration at DMs of 0, 546, 556.9, 560, and 565 pc cm$^{-3}$. Gain calibration is read from the "telcal" system, which uses phase-only calibration on the previous gain calibrator. A flux scale is calculated for each spectral window from an observation on {\color{red} xx (Bryan)} and applied to all burst spectra.
 
 Burst detections and localizations were made within hours of data being recorded. The transient search starts when data are recorded, but this prototype of \rf\ is a factor of several times slower than real-time, so we refer to the detection as "quasi real-time". Each image with a pixel higher than 6.4$\sigma$ has some rudimentary data saved to capture both real and thermal-noise candidates as a check of data quality. For each image with a pixel higher than 7.4$\sigma$, \rf\ generates a candidate visualization with an image and spectrum. More detailed analysis, including improved calibration and localization, is conducted offline. 
 
@@ -174,12 +173,12 @@ Five Effelsberg observations had some simultaneous coverage with the VLA, of whi
 
 {\color{red} Kunal to provide description of AMI-LA}
 
-Six AMI-LA observations had some simultaneous coverage with the VLA, of which four covered VLA bursts. The upper limit on burst flux density limits any significant "afterglow". Deep image sensitivity is limited by confusion and is approximately equal to the flux density observed by VLA (CITE). {\color{red} Details from Kunal}
+Six AMI-LA observations had some simultaneous coverage with the VLA, of which four covered VLA bursts. The upper limit on burst flux density limits any significant "afterglow". Deep image sensitivity is limited by confusion and is approximately equal to the flux density observed by VLA (CITE: RADIO CPART). {\color{red} Details from Kunal}
 
 \section{Results}
 
 \subsection{Multi-Telescope Burst Spectrum}
-As shown in Figure \ref{fig:multi}, only one burst from \frb\ was detected simultaneously at more than one observatory. The VLA burst on 57648 was detected at Arecibo with a significance of {\color{red} xx$\sigma$ (Jason)} The relative time delay between the VLA and Arecibo is {\color{red} xx (Jason)} ms...
+Of the four VLA burst detections from \frb with simultaneous observations \frb (Figure \ref{fig:multi}), one was detected with a consistent dedispersed time. The VLA burst on 57648 was detected at Arecibo with a significance of {\color{red} xx$\sigma$ (Jason)} The relative time delay between the VLA and Arecibo is {\color{red} xx (Jason)} ms...
 
 Figure **to do** shows the dynamic spectrum formed from the phased VLA and Arecibo data... 
 This simultaneous detection of a burst from roughly 1 to 4~GHz shows that some bursts cover more than an octave of frequency. This is one of three bursts with similar spectral coverage at Arecibo, so the other nondetections imply that those bursts had a smaller spectral coverage. In fact, as described in \S \ref{sec:spec}, most of the VLA bursts appear to be fully contained in the band from 2.5 to 3.5~GHz, which implies a much smaller spectral coverage for typical bursts.
@@ -195,10 +194,6 @@ This simultaneous detection of a burst from roughly 1 to 4~GHz shows that some b
 %\end{figure}
 
 \subsection{VLA Bursts}
-
-\subsubsection{Dynamic Spectra}
-\label{sec:spec}
-Figure \ref{fig:sgram} shows the spectrograms of all nine bursts detected by the VLA. We improved on the initial analysis presented in (CITE) by using a better calibration scheme and optimizing the image SNR over a fine DM grid. Table \ref{tab:spec} shows the improved burst parameters using this new scheme. 
 
 \begin{figure*}[htb]
 \begin{center}
@@ -222,34 +217,40 @@ Figure \ref{fig:sgram} shows the spectrograms of all nine bursts detected by the
 \end{center}
 \end{figure*}
 
-The optimal DM values range from 552 to 572 pc cm$^{-3}$ for all bursts and from 552 to 561 pc cm$^{-3}$ for bursts with SNR$>30$. The expectation is that the VLA 3~GHz observing band will lose 10\% of its sensitivity for DM in error by roughly 10 pc cm$^{-3}$ \citep{2003ApJ...596.1142C}. However, the peak DM can be determined with a much higher precision (scaling linearly with the significance of the burst). We tested this model by simulating a burst with SNR$=30$ and measuring its detection significance as a function of DM. The simulation parameters were reproduced at the known DM with a precision of roughly 1 pc cm$^{-3}$. This suggests that the measured variation in DM for \frb is intrinsic to the bursts, rather than due to measurement uncertainty. This is consistent with the observation of intrinsic burst spectrotemporal structure that varies between bursts (CITE: WEIRD BURST).
+
+\subsubsection{Dynamic Spectra}
+\label{sec:spec}
+Figure \ref{fig:sgram} shows the spectrograms of all nine bursts detected by the VLA. We improved on the initial analysis presented in (CITE: LOC) by using a better calibration scheme and optimizing the image SNR over a fine DM grid. Table \ref{tab:spec} shows the improved burst parameters using this new scheme. 
 
 \begin{table*}
 \caption{Properties of Bursts from \frb}
 \centering
-\begin{tabular}{lcccccc}
+\begin{tabular}{lccccccc}
 \hline
-Date     & S$_{\rm{int}}$ & Image SNR & DM$_{\rm{opt}}$ & S$_{\rm{peak}}$ & Center & FWHM \\
-(MJD)    & (mJy) &  & (pc cm$^{-3})$ & (mJy) & (GHz) & (MHz) \\ \hline
-57623    & 258 & 38 & 561 & 0.41             & 2.8 & 300 \\
-57633.68 & 2000 & 179 & 554 & 1.90           & 3.2 & 520 \\
-57633.70 & 105 & 15 & 559 & $>$0.188          & $<$2.5 & $>$350 \\
-57638    & 65  & 12 & 556 & 0.07             & 3.1 & 410 \\
-57643    & 375 & 100 & 560 & 0.39            & 2.8 & 520 \\
-57645    & 38  & 13 & 572 & 0.06             & 2.8 & 210 \\
-57646    & 69  & 20 & 555 & $>$0.16          & $<$2.5 & $>$400 \\
-57648\tablenotemark{a}    & 97  & 25 & 559 & 0.11 & 2.9 & 420 \\
-57649    & 110 & 36 & 552 & 0.07             & 2.9 & 880 \\ \hline
+Date     & S$_{\rm{int}}$ & Image SNR & L$_{\rm{int}}$ & DM$_{\rm{opt}}$ & S$_{\rm{peak}}$ & Center & FWHM \\
+(MJD)    & (mJy) &  & (ergs?) & (pc cm$^{-3})$ & (mJy?) & (GHz) & (MHz) \\ \hline
+57623    & 258 & 38 & & 561 & 0.41             & 2.8 & 300 \\
+57633.68 & 2000 & 179 & & 554 & 1.90           & 3.2 & 520 \\
+57633.70 & 105 & 15 & & 559 & $>$0.188          & $<$2.5 & $>$350 \\
+57638    & 65  & 12 & & 556 & 0.07             & 3.1 & 410 \\
+57643    & 375 & 100 & & 560 & 0.39            & 2.8 & 520 \\
+57645    & 38  & 13 & & 572 & 0.06             & 2.8 & 210 \\
+57646    & 69  & 20 & & 555 & $>$0.16          & $<$2.5 & $>$400 \\
+57648\tablenotemark{a}    & 97 & 25 & & 559 & 0.11 & 2.9 & 420 \\
+57649    & 110 & 36 & & 552 & 0.07             & 2.9 & 880 \\ \hline
 \end{tabular}
 \tablenotetext{a}{Detected simultaneously with Arecibo between 1.15 and 1.73~GHz.}
 \label{tab:spec}
 \end{table*} 
 
+\subsubsection{Dispersion Meausres}
+The initial VLA detections were made by searching a DM grid that allowed inter-DM sensitivity losses up to roughly 10\%. For the VLA 3~GHz observing band, we estimated that trials could be separated by at most 10 pc cm$^{-3}$ \citep{2003ApJ...596.1142C}. We refined that analysis by maximizing the image SNR for DMs spaced by 1 pc cm$^{-3}$. The optimal DM values range from 552 to 572 pc cm$^{-3}$ for all bursts and from 552 to 561 pc cm$^{-3}$ for bursts with SNR$>30$. 
+
+The uncertainty in the peak DM measurement is defined by the DM sensitivity loss curve and the significance of the burst. We tested this model by simulating a burst with SNR$=30$ and measuring its detection significance as a function of DM. The simulation parameters were reproduced at the known DM with a precision of roughly 1 pc cm$^{-3}$. This suggests that the measured variation in DM for \frb is intrinsic to the bursts, rather than due to measurement uncertainty. This is consistent with the observation of intrinsic burst spectrotemporal structure that varies between bursts (CITE: WEIRD).
+
+
 \subsubsection{Spectral modeling}
-After finding an optimal burst DM, we extract a spectrum from the integration with peak SNR. **need to confirm that bursts were unresolved in time**
-
-Burst spectra are shown in Figure \ref{fig:spec}...
-
+After finding an optimal burst DM, we extract a spectrum from the integration with peak SNR (Figure \ref{fig:spec}). After DM optimization, all bursts appear unresolved at the 5~ms time resolution of the VLA data (except maybe 57633.68, brightest burst). 
 
 \begin{figure*}[h!]
 \begin{center}
@@ -275,15 +276,20 @@ Burst spectra are shown in Figure \ref{fig:spec}...
 \end{center}
 \end{figure*}
 
-We fit a Gaussian model to each burst to estimate their characteristic width and peak flux... As shown in Table \ref{tab:spec}, the typical frequency scale is xx MHz...
+The burst spectra are generally characterized by a broad, Gaussian shape that with strong modulation between channels. We fit a Gaussian shape to each burst to estimate their characteristic width and peak flux, as summarized in Table \ref{tab:spec}. The channel-scale modulation is as high as 100\% (see \S \ref{sec:auto}) and is consistent with an exponential distribution. While this introduces a strong bias to the best-fit Gaussian, the typical burst spectral width has a characteristic width of 500~MHz.
+
+All but two of the best-fit Gaussians are centered inside the 3~GHz band and most are fully contained by the 1~GHz wide band. This is consistent with previous detections of \frb by Arecibo, which showed quasi-broadband structure \citep{2016arXiv160308880S} and large variation in the implied spectral index \citep{2014ApJ...790..101S}. A detailed discussion of \frb\ burst spectra is presented in (CITE: WEIRD).
 
 \subsubsection{Spectral Autocorrelation}
-The spectral autocorrelation is used to infer both intrinsic and scintillation properties \citep{}. Figure \ref{fig:acf} shows the spectral autocorrellation for the MJD 57633.68 burst. Some marginal evidence of spectral correlation on the scale of the channel resolution (4~MHz)?
+\label{sec:auto}
+Autocorrelation of the burst signal (both temporal and spectral) can be used to infer both intrinsic properties and modulation due to scintillation (CITE: Cordes et al?). The VLA data have a channel resolution of 4~MHz, which is relatively coarse compared to single-dish data (e.g., CITE: WEIRD). However, diffractive scintillation observed for other FRBs \citep{} {\color{red}could/could not (Jim?)} induce structure on this scale near 3~GHz.
+
+Figure \ref{fig:acf} shows the spectral autocorrellation for the strongest burst (MJD 57633.68). (Marginal evidence of spectral correlation on the scale of 4~MHz) {\color{red} Comment, Jim?}
 
 \begin{figure}[htb]
 \begin{center}
 \includegraphics[width=0.9\columnwidth]{acf_57633_scan7}
-\caption{
+\caption{The spectral autocorrelation for the burst from \frb\ at MJD 57633.68. Blue shows the autocorrelation for the burst and green shows an autocorrelation of a representative spectrum with no burst.
 \label{fig:acf}}
 \end{center}
 \end{figure}
@@ -291,8 +297,36 @@ The spectral autocorrelation is used to infer both intrinsic and scintillation p
 \subsubsection{Circular Polarization}
 The VLA S-band recievers natively measure circular polarization, although observations did not include polarization calibration procedures. Crude constraints on circular polarization are possible by comparing the burst intensity in right and left-hand polarized data products. The apparent circular polarization fraction ($(RR-LL)/(RR+LL)$) for the most significant bursts are all less than 3\%. FRB121102 was located 2.3 arcmin away from pointing center, where systematic effects have been measured as large as 3\% (Perley et al 2016, VLA memo). We conclude that the S-band bursts seen by the VLA have a circular polarization of less than 3\%.
 
+\subsection{Temporal Statistics}
+Periodicity search...
+Figure \ref{fig:ls} shows a Lomb-Scargle periodogram...
+Lots of excess power corresponding to periods shorter than 1 hour...
+Assuming periods with power peaks, we find clusters of bursts with same rotational phase...
+Possible that we are seeing an underlying period with a very wide pulse phase window...
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=0.9\columnwidth]{lombscargle}
+\caption{Lomb-Scargle periodogram with 95\% limit on power from last observing campaign
+\label{fig:ls}}
+\end{center}
+\end{figure}
+
+Burst detections were made very inhomogenously through the roughly 63 hours of observing toward FRB 121102. In the first 30 hours of observing at S-band no bursts were detected, while nine bursts were detected in the last 27 hours of S-band observing. The data quality is high and RFI did not significantly impact sensitivity, so the inhomogeneous burst distribution is not an observational artifact, but rather an indication of a non-stationary burst detection probability. Assuming that the burst detection probability follows a Poisson distribution, the nondetection in the first half of S-band limits the FRB rate to $\rm{R}<0.1$ hour$^{-1}$ (95\% confidence limit). The mean detection rate for the last part of the campaign was $\rm{R}=0.3$ hour$^{-1}$.
+
+Moreover, there is weak evidence that the \frb\ burst rate changes during the last part of the campaign. We modeled the event detection probability as a Poisson probability with a rate parameter that scales linearly with time (relative to first burst detection) as $\lambda = a + b * (\rm{MJD} - 57623)$. We then calculated the probability of measuring the observed event rate as $\prod_{i} P_i(R)$. Figure \ref{fig:rate} shows the ($a$, $b$) parameter space with contours of 50, 90, and 95\% confidence contours. 
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=0.9\columnwidth]{event_rate_contours}
+\caption{Rate versus rate change during last campaign.
+\label{fig:rate}}
+\end{center}
+\end{figure}
+
 \subsection{Brightness Distribution}
-The bursts seen by the VLA range in significance from 10 to 150$\sigma$. Table \ref{tab:spec} shows the estimated burst luminosity from spectral modeling...
+Table \ref{tab:spec} shows burst luminosities...
+The significance of the nine bursts span more than an order of magnitude (12 to 179$\sigma$). This highlights the fact that the bursts have a relatively flat luminosity distribution.
 
 Figure \ref{fig:logns} shows the flux distribution of the nine VLA bursts. Quantify flatness...
 
@@ -306,31 +340,6 @@ Figure \ref{fig:logns} shows the flux distribution of the nine VLA bursts. Quant
 
 Compare luminosity distribution to flux distribution measured by \citep{2016ApJ...830...75V}...
 
-\subsection{Temporal Statistics}
-Burst detections were made very inhomogenously though the roughly 63 hours of observing toward FRB 121102. Data quality are relatively high and RFI did not significantly impact sensitivity, so the inhomogeneous burst distribution not an observational artifact.
-
-In the first $\sim25$\ hours observing at S-band no bursts were detected, while nine bursts were detected in the last $\sim30$ hours of S-band observing. Assuming the burst detection probability follows a stationary Poisson distribution, the nondetection in the first half of S-band limits the FRB rate to $\rm{R}<0.12$ hour$^{-1}$. The mean detection rate for the last part of the campaign was $\rm{R}=0.3$ hour$^{-1}$. The inconsistency shows that the detection probability is not stationary.
-
-Moreover, there is weak evidence that the \frb\ burst rate changes during the last part of the campaign. We modeled the event detection probability as a Poisson probability with a rate parameter that scales linearly with time as $R=a + b*(\rm{MJD} - 57623)$. We then calculated the probability of measuring the observed event rate as $\Pi P_i(R)$. Figure \ref{fig:rate} shows the ($a$, $b$) parameter space with contours of 50, 90, and 95\% confidence contours. 
-
-\begin{figure}[htb]
-\begin{center}
-\includegraphics[width=0.9\columnwidth]{event_rate_contours}
-\caption{Rate versus rate change during last campaign.
-\label{fig:rate}}
-\end{center}
-\end{figure}
-
-Figure \ref{fig:ls} shows a Lomb-Scargle periodogram...
-Lots of excess power corresponding to periods shorter than 1 hour.
-
-\begin{figure}[htb]
-\begin{center}
-\includegraphics[width=0.9\columnwidth]{lombscargle}
-\caption{Lomb-Scargle periodogram with 95\% limit on power from last observing campaign
-\label{fig:ls}}
-\end{center}
-\end{figure}
 
 
 \section{discussion}
