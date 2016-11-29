@@ -165,9 +165,12 @@ Five Effelsberg observations had some simultaneous coverage with the VLA, of whi
 
 \subsection{AMI}
 
-{\color{red} Kunal to provide description of AMI-LA}
+We observed FRB121102 with the Arcminute MicroKelvin Imager Large Array (AMI-LA; Zwart et al. 2008) for 3 hours each on four epochs starting MJDs 57643.3351, 57645.3317, 57648.3352, 57649.3353. Observations were made with the new digital correlator having 4096 channels across a 5 GHz bandwidth between 13--18 GHz with a 1s dump time. The phase calibrator, J0518+3306, was observed every 12 minutes for about 1.5 minutes. The AMI-LA data were binned to eight 0.625 GHz channels and processed (RFI excision and calibration) with a fully-automated pipeline, AMI-REDUCE (e.g. Davies et al. 2009; Perrott et al. 2013). Daily measurements of 3C48 and 3C286 were used for the absolute flux calibration, which is good to about 10\%. 
 
-Six AMI-LA observations had some simultaneous coverage with the VLA, of which four covered VLA bursts. The upper limit on burst flux density limits any significant "afterglow". Deep image sensitivity is limited by confusion and is approximately equal to the flux density observed by VLA (CITE: RADIO CPART). {\color{red} Details from Kunal}
+**find a place for this elsewhere**
+We inspected the calibrated visibilities, and did not find any signal above 20 mJy in the 1s samples at and in the vicinity of the detected bursts (MJDs 57643.45730263, 57645.42958602, 57648.4369149, and 57649.45175697 **add two more with VLA coverage**). Concatenating and imaging the 12 hours of calibrated data with the CASA tasks {\it concat} and {\it clean} also does not yield any significant detection at the FRB location. Although the statistical 3sigma upper limit is 60 uJy, extended mJy-level sources in the field cause sidelobe confusion (the AMI-LA angular resolution is $\sim$30 arcsec), and the actual upper limit is larger. We introduced artificial point sources at the FRB location using the CASA {\it sm} tool, and found that these sources can be recovered as long as their peak flux densities are more than $\sim$100 uJy. Hence, we place an upper limit of 100$\pm$10 uJy on any quiescent or possible radio "afterglow" (on $\sim$days timescale) signal from the FRB.
+
+Deep image sensitivity is limited by confusion and is approximately equal to the flux density observed by VLA (CITE: RADIO CPAR
 
 \section{Results}
 
