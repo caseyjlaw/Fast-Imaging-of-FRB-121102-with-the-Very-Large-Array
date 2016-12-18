@@ -212,9 +212,9 @@ This simultaneous detection of a burst from roughly 1 to 4~GHz shows that some b
 \end{figure*}
 
 
-\subsubsection{Dynamic Spectra}
+\subsubsection{Spectra}
 \label{sec:spec}
-Figure \ref{fig:sgram} shows the dynamic spectra of all nine bursts detected by the VLA. We improved on the initial analysis presented in (CITE: LOC) by using a better calibration scheme and optimizing the detection signifnance over a range of DM. Table \ref{tab:spec} shows the improved burst parameters using this new scheme. 
+Figure \ref{fig:sgram} shows the dynamic spectra of all nine bursts detected by the VLA. We improved on the initial analysis presented in (CITE: LOC) by using a better calibration scheme and optimizing the detection significance over a find grid of DM ($\Delta DM=1$ \rm{pc} \rm{cm}^{-3}$). Table \ref{tab:spec} shows the improved burst parameters using this new scheme. 
 
 \begin{table*}
 \caption{Properties of Bursts from \frb}
@@ -238,25 +238,7 @@ Date     & S$_{\rm{int}}$ & Image SNR & L$_{\rm{int}}$ & DM$_{\rm{opt}}$ & S$_{\
 \label{tab:spec}
 \end{table*} 
 
-\subsubsection{Dispersion Meausres}
-The initial VLA detections were made by searching a DM grid that allowed inter-DM sensitivity losses up to roughly 10\%. For the VLA 3~GHz observing band, we estimated that trials could be separated by at most 10 pc cm$^{-3}$ \citep{2003ApJ...596.1142C}. We refined that analysis by maximizing the image SNR for DMs spaced by 1 pc cm$^{-3}$. The optimal DM values range from 552 to 572 pc cm$^{-3}$.
-
-The uncertainty in the peak DM measurement is defined by the DM sensitivity loss curve and the significance of the burst. We estimate the DM likelihood distribution for each burst by using a generative model for the burst spectra \citep{2010arXiv1008.4686H}. The burst spectra as a function of frequency were fixed according to the broad Gaussian shape defined below (\S \ref{sec:specmod}) and made into dynamic spectra by applying a frequency-dependent delay. We assume a Gaussian error distribution for channels with low signal and error up to 100\% of the model amplitude for channels with high signal. This is consistent with the large channel-to-channel variations observed (potentially due to diffractive scintillation).
-
-Figure \ref{fig:dmmodel} compares the 68\% ($1\sigma$) bounds on the DM for all nine VLA bursts. 
-
-\begin{figure}[htb]
-\begin{center}
-\includegraphics[width=0.9\columnwidth]{dmmodel}
-\caption{Comparison of 68\% ($\1sigma$) confidence intervals for DM for nine bursts detected by the VLA.
-\label{fig:dmmodel}}
-\end{center}
-\end{figure}
-
-
-\subsubsection{Spectral modeling}
-\label{sec:specmod}
-After finding an optimal burst DM, we extract a spectrum from the integration with peak SNR (Figure \ref{fig:spec}). After DM optimization, all bursts appear unresolved at the 5~ms time resolution of the VLA data (except maybe 57633.68, brightest burst). 
+Figure \ref{fig:spec} shows the spectrum of the integration and DM that maximizes the burst detection significance. After DM optimization, all bursts appear unresolved at the 5~ms time resolution of the VLA data. One possible exception is the brightest burst at 57633.68, for which roughly 10\% of the peak flux density is seen in adjacent 5~ms integrations.
 
 \begin{figure*}[ht]
 \begin{center}
@@ -282,15 +264,33 @@ After finding an optimal burst DM, we extract a spectrum from the integration wi
 \end{center}
 \end{figure*}
 
-The burst spectra are generally characterized by a broad, Gaussian shape that with strong modulation between channels. We fit a Gaussian shape to each burst to estimate their characteristic width and peak flux, as summarized in Table \ref{tab:spec}. The channel-scale modulation is as high as 100\% (see \S \ref{sec:auto}) and is consistent with an exponential distribution. This introduces a strong bias to the best-fit Gaussian, but the models are reliable enough to show that the typical burst has a spectral width of 500~MHz.
+The burst spectra are generally characterized by a broad, Gaussian shape that with strong inter-channel modulation. We fit a Gaussian shape to each burst to estimate their characteristic width and peak flux, as summarized in Table \ref{tab:spec}. The channel-scale modulation is as high as 100\% (see \S \ref{sec:auto}) and is consistent with an exponential distribution. This introduces a strong bias to the best-fit Gaussian, but these simple fits are reliable enough to show that the typical burst has a spectral width of 500~MHz.
 
-All but two of the best-fit Gaussians are centered inside the 3~GHz band and most are fully contained by the 1~GHz wide band. This is consistent with previous detections of \frb by Arecibo, which showed quasi-broadband structure \citep{2016arXiv160308880S} and large variation in the implied spectral index \citep{2014ApJ...790..101S}. A detailed discussion of \frb\ burst spectra is presented in (CITE: WEIRD).
+All but two of the best-fit Gaussians are centered inside the 3~GHz band and most appear contained by the 1~GHz wide band. This is consistent with previous detections of \frb by Arecibo, which showed quasi-broadband structure \citep{2016arXiv160308880S} and large variation in the implied spectral index \citep{2014ApJ...790..101S}. A detailed discussion of high-resolution \frb\ burst spectra seen by the Arecibo Observatory will be presented elsewhere (CITE: WEIRD).
+
+\subsubsection{Dispersion}
+The initial VLA detections were made by searching a DM grid that allowed inter-DM sensitivity losses up to roughly 10\% \citep[$\Delta DM=10 \rm{pc} \rm{cm}^{-3}$][]{2003ApJ...596.1142C}. In optimizing detection significance over a fine DM grid, we find optimal DM values range from 552 to 572 pc cm$^{-3}$. However, the uncertainty in the peak DM measurement is defined by the DM sensitivity loss curve and the significance of the burst. 
+
+Given that the apparent DM can potentially change due to intrinsic or extrinsic effects, we developed a more sophisticated system for modeling dispersion. We created a generative model to sample the likelihood distribution of a class of dispersion models \citep{2010arXiv1008.4686H}. Since the goal is to study dispersion rather than spectral structure, we create a model by applying a dispersion delay to the observed spectrum. The observed spectrum is calculated from 3 integrations centered at the peak integration to ensure all burst emission is included. The likelihood is directly sampled by calculating the product of probabilities on a per-pixel basis with uniform errors that follow a Gaussian error distribution.
+
+Figure \ref{fig:dmmodel} compares the 68\% ($1\sigma$) bounds on the DM for all nine VLA bursts. 
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=0.9\columnwidth]{dmmodel}
+\caption{Comparison of 68\% ($\1sigma$) confidence intervals for DM for nine bursts detected by the VLA.
+\label{fig:dmmodel}}
+\end{center}
+\end{figure}
+
+Non-lambda$^{2}$ dispersion...
+
 
 \subsubsection{Spectral Autocorrelation}
 \label{sec:auto}
-Autocorrelation of the burst signal (both temporal and spectral) can be used to infer both intrinsic properties and modulation due to scintillation (CITE: Cordes et al?). The VLA data have a channel resolution of 4~MHz, which is relatively coarse compared to single-dish data (e.g., CITE: WEIRD). However, diffractive scintillation observed for other FRBs \citep{} {\color{red}could/could not (Jim?)} induce structure on this scale near 3~GHz.
+Autocorrelation of the burst signal (both temporal and spectral) can be used to infer both intrinsic properties and modulation due to scintillation (CITE: Cordes et al?). While VLA spectral resolution of 4~MHz is relatively coarse, diffractive scintillation observed for other FRBs \citep{} {\color{red}could/could not (Jim?)} induce structure on this scale near 3~GHz.
 
-Figure \ref{fig:acf} shows the spectral autocorrellation for the strongest burst (MJD 57633.68). (Marginal evidence of spectral correlation on the scale of 4~MHz) {\color{red} Comment, Jim?}
+Figure \ref{fig:acf} shows the spectral autocorrellation for the strongest burst (MJD 57633.68). {\color{red} Comment, Jim?}
 
 \begin{figure}[htb]
 \begin{center}
@@ -301,7 +301,7 @@ Figure \ref{fig:acf} shows the spectral autocorrellation for the strongest burst
 \end{figure}
 
 \subsubsection{Circular Polarization}
-The VLA S-band recievers natively measure circular polarization, although for observing efficiency we chose not include polarization calibration procedures. Crude constraints on circular polarization are possible by comparing the burst intensity in right and left-hand polarized data products. The apparent circular polarization fraction ($(RR-LL)/(RR+LL)$) for the most significant bursts are all less than 3\%. FRB121102 was located 2.3 arcmin away from pointing center, where systematic effects have been measured as large as 3\% (Perley et al 2016, VLA memo). We conclude that the S-band bursts seen by the VLA have a circular polarization of less than 3\%.
+The VLA S-band recievers natively measure circular polarization, although for observing efficiency we chose not include polarization calibration procedures. Crude constraints on circular polarization are possible by comparing the burst intensity in right and left-hand polarized data products. The apparent circular polarization fraction ($(RR-LL)/(RR+LL)$) for the most significant bursts are all less than 3\%. \frb was located 2.3 arcmin away from pointing center, where systematic effects have been measured as large as 3\% (Perley et al 2016, VLA memo). Given that systematic effects dominate the apparent circular polarization, we conclude that the true fractional circular polarization is less than 3\%.
 
 \subsection{Temporal Statistics}
 The VLA detected nine bursts during the month-long campaign in August--September 2016. The typical observation lasted about two hours and was sampled with a 5~ms cadence, so we used the Lomb-Scargle periodogram \citep{} to search for periodic structure over a wide range of timescales. The input "lightcurve" was mde as a one-dimensional array for all times with observations; times with a detection are set to 1 and other times are set to 0 \citep[see also]{2011MNRAS.417.1871P}. The lightcurve time resolution was set to {\color{red} 100~ms (check)} to keep the computation manageable. The 95\% confidence upper limit on periodic power is estimated by randomly selecting the 9 burst times from the same observing times. The limit is set as the 95\% highest point at each period (5th highest value in 100 simulations).
@@ -345,7 +345,21 @@ With a uniform sample of burst luminosities, we can use their distribution to in
 
 \section{discussion}
 
+\subsection{Emission Physics and Burst Energetics}
+**Cut from gemini paper**
+The redshift measurement allows us to put FRB 121102’s energetics on a firmer footing, confirming the energy scale of 1038 erg (δΩ/4π)(Aν/0.1 Jy ms)(∆ν/1 GHz) calculated by Chatterjee et al. (2017) using a distance scale of 1 Gpc. Here Aν and ∆ν are the fluence and bandwidth, respectively, at observing frequency ν and δΩ is the opening angle of the bursts.
+
+% from first paper
+For a nominal Gpc distance $D$ corresponding to redshifts $z\lesssim 0.3$, the received fluence $A_{\nu}$ from each burst implies  a burst energy
+$$E_{\rm burst} = 4\pi D^2 (\delta\Omega/4\pi) A_{\nu} \Delta\nu
+\approx 10^{38}\, {\rm erg}\,(\delta\Omega/4\pi) D_{\rm Gpc}^2  (A_{\nu} / 0.1\ {\rm Jy\ ms}) \Delta\nu_{\rm GHz}.$$
+The unknown  emission solid angle $\delta\Omega$
+could be very small due to relativistic beaming, and together with a distance possibly much smaller than 1~Gpc, could reduce the energy requirement significantly.  However, the {\it total} energy emitted could be larger depending on the duration of the emission in the source frame and other model-dependent details.
+Either way, the burst energies from \frb\ are not inconsistent with those that might be expected from the magnetosphere of a compact object\cite{2016MNRAS.457..232C}.
+
+
 \subsection{Luminosity Distribution}
+
 Doubts were cast on the first FRB detection (``Lorimer burst'') due to its unusually high brightness. The lack of lower-significance detections suggested that this burst was unlikely to be part of any astrophysical population. With more detections, it has become clear that the FRB population has a relatively flat flux distribution \citep{2016ApJ...830...75V, 2016arXiv161100458L}. This fact was demonstrated with yet another detection of an extremely bright FRB \citep{2016arXiv161105758R}.
 
 \frb\ is detectable with the VLA out to $z=0.7$ and much farther with Arecibo...
@@ -367,15 +381,18 @@ Intrinsic versus refractive scintillation...
 
 Fewer FRBs out there...
 
-\subsection{Emission Physics and Burst Energetics}
 
-% from first paper
-For a nominal Gpc distance $D$ corresponding to redshifts $z\lesssim 0.3$, the received fluence $A_{\nu}$ from each burst implies  a burst energy
-$$E_{\rm burst} = 4\pi D^2 (\delta\Omega/4\pi) A_{\nu} \Delta\nu
-\approx 10^{38}\, {\rm erg}\,(\delta\Omega/4\pi) D_{\rm Gpc}^2  (A_{\nu} / 0.1\ {\rm Jy\ ms}) \Delta\nu_{\rm GHz}.$$
-The unknown  emission solid angle $\delta\Omega$
-could be very small due to relativistic beaming, and together with a distance possibly much smaller than 1~Gpc, could reduce the energy requirement significantly.  However, the {\it total} energy emitted could be larger depending on the duration of the emission in the source frame and other model-dependent details.
-Either way, the burst energies from \frb\ are not inconsistent with those that might be expected from the magnetosphere of a compact object\cite{2016MNRAS.457..232C}.
+\subsection{FRB Rate}
+**cut from gemini paper**
+Assuming that FRB 121102 is from the same population as the other FRBs, the measurement of a distance for the host of FRB 121102 allows us to re-evaluate the cosmic volume and event rate per galaxy for the FRB population. For an estimated projected FRB rate Rp, comoving volume V (z), and galaxy number density Φ(M), the rate per galaxy is RFRB = Rp/(Φ(M)V (z)), assuming isotropic radiation. (**parameterize beaming**)
+
+The first such rate estimate was made by Thornton et al. (2013), who used the measured DM to estimate a characteristic distance for their sample of 4 FRBs. They assumed that all of the extragalactic component of the DM was caused by the IGM and scaled as DM ∼ z × 1200 pc cm−3 (Ioka 2003; Inoue 2004). They also calculated the number of galaxies by assuming a characteristic L∗ galaxy (corresponding to stellar mass M∗ ≈ 1010.66 M ; Baldry et al. 2012).
+
+Our calculation differs in that we have better estimates of all three parameters. First, the projected FRB rate is now believed to be closer to 2×103 sky−1 day−1 at high Galactic latitudes and flux densities brighter than 1 Jy ms (Lawrence et al. 2016; Champion et al. 2016; Rane et al. 2016). FRB 121102 is associated with a relatively small galaxy, which are roughly a factor of 100 more abundant than L∗ galaxies (φ(M) ∼ 10−2 Mpc−3; Faber et al. 2007). Finally, the measured distance for FRB 121102 suggests that roughly half of the extragalactic DM is intrinsic to the host and half is from the IGM.
+
+This reduces the characteristic distance by a factor of two and the volume by an order of magnitude. Considering these factors, we assume a characteristic FRB redshift of 0.4 to estimate RFRB ≈ 10−5 galaxy−1 year−1. This is lower than previously estimated (RFRB ∼ 10−3 galaxy−1 year−1 , Thornton et al. 2013). 
+
+There are significant caveats to the comparison of this rate to the rates of other classes of transient. This isotropic FRB rate assumes a projected FRB rate at a single (observationally defined) flux limit and that no bursts repeat. Using this calculation with data from more sensitive telescopes, we might infer a higher rate. However, if we assume that FRB 121102 is representative of the overall FRB population, then more sensitive observations would be more likely to find repeating FRBs that would effectively depress the estimate of the underlying isotropic rate per source. In this model, these two effects partially cancel, although without a physical model it is difficult to say how well. Finally, the bursts are known to be generated by a coherent emission process and does not emit isotropically. Assuming beaming angles typical of pulsars (e.g., Tauris & Manchester 1998), we expect a true FRB rate that is higher by a factor of 10.
 
 
 
