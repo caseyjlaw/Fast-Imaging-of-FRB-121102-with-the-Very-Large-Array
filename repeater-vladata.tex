@@ -77,6 +77,9 @@
 %\author[0000-0001-9814-2354]{B.~Marcote}
 %\affiliation{Joint Institute for VLBI ERIC, Postbus 2, 7990 AA Dwingeloo, The Netherlands}
 
+\author{D.~Michilli}
+\affiliation{Anton Pannekoek Institute for Astronomy, University of Amsterdam, Science Park 904, 1098 XH Amsterdam, The Netherlands}
+
 \author{M.~A.~McLaughlin}
 \affiliation{Department of Physics and Astronomy, West Virginia University, Morgantown, WV 26506, USA}
 \affiliation{Center for Gravitational Waves and Cosmology, West Virginia University, Chestnut Ridge Research Building, Morgantown, WV 26505}
@@ -117,9 +120,9 @@ The millisecond radio transients known as Fast Radio Bursts have recently emerge
 \section{Introduction}
 Fast Radio Bursts (FRBs) are a new class of millisecond-duration radio transient with a dispersion measure (DM) that implies that they originate outside of our Galaxy. At extragalactic (and potentially cosmological) distances, they are not only unusually luminous, but they provide a new tracer of other galaxies and the intergalactic medium (IGM). In this way, FRBs have opened a whole new playground in astrophysics \citep[e.g.,][]{2014A&A...562A.137F, 2014ApJ...780L..33M, 2016MNRAS.457..232C}. However, that potential has been hamstrung by the lack of a definitive association of an FRB to an extragalactic host.
 
-This paper is part of a series that presents the first localization and unambiguous identification of an FRB host (CITE: LOC, OPT, EVN). \frb, also known as the ``repeating FRB'', was first detected in November 2012 by the Arecibo Observatory \citep{2014ApJ...790..101S}. In mid 2015, new Arecibo observations revealed a series of bursts at the same DM and sky position demonstrating that FRBs are capable of repetition \citep{2016Natur.531..202S}. Beginning in August of 2015, we made the first of nine detections of \frb\ with the Very Large Array (CITE: LOC) and localized it with a precision of 0.1\arcsec. Deep radio and optical observing shows that \frb\ is unambiguously associated with a persistent radio and optical source at a redshift of 0.193 (CITE: OPT, EVN).
+This paper is part of a series that presents the first localization and unambiguous identification of an FRB host \citep{LOC, OPT, EVN}. \frb, also known as the ``repeating FRB'', was first detected in November 2012 by the Arecibo Observatory \citep{2014ApJ...790..101S}. In mid 2015, new Arecibo observations revealed a series of bursts at the same DM and sky position demonstrating that FRBs are capable of repetition \citep{2016Natur.531..202S}. Beginning in August of 2015, we made the first of nine detections of \frb\ with the Very Large Array \citep{LOC} and localized it with a precision of 0.1\arcsec. Deep radio and optical observing shows that \frb\ is unambiguously associated with a persistent radio and optical source at a redshift of 0.193 \citep{OPT, EVN}.
 
-\frb\ has now been localized four orders of magnitude better than any other FRB and placed at a cosmological distance. Its lookback and luminosity distances are 746 and 972 Mpc \citep{planck15}, which are orders of magnitude larger than any other millisecond transient. This shows that FRBs are more luminous than any other millisecond radio transient, have a significant DM contribution from the IGM, and can be used to probe the IGM and their host galaxy. The promise implied by the first reported FRB \citep{2007Sci...318..777L} is now being realized.
+\frb\ has now been localized four orders of magnitude better than any other FRB and placed at a cosmological distance. Its lookback and luminosity distances are 746 and 972 Mpc \citep{2016A&A...594A..13P}, which are orders of magnitude larger than any other millisecond transient. This shows that FRBs are more luminous than any other millisecond radio transient, have a significant DM contribution from the IGM, and can be used to probe the IGM and their host galaxy. The promise implied by the first reported FRB \citep{2007Sci...318..777L} is now being realized.
 
 The confirmation of a cosmological distance for \frb\ could have wide-ranging implications for the FRB population as a whole. However, it has not been demonstrated that \frb\ is representative of the overall FRB population. In fact, the repetition of its bursts is unique among all FRBs \citep{2015MNRAS.454..457P}, so it is natural to ask whether \frb\ is representative. An important first step is to demonstrate that the properties of \frb\ are consistent with the significant body of facts for the overall population \citep{2015MNRAS.451.3278M, 2016MPLA...3130013K}. The repeating nature of \frb\ provides us with several statistical tests we can use to test this connection.
 
@@ -168,7 +171,7 @@ Five Effelsberg observations had some simultaneous coverage with the VLA, of whi
 
 We observed \frb with the Arcminute MicroKelvin Imager Large Array (AMI-LA; Zwart et al. 2008) for 3 hours each on four epochs starting at MJDs 57643.3351, 57645.3317, 57648.3352, and 57649.3353. Observations were made with the new digital correlator having 4096 channels across a 5 GHz bandwidth between 13--18 GHz with a 1s dump time. The phase calibrator, J0518+3306, was observed every 12 minutes for about 1.5 minutes. The AMI-LA data were binned to eight 0.625 GHz channels and processed (RFI excision and calibration) with a fully-automated pipeline, AMI-REDUCE \citep[e.g.,][]{2013MNRAS.429.3330P}. Daily measurements of 3C48 and 3C286 were used for the absolute flux calibration, which is good to about 10\%. 
 
-We inspected the calibrated visibilities, and did not find any signal above 20 mJy in the 1s samples at and in the vicinity of the detected bursts. Concatenating and imaging the 12 hours of calibrated data with the CASA tasks {\it concat} and {\it clean} also does not yield any significant detection at the FRB location. Although the statistical 3sigma upper limit is 60 uJy, extended mJy-level sources in the field cause sidelobe confusion (the AMI-LA angular resolution is $\sim$30 arcsec), and the actual upper limit is larger. We introduced artificial point sources at the FRB location using the CASA {\it sm} tool, and found that these sources can be recovered as long as their peak flux densities are more than $\sim$100 uJy. Hence, we place an upper limit of 100$\pm$10 uJy on any quiescent or possible radio "afterglow" (on $\sim$days timescale) signal from the FRB. This limit is close to the flux density measured by the VLA (CITE: LOC)
+We inspected the calibrated visibilities, and did not find any signal above 20 mJy in the 1s samples at and in the vicinity of the detected bursts. Concatenating and imaging the 12 hours of calibrated data with the CASA tasks {\it concat} and {\it clean} also does not yield any significant detection at the FRB location. Although the statistical 3sigma upper limit is 60 uJy, extended mJy-level sources in the field cause sidelobe confusion (the AMI-LA angular resolution is $\sim$30 arcsec), and the actual upper limit is larger. We introduced artificial point sources at the FRB location using the CASA {\it sm} tool, and found that these sources can be recovered as long as their peak flux densities are more than $\sim$100 uJy. Hence, we place an upper limit of 100$\pm$10 uJy on any quiescent or possible radio "afterglow" (on $\sim$days timescale) signal from the FRB. This limit is close to the flux density measured by the VLA \citep{LOC}.
 
 \section{Results}
 
@@ -214,24 +217,24 @@ This simultaneous detection of a burst from roughly 1 to 4~GHz shows that some b
 
 \subsubsection{Spectra}
 \label{sec:spec}
-Figure \ref{fig:sgram} shows the dynamic spectra of all nine bursts detected by the VLA. We improved on the initial analysis presented in (CITE: LOC) by using a better calibration scheme and optimizing the detection significance over a find grid of DM ($\Delta DM=1$ \rm{pc} \rm{cm}^{-3}$). Table \ref{tab:spec} shows the improved burst parameters using this new scheme. 
+Figure \ref{fig:sgram} shows the dynamic spectra of all nine bursts detected by the VLA. We improved on the initial analysis presented in \citet{LOC} by using a better calibration scheme and optimizing the detection significance over a find grid of DM ($\Delta DM=1 \rm{pc} \rm{cm}^{-3}$). Table \ref{tab:spec} shows the improved burst parameters using this new scheme. 
 
 \begin{table*}
 \caption{Properties of Bursts from \frb}
 \centering
 \begin{tabular}{lccccccc}
 \hline
-Date     & S$_{\rm{int}}$ & Image SNR & L$_{\rm{int}}$ & DM$_{\rm{opt}}$ & S$_{\rm{peak}}$ & Center & FWHM \\
-(MJD)    & (mJy) &  & ($10^{39}$\ erg) & (pc cm$^{-3})$ & (mJy?) & (GHz) & (MHz) \\ \hline
-57623    & 258 & 38 & 1.5 & 561 & 0.41             & 2.8 & 300 \\
-57633.68 & 2000 & 179 & 12 & 554 & 1.90           & 3.2 & 520 \\
-57633.70\tablenotemark{a} & 105 & 15 & 0.6 & 559 & $>$0.188          & $<$2.5 & $>$350 \\
-57638    & 65  & 12 & 0.4 & 556 & 0.07             & 3.1 & 410 \\
-57643    & 375 & 100 & 2.1 & 560 & 0.39            & 2.8 & 520 \\
-57645    & 38  & 13 & 0.2 & 572 & 0.06             & 2.8 & 210 \\
-57646\tablenotemark{a}    & 69  & 20 & 0.4 & 555 & $>$0.16          & $<$2.5 & $>$400 \\
-57648\tablenotemark{b}    & 97 & 25 & 0.6 & 559 & 0.11 & 2.9 & 420 \\
-57649    & 110 & 36 & 0.6 & 552 & 0.07             & 2.9 & 880 \\ \hline
+Date                & S$_{\rm{int}}$  & Image SNR & L$_{\rm{int}}$ & DM$_{\rm{opt}}$ & S$_{\rm{peak}}$  & Center & FWHM \\
+(MJD)               & (mJy)           &           & ($10^{38}$\ erg) & (pc cm$^{-3})$ & (Jy) & (GHz)  & (MHz) \\ \hline
+57623               & 258             & 38        & 15   & 561 & 0.41                                    & 2.8 & 300 \\
+57633.68            & 2000            & 179       & 120  & 554 & 1.90                                    & 3.2 & 520 \\
+57633.70\tablenotemark{a} & 105       & 15        & 6    & 559 & $>$0.188                                & $<$2.5 & $>$350 \\
+57638               & 65              & 12        & 4    & 556 & 0.07                                    & 3.1 & 410 \\
+57643               & 375             & 100       & 21   & 560 & 0.39                                    & 2.8 & 520 \\
+57645               & 38              & 13        & 2    & 572 & 0.06                                    & 2.8 & 210 \\
+57646\tablenotemark{a} & 69           & 20        & 4    & 555 & $>$0.16                                 & $<$2.5 & $>$400 \\
+57648\tablenotemark{b} & 97           & 25        & 6    & 559 & 0.11                                    & 2.9 & 420 \\
+57649               & 110             & 36        & 6    & 552 & 0.07                                    & 2.9 & 880 \\ \hline
 \end{tabular}
 \tablenotetext{a}{Best-fit Gaussian is not centered in 3~GHz band, so spectral parameters are limits.}
 \tablenotetext{b}{Detected simultaneously with Arecibo between 1.15 and 1.73~GHz.}
@@ -265,25 +268,26 @@ Figure \ref{fig:spec} shows the spectrum of the integration and DM that maximize
 \end{figure*}
 
 The burst spectra are generally characterized by a broad, Gaussian shape that with strong inter-channel modulation. We fit a Gaussian shape to each burst to estimate their characteristic width and peak flux, as summarized in Table \ref{tab:spec}. The channel-scale modulation is as high as 100\% (see \S \ref{sec:auto}) and is consistent with an exponential distribution. This introduces a strong bias to the best-fit Gaussian, but these simple fits are reliable enough to show that the typical burst has a spectral width of 500~MHz.
+% TODO: fit with generative model with 100% amplitude modulations (emcee?)
 
-All but two of the best-fit Gaussians are centered inside the 3~GHz band and most appear contained by the 1~GHz wide band. This is consistent with previous detections of \frb by Arecibo, which showed quasi-broadband structure \citep{2016arXiv160308880S} and large variation in the implied spectral index \citep{2014ApJ...790..101S}. A detailed discussion of high-resolution \frb\ burst spectra seen by the Arecibo Observatory will be presented elsewhere (CITE: WEIRD).
+All but two of the best-fit Gaussians are centered inside the 3~GHz band and most appear contained by the 1~GHz wide band. This is consistent with previous detections of \frb by Arecibo, which showed quasi-broadband structure \citep{2016arXiv160308880S} and large variation in the implied spectral index \citep{2014ApJ...790..101S}. A detailed discussion of high-resolution \frb\ burst spectra seen by the Arecibo Observatory will be presented elsewhere \citep{WEIRD}.
 
 \subsubsection{Dispersion}
 The initial VLA detections were made by searching a DM grid that allowed inter-DM sensitivity losses up to roughly 10\% \citep[$\Delta DM=10 \rm{pc} \rm{cm}^{-3}$][]{2003ApJ...596.1142C}. In optimizing detection significance over a fine DM grid, we find optimal DM values range from 552 to 572 pc cm$^{-3}$. However, the uncertainty in the peak DM measurement is defined by the DM sensitivity loss curve and the significance of the burst. 
 
-Given that the apparent DM can potentially change due to intrinsic or extrinsic effects, we developed a more sophisticated system for modeling dispersion. We created a generative model to sample the likelihood distribution of a class of dispersion models \citep{2010arXiv1008.4686H}. Since the goal is to study dispersion rather than spectral structure, we create a model by applying a dispersion delay to the observed spectrum. The observed spectrum is calculated from 3 integrations centered at the peak integration to ensure all burst emission is included. The likelihood is directly sampled by calculating the product of probabilities on a per-pixel basis with uniform errors that follow a Gaussian error distribution.
+Given that the apparent DM can potentially change due to intrinsic or extrinsic effects, we developed a more sophisticated system for modeling dispersion. We created a generative model to sample the likelihood distribution of a class of dispersion models \citep{2010arXiv1008.4686H}. We use the Gaussian shape (see \S \ref{sec:spec}) along the spectral axis and apply a frequency-depndent delay for a given dispersion model. The likelihood is directly sampled by calculating the product of probabilities on a per-pixel basis of the 2-dimensional dynamic spectrum. Uncertainties in each pixel are drawn from a uniform Gaussian error distribution that is estimated from the data.
 
-Figure \ref{fig:dmmodel} compares the 68\% ($1\sigma$) bounds on the DM for all nine VLA bursts. 
+Figure \ref{fig:dmmodel} compares the 95\% confidence intervals on the DM for all nine VLA bursts. Some of the confidence intervals do not overlap, which suggests that there are apparent DM changes between bursts. This change could be caused by intrinsic burst structure \citep{WEIRD} or actual changes to the DM column density. **Preliminary**
 
 \begin{figure}[htb]
 \begin{center}
 \includegraphics[width=0.9\columnwidth]{dmmodel}
-\caption{Comparison of 68\% ($\1sigma$) confidence intervals for DM for nine bursts detected by the VLA.
+\caption{**Preliminary** Comparison of 95\% ($1sigma$) confidence intervals for DM for nine bursts detected by the VLA.
 \label{fig:dmmodel}}
 \end{center}
 \end{figure}
 
-Non-lambda$^{2}$ dispersion...
+% TODO: Non-lambda$^{2}$ dispersion...
 
 
 \subsubsection{Spectral Autocorrelation}
@@ -320,7 +324,7 @@ Assuming periods with power peaks, we find clusters of bursts with same rotation
 
 Burst detections were made very inhomogenously through the larger (63 hours) observing campaign of FRB 121102. In the first 30 hours of observing at S-band no bursts were detected, while nine bursts were detected in the last 27 hours of S-band observing. The data quality is high and RFI did not significantly impact sensitivity, so the inhomogeneous burst distribution shows that the burst detection probability was not stationary. Assuming that the burst detection probability follows a Poisson distribution, the nondetection in the first half of S-band limits the FRB rate to $\rm{R}<0.1$ hour$^{-1}$ (95\% confidence limit). The mean detection rate for the last part of the campaign was $\rm{R}=0.3$ hour$^{-1}$.
 
-Moreover, there is weak evidence that the \frb\ burst rate changes during the last part of the campaign. We modeled the event detection probability as a Poisson probability with a rate parameter that evolves linearly with time relative to first burst detection. We directly sampled the model by calculating the joint probability $\prod_{i} P_i$, where $P_i$ follows a Poisson probability with rate $\lambda = a + b * (\rm{MJD}_i - 57623)$. Figure \ref{fig:rate} shows that the probability distribution excludes a constant rate with $\sim$85\% confidence. This weak constraint is consistent with the broader trend seen by the VLA and Arecibo (CITE: WEIRD?).
+Moreover, there is weak evidence that the \frb\ burst rate changes during the last part of the campaign. We modeled the event detection probability as a Poisson probability with a rate parameter that evolves linearly with time relative to first burst detection. We directly sampled the model by calculating the joint probability $\prod_{i} P_i$, where $P_i$ follows a Poisson probability with rate $\lambda = a + b * (\rm{MJD}_i - 57623)$. Figure \ref{fig:rate} shows that the probability distribution excludes a constant rate with $\sim$85\% confidence. This weak constraint is consistent with the broader trend seen by the VLA and Arecibo \citep{WEIRD}.
 
 \begin{figure}[htb]
 \begin{center}
@@ -347,7 +351,7 @@ With a uniform sample of burst luminosities, we can use their distribution to in
 
 \subsection{Emission Physics and Burst Energetics}
 **Cut from gemini paper**
-The redshift measurement allows us to put FRB 121102’s energetics on a firmer footing, confirming the energy scale of 1038 erg (δΩ/4π)(Aν/0.1 Jy ms)(∆ν/1 GHz) calculated by Chatterjee et al. (2017) using a distance scale of 1 Gpc. Here Aν and ∆ν are the fluence and bandwidth, respectively, at observing frequency ν and δΩ is the opening angle of the bursts.
+The redshift measurement allows us to put FRB 121102’s energetics on a firmer footing, confirming \citet{LOC}.
 
 % from first paper
 For a nominal Gpc distance $D$ corresponding to redshifts $z\lesssim 0.3$, the received fluence $A_{\nu}$ from each burst implies  a burst energy
@@ -383,18 +387,16 @@ Fewer FRBs out there...
 
 
 \subsection{FRB Rate}
-**cut from gemini paper**
-Assuming that FRB 121102 is from the same population as the other FRBs, the measurement of a distance for the host of FRB 121102 allows us to re-evaluate the cosmic volume and event rate per galaxy for the FRB population. For an estimated projected FRB rate Rp, comoving volume V (z), and galaxy number density Φ(M), the rate per galaxy is RFRB = Rp/(Φ(M)V (z)), assuming isotropic radiation. (**parameterize beaming**)
+% cut from gemini paper. TODO: incorporate referee comments on rate scale
+Assuming that \frb is from the same population as the other FRBs, the measurement of a distance for the host of \frb allows us to re-evaluate the cosmic volume and event rate per galaxy for the FRB population. The estimated projected FRB rate $R_p$ understates the true rate by a beaming fraction $\Omega_b$ \citep[$\sim$10\%;][]{1998MNRAS.298..625T}.. For a comoving volume $V(z)$ and galaxy number density $\Phi(M)$, the rate per galaxy is $R_{FRB} = R_p \Omega_b /(\Phi(M)V (z))$. 
 
-The first such rate estimate was made by Thornton et al. (2013), who used the measured DM to estimate a characteristic distance for their sample of 4 FRBs. They assumed that all of the extragalactic component of the DM was caused by the IGM and scaled as DM ∼ z × 1200 pc cm−3 (Ioka 2003; Inoue 2004). They also calculated the number of galaxies by assuming a characteristic L∗ galaxy (corresponding to stellar mass M∗ ≈ 1010.66 M ; Baldry et al. 2012).
+The first such rate estimate was made by \citet{2013Sci...341...53T}, who used the measured DM to estimate a characteristic distance for their sample of 4 FRBs. They assumed that all of the extragalactic component of the DM was caused by the IGM and scaled as $DM\approx z\times1200 \rm{pc} \rm{cm}^{-3}$ \citep{2003ApJ...598L..79I,2004MNRAS.348..999I}. They also calculated the number of galaxies by assuming a characteristic $L_*$ galaxy \citep[corresponding to stellar mass $M_* \approx 1010.66 M$][]{2012MNRAS.421..621B}.
 
-Our calculation differs in that we have better estimates of all three parameters. First, the projected FRB rate is now believed to be closer to 2×103 sky−1 day−1 at high Galactic latitudes and flux densities brighter than 1 Jy ms (Lawrence et al. 2016; Champion et al. 2016; Rane et al. 2016). FRB 121102 is associated with a relatively small galaxy, which are roughly a factor of 100 more abundant than L∗ galaxies (φ(M) ∼ 10−2 Mpc−3; Faber et al. 2007). Finally, the measured distance for FRB 121102 suggests that roughly half of the extragalactic DM is intrinsic to the host and half is from the IGM.
+Our calculation differs in that we have better estimates of all three parameters. First, the projected FRB rate is now believed to be closer to $2\times10^3 \rm{sky}^{-1} \rm{day}^{-1}$\ at high Galactic latitudes and flux densities brighter than 1 Jy ms \citep{2016arXiv161100458L,2016MNRAS.460L..30C}. \frb\ is associated with a relatively small galaxy, which are roughly a factor of 100 more abundant \citep[$\Phi(M) \approx 10^{-2} \rm{Mpc}^{-3}$][]{2007ApJ...665..265F}. Finally, the measured distance for FRB 121102 suggests that roughly half of the extragalactic DM is intrinsic to the host and half is from the IGM.
 
-This reduces the characteristic distance by a factor of two and the volume by an order of magnitude. Considering these factors, we assume a characteristic FRB redshift of 0.4 to estimate RFRB ≈ 10−5 galaxy−1 year−1. This is lower than previously estimated (RFRB ∼ 10−3 galaxy−1 year−1 , Thornton et al. 2013). 
+This reduces the characteristic distance by a factor of two and the volume by an order of magnitude. Considering these factors, we assume a characteristic FRB redshift of 0.4 to estimate $R_{FRB} \approx 10^{-4} (0.1/\Omega_b) \rm{galaxy}^{-1} \rm{year}^{-1}$, which is two orders of magnitude lower than previously estimated \citep[assuming isotropic radiation;]{2013Sci...341...53T}.
 
-There are significant caveats to the comparison of this rate to the rates of other classes of transient. This isotropic FRB rate assumes a projected FRB rate at a single (observationally defined) flux limit and that no bursts repeat. Using this calculation with data from more sensitive telescopes, we might infer a higher rate. However, if we assume that FRB 121102 is representative of the overall FRB population, then more sensitive observations would be more likely to find repeating FRBs that would effectively depress the estimate of the underlying isotropic rate per source. In this model, these two effects partially cancel, although without a physical model it is difficult to say how well. Finally, the bursts are known to be generated by a coherent emission process and does not emit isotropically. Assuming beaming angles typical of pulsars (e.g., Tauris & Manchester 1998), we expect a true FRB rate that is higher by a factor of 10.
-
-
+There are significant caveats to the comparison of this rate to the rates of other classes of transient. This isotropic FRB rate assumes a projected FRB rate at a single (observationally defined) flux limit and that no bursts repeat. Using this calculation with data from more sensitive telescopes, we might infer a higher rate. However, if we assume that \frb\ is representative of the overall FRB population, then more sensitive observations would be more likely to find repeating FRBs that would effectively depress the estimate of the underlying isotropic rate per source. In this model, these two effects partially cancel, although without a physical model it is difficult to say how well.
 
 \subsection{Observing Strategies}
 
