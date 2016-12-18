@@ -310,20 +310,22 @@ The VLA S-band recievers natively measure circular polarization, although for ob
 \subsection{Temporal Statistics}
 Burst detections were made very inhomogenously through the larger (63 hours) observing campaign of FRB 121102. In the first 30 hours of observing at S-band no bursts were detected, while nine bursts were detected in the last 27 hours of S-band observing. The data quality is high, so the inhomogeneous burst distribution shows that the burst detection probability was not stationary. Assuming that the burst detection probability follows a Poisson distribution, the nondetection in the first half of S-band limits the FRB rate to $\rm{R}<0.1$ hour$^{-1}$ (95\% confidence limit). The mean detection rate for the last part of the campaign was $\rm{R}=0.3$ hour$^{-1}$.
 
-There is weak evidence that the \frb\ burst rate changed during the last 27 hours of the S-band campaign. We modeled the event detection probability as a Poisson probability with a rate parameter that evolves linearly with time relative to first burst detection. We directly sampled the model by calculating the joint probability $\prod_{i} P_i$, where $P_i$ follows a Poisson probability with rate $\lambda = a + b * (\rm{MJD}_i - 57623)$. Figure \ref{fig:rate} shows that the probability distribution excludes a constant rate with $\sim$85\% confidence. This weak constraint is consistent with the broader trend seen by the VLA and Arecibo.
+There is weak evidence that the \frb\ burst rate changed during the last 27 hours of the S-band campaign. We modeled the event detection probability as a Poisson probability with a rate parameter that evolves linearly with time relative to first burst detection, $\lambda = a + b * (\rm{MJD}_i - 57623)$. By directly sampling the joint probability distribution, $\prod_{i} P_i$, we can exclude a constant rate with $\sim$85\% confidence. This weak constraint is consistent with the broader trend seen by the VLA and Arecibo.
 
-\begin{figure}[htb]
-\begin{center}
-\includegraphics[width=0.9\columnwidth]{event_rate_contours}
-\caption{Color scale and contours show the relative probability for a time-evolving Poisson detection probability for \frb. Contours show the 50, 90, and 95\% confidence contours on the rate $a$\ (bursts s$^{-1}$) and rate change $b$\ (bursts s$^{-1}$ day$^{-1}$) during the August--September 2016 campaign in which bursts were detected.
-\label{fig:rate}}
-\end{center}
-\end{figure}
+%\begin{figure}[htb]
+%\begin{center}
+%\includegraphics[width=0.9\columnwidth]{event_rate_contours}
+%\caption{Color scale and contours show the relative probability for a time-evolving Poisson detection probability for \frb. Contours show the 50, 90, and 95\% confidence contours on the rate $a$\ (bursts s$^{-1}$) and rate change $b$\ (bursts s$^{-1}$ day$^{-1}$) during the August--September 2016 campaign in which bursts were detected.
+%\label{fig:rate}}
+%\end{center}
+%\end{figure}
 
-During the August--September 2016 observing campaign, the typical observation lasted about two hours and was sampled with a 5~ms cadence. We used the Lomb-Scargle periodogram \citep{1982ApJ...263..835S} to search for periodic structure over a wide range of timescales. The time series is calculated by binning the burst detection rate per 10~ms \citep[i.e., 0 or 1, see also]{2011MNRAS.417.1871P}. 
-**in progress**
-No significant excess spectral power is seen for periods from xx to xx s... 
-%The periodogram exceeds the 95\% power limit for periods from xx to xx s (**limited by binning time?**). This is consistent with the idea that the bursts imperfectly trace an underlying rotational period, as has been observed from many classes of neutron star. Examples include magnetars, which typically have wide pulse phase windows \citep{}, pulsars with glitches that change their periods \citep{}, and {\color{red} Maura? also refs for previous points would be welcome}. However, we can show with simulations that nine bursts drawn from a simple rotational would produce a strong, narrow peak in \ref{fig:ls}.
+During the August--September 2016 observing campaign, the typical observation lasted about two hours and was sampled with a 5~ms cadence. We used the Lomb-Scargle periodogram \citep{1982ApJ...263..835S} to search for periodic structure over a wide range of timescales. The time series is calculated by binning the burst detection rate per 100~ms \citep[always either 0 or 1, see also]{2011MNRAS.417.1871P}. 
+The spectral power is calculated for periods between 0.8 and 80 s and a 95\% confidence bound is estimated from a sample of 100 random shuffles of the data. 
+
+Figure \ref{fig:ls} shows that while no single period dominates the spectral power, there is excess power for periods shorter than {\color{red}xx s}. It is easy to generate excess power in a Lomb-Scargle periodogram with a non-stationary noise process. However, that tends to create spectral power on low frequencies \citep["red noise"][]{}. We verified that simulating nine bursts drawn from a simple rotational model would produce a strong, narrow peak in \ref{fig:ls}. If astrophysical, this excess power is consistent with the idea that the bursts imperfectly trace an underlying rotational period, as has been observed from many classes of neutron star. Examples include magnetars, which typically have wide pulse phase windows \citep{2007ApJ...663..497C} and glitches that change their periods \citep{2013Natur.497..591A}.
+
+
 
 \subsection{Luminosity and Brightness Distribution}
 \label{sec:disn}
