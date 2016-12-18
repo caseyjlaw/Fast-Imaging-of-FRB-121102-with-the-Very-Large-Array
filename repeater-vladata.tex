@@ -217,7 +217,7 @@ This simultaneous detection of a burst from roughly 1 to 4~GHz shows that some b
 
 \subsubsection{Spectra}
 \label{sec:spec}
-Figure \ref{fig:sgram} shows the dynamic spectra of all nine bursts detected by the VLA. We improved on the initial analysis presented in \citet{LOC} by using a better calibration scheme and optimizing the detection significance over a find grid of DM ($\Delta DM=1 \rm{pc} \rm{cm}^{-3}$). Table \ref{tab:spec} shows the improved burst parameters using this new scheme. 
+Figure \ref{fig:sgram} shows the dynamic spectra of all nine bursts detected by the VLA. We improved on the initial analysis presented in \citet{LOC} by using a better calibration scheme and optimizing the detection significance over a fine grid of DM ($\Delta \rm{DM}=1 \rm{pc} \rm{cm}^{-3}$). Table \ref{tab:spec} shows the improved burst parameters using this new scheme. 
 
 \begin{table*}
 \caption{Properties of Bursts from \frb}
@@ -310,7 +310,7 @@ The VLA S-band recievers natively measure circular polarization, although for ob
 \subsection{Temporal Statistics}
 Burst detections were made very inhomogenously through the larger (63 hours) observing campaign of FRB 121102. In the first 30 hours of observing at S-band no bursts were detected, while nine bursts were detected in the last 27 hours of S-band observing. The data quality is high, so the inhomogeneous burst distribution shows that the burst detection probability was not stationary. Assuming that the burst detection probability follows a Poisson distribution, the nondetection in the first half of S-band limits the FRB rate to $\rm{R}<0.1$ hour$^{-1}$ (95\% confidence limit). The mean detection rate for the last part of the campaign was $\rm{R}=0.3$ hour$^{-1}$.
 
-There is weak evidence that the \frb\ burst rate changed during the last 27 hours of the S-band campaign. We modeled the event detection probability as a Poisson probability with a rate parameter that evolves linearly with time relative to first burst detection, $\lambda = a + b * (\rm{MJD}_i - 57623)$. By directly sampling the joint probability distribution, $\prod_{i} P_i$, we can exclude a constant rate with $\sim$85\% confidence. This weak constraint is consistent with the broader trend seen by the VLA and Arecibo.
+There is weak evidence that the \frb\ burst rate changed during the last 27 hours of the S-band campaign. We modeled the event detection probability as a Poisson probability function, $P_i(\lambda)$, with rate parameter that evolves linearly in time relative to the first VLA burst $\lambda = a + b (\rm{MJD}_i - 57623)$. By directly sampling the joint probability distribution, $\prod_{i} P_i$, we can exclude a constant rate with $\sim$85\% confidence. This weak constraint is consistent with the broader trend seen by the VLA and Arecibo.
 
 %\begin{figure}[htb]
 %\begin{center}
