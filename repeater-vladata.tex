@@ -18,7 +18,7 @@
 
 \begin{document}
 
-\title{The \frb Observing Campaign: Multi-Telescope Radio Burst and Implications for the FRB Population}
+\title{The \frb\ Observing Campaign: Multi-Telescope Radio Burst and Implications for the FRB Population}
 %\title{Multi-Telescope Burst Properties and Implications for FRB Population}
 \shorttitle{\frb\ Observing Campaign}
 \shortauthors{Law et al.}
@@ -277,12 +277,14 @@ The initial VLA detections were made by searching a DM grid that allowed inter-D
 
 Given that the apparent DM can potentially change due to intrinsic or extrinsic effects, we developed a more sophisticated system for modeling dispersion. We created a generative model to sample the likelihood distribution of a class of dispersion models \citep{2010arXiv1008.4686H}. We use the Gaussian shape (see \S \ref{sec:spec}) along the spectral axis and apply a frequency-depndent delay for a given dispersion model. The likelihood is directly sampled by calculating the product of probabilities on a per-pixel basis of the 2-dimensional dynamic spectrum. Uncertainties in each pixel are drawn from a uniform Gaussian error distribution that is estimated from the data.
 
-Figure \ref{fig:dmmodel} compares the 95\% confidence intervals on the DM for all nine VLA bursts. Some of the confidence intervals do not overlap, which suggests that there are apparent DM changes between bursts. This change could be caused by intrinsic burst structure \citep{WEIRD} or actual changes to the DM column density. **Preliminary**
+ **Preliminary** Figure \ref{fig:dmmodel} compares the 95\% confidence intervals on the DM for all nine VLA bursts. The DM confidence intervals are not consistent with a single DM, which suggests that there are apparent DM changes between bursts. This change could be caused by intrinsic burst structure or actual changes to the DM column density. 
+
+High-resolution dynamic spectra at 1.4~GHz have discovered spectro-temporal structure that can bias the apparent DM differently from burst to burst \citep{WEIRD}. Observations at 1.4~GHz have measured DM in the range from xx to yy pc cm$^{-3}$, which is **smaller than/consistent with** the range of observed values seen by the VLA at 3~GHz. The FRB emission process has not yet been defined, so it is not clear how the intrinsic structure can bias DM as a function of frequency. {\color{red} Laura, any input from DM at higher frequencies?}
 
 \begin{figure}[htb]
 \begin{center}
 \includegraphics[width=0.9\columnwidth]{dmmodel}
-\caption{**Preliminary** Comparison of 95\% ($1sigma$) confidence intervals for DM for nine bursts detected by the VLA.
+\caption{**Preliminary** Comparison of 95\% ($1\sigma$) confidence intervals for DM for nine bursts detected by the VLA.
 \label{fig:dmmodel}}
 \end{center}
 \end{figure}
@@ -292,9 +294,7 @@ Figure \ref{fig:dmmodel} compares the 95\% confidence intervals on the DM for al
 
 \subsubsection{Spectral Autocorrelation}
 \label{sec:auto}
-Autocorrelation of the burst signal (both temporal and spectral) can be used to infer both intrinsic properties and modulation due to scintillation (CITE: Cordes et al?). While VLA spectral resolution of 4~MHz is relatively coarse, diffractive scintillation observed for other FRBs \citep{} {\color{red}could/could not (Jim?)} induce structure on this scale near 3~GHz.
-
-Figure \ref{fig:acf} shows the spectral autocorrellation for the strongest burst (MJD 57633.68). {\color{red} Comment, Jim?}
+Autocorrelation of the burst signal (both temporal and spectral) can be used to infer both intrinsic properties and modulation due to scintillation \citep{CORDES}. While VLA spectral resolution of 4~MHz is relatively coarse, the Galactic electron density model predicts a diffractive scintillation bandwidth of {\color{red} xx MHz at 3~GHz (Jim?)} \citep{2002astro.ph..7156C}. Figure \ref{fig:acf} shows the spectral autocorrellation for the strongest burst (MJD 57633.68). No excess correlation is found near the channel resolution, which limits the correlation width to less than 4~MHz.
 
 \begin{figure}[htb]
 \begin{center}
@@ -308,23 +308,9 @@ Figure \ref{fig:acf} shows the spectral autocorrellation for the strongest burst
 The VLA S-band recievers natively measure circular polarization, although for observing efficiency we chose not include polarization calibration procedures. Crude constraints on circular polarization are possible by comparing the burst intensity in right and left-hand polarized data products. The apparent circular polarization fraction ($(RR-LL)/(RR+LL)$) for the most significant bursts are all less than 3\%. \frb was located 2.3 arcmin away from pointing center, where systematic effects have been measured as large as 3\% (Perley et al 2016, VLA memo). Given that systematic effects dominate the apparent circular polarization, we conclude that the true fractional circular polarization is less than 3\%.
 
 \subsection{Temporal Statistics}
-The VLA detected nine bursts during the month-long campaign in August--September 2016. The typical observation lasted about two hours and was sampled with a 5~ms cadence, so we used the Lomb-Scargle periodogram \citep{} to search for periodic structure over a wide range of timescales. The input "lightcurve" was mde as a one-dimensional array for all times with observations; times with a detection are set to 1 and other times are set to 0 \citep[see also]{2011MNRAS.417.1871P}. The lightcurve time resolution was set to {\color{red} 100~ms (check)} to keep the computation manageable. The 95\% confidence upper limit on periodic power is estimated by randomly selecting the 9 burst times from the same observing times. The limit is set as the 95\% highest point at each period (5th highest value in 100 simulations).
+Burst detections were made very inhomogenously through the larger (63 hours) observing campaign of FRB 121102. In the first 30 hours of observing at S-band no bursts were detected, while nine bursts were detected in the last 27 hours of S-band observing. The data quality is high, so the inhomogeneous burst distribution shows that the burst detection probability was not stationary. Assuming that the burst detection probability follows a Poisson distribution, the nondetection in the first half of S-band limits the FRB rate to $\rm{R}<0.1$ hour$^{-1}$ (95\% confidence limit). The mean detection rate for the last part of the campaign was $\rm{R}=0.3$ hour$^{-1}$.
 
-Figure \ref{fig:ls} shows the Lomb-Scargle periodogram for the bursts for periods from **xx to xx** s. No significant excess power is seen at long periods, but the periodogram shows a steady increase in power at shorter periods. The periodogram exceeds the 95\% power limit for periods from xx to xx s (**limited by binning time?**). This is consistent with the idea that the bursts imperfectly trace an underlying rotational period, as has been observed from many classes of neutron star. Examples include magnetars, which typically have wide pulse phase windows \citep{}, pulsars with glitches that change their periods \citep{}, and {\color{red} Maura? also refs for previous points would be welcome}. However, we can show with simulations that nine bursts drawn from a simple rotational would produce a strong, narrow peak in \ref{fig:ls}.
-
-Assuming periods with power peaks, we find clusters of bursts with same rotational phase...
-
-\begin{figure}[htb]
-\begin{center}
-\includegraphics[width=0.9\columnwidth]{lombscargle}
-\caption{Dots show the Lomb-Scargle periodogram of burst arrival times for \frb. The solid line show the 95\% confidence upper limit on the power expected from bursts with random arrival times. (**New version being compiled**)
-\label{fig:ls}}
-\end{center}
-\end{figure}
-
-Burst detections were made very inhomogenously through the larger (63 hours) observing campaign of FRB 121102. In the first 30 hours of observing at S-band no bursts were detected, while nine bursts were detected in the last 27 hours of S-band observing. The data quality is high and RFI did not significantly impact sensitivity, so the inhomogeneous burst distribution shows that the burst detection probability was not stationary. Assuming that the burst detection probability follows a Poisson distribution, the nondetection in the first half of S-band limits the FRB rate to $\rm{R}<0.1$ hour$^{-1}$ (95\% confidence limit). The mean detection rate for the last part of the campaign was $\rm{R}=0.3$ hour$^{-1}$.
-
-Moreover, there is weak evidence that the \frb\ burst rate changes during the last part of the campaign. We modeled the event detection probability as a Poisson probability with a rate parameter that evolves linearly with time relative to first burst detection. We directly sampled the model by calculating the joint probability $\prod_{i} P_i$, where $P_i$ follows a Poisson probability with rate $\lambda = a + b * (\rm{MJD}_i - 57623)$. Figure \ref{fig:rate} shows that the probability distribution excludes a constant rate with $\sim$85\% confidence. This weak constraint is consistent with the broader trend seen by the VLA and Arecibo \citep{WEIRD}.
+There is weak evidence that the \frb\ burst rate changed during the last 27 hours of the S-band campaign. We modeled the event detection probability as a Poisson probability with a rate parameter that evolves linearly with time relative to first burst detection. We directly sampled the model by calculating the joint probability $\prod_{i} P_i$, where $P_i$ follows a Poisson probability with rate $\lambda = a + b * (\rm{MJD}_i - 57623)$. Figure \ref{fig:rate} shows that the probability distribution excludes a constant rate with $\sim$85\% confidence. This weak constraint is consistent with the broader trend seen by the VLA and Arecibo.
 
 \begin{figure}[htb]
 \begin{center}
@@ -334,46 +320,47 @@ Moreover, there is weak evidence that the \frb\ burst rate changes during the la
 \end{center}
 \end{figure}
 
-\subsection{Brightness Distribution}
+During the August--September 2016 observing campaign, the typical observation lasted about two hours and was sampled with a 5~ms cadence. We used the Lomb-Scargle periodogram \citep{1982ApJ...263..835S} to search for periodic structure over a wide range of timescales. The time series is calculated by binning the burst detection rate per 10~ms \citep[i.e., 0 or 1, see also]{2011MNRAS.417.1871P}. 
+**in progress**
+No significant excess spectral power is seen for periods from xx to xx s... 
+%The periodogram exceeds the 95\% power limit for periods from xx to xx s (**limited by binning time?**). This is consistent with the idea that the bursts imperfectly trace an underlying rotational period, as has been observed from many classes of neutron star. Examples include magnetars, which typically have wide pulse phase windows \citep{}, pulsars with glitches that change their periods \citep{}, and {\color{red} Maura? also refs for previous points would be welcome}. However, we can show with simulations that nine bursts drawn from a simple rotational would produce a strong, narrow peak in \ref{fig:ls}.
+
+\subsection{Luminosity and Brightness Distribution}
+\label{sec:disn}
 Knowing the burst distance, we calculate their mean luminosity across a single 5~ms integration and the 1~GHz bandwidth (Table \ref{tab:spec}). The VLA has also shown for the first time that most bursts are contained within the 3~GHz band. That means that the mean S-band flux density can be converted to a luminosity in units of ergs with no assumptions about its spectral properties.
 
-With a uniform sample of burst luminosities, we can use their distribution to infer more general properties for \frb. Figure \ref{fig:lumd} shows the luminosity distribution of the VLA bursts with a best-fit powerlaw model. Fitting a powerlaw model to the cumulative luminosity distribution gives an index of --0.5. The flatness of the distribution is also clear from range of significance of the nine bursts (12 to 179$\sigma$). All bursts are much brighter than the sensitivity limit (weakest is $\sim10\sigma$), so the distribution is not affected by a completeness limit.
+This uniform sample of burst luminosities can be used to infer more general properties of \frb. We treat the detection probability as a Poisson process with a rate that scales with the luminosity as a powerlaw. Figure \ref{fig:lumd} shows the probability distribution for the powerlaw amplitude and index for the sample of nine VLA bursts. The luminosity powerlaw index $1\sigma$ bounds range from --0.5 to +0.4; for a cumulative luminosity distribution, this corresponds to a powerlaw index of roughly --0.6. The flatness of the distribution is also clear from range of significance of the nine bursts (12 to 179$\sigma$). All bursts are much brighter than the sensitivity limit, so the distribution is not affected by a completeness limit.
 
 \begin{figure}[htb]
 \begin{center}
 \includegraphics[width=0.9\columnwidth]{luminosity_disn}
-\caption{Cumulative luminosity distribution and best-fit powerlaw model for the nine VLA bursts from \frb.
+\caption{Probability distribution of powerlaw luminosity model for the nine VLA bursts from \frb. Powerlaw referenced to $L=2\times10^{38}$\ erg.
 \label{fig:lumd}}
 \end{center}
 \end{figure}
 
+Assuming that \frb\ is representative of the overall FRB population, we can use the luminosity distribution of the former to infer properties of the latter. The primary observable of the FRB population is the flux distribution. We use a Monte-Carlo technique to simulate an FRB population with a given luminosity and spatial distribution. To reproduce the observed FRB sample, we select the brightest $N$\ bursts and fit their fluxes with a powerlaw. The tail of this distribution selects for extrema, such cut-offs in the intrinsic distribution or propagation effects \citep{2015MNRAS.451.3278M, CORDES}. Therefore, we sample 100 such populations and measure 95\% bounds on the distribution of cumulative flux distribution index.
+
+These simulations confirm previous work that shows that in many circumstances the cumulative flux distribution follows a Euclidean distribution \citep[index = --1.5;][]{2016MNRAS.462..941L}. To reproduce the flatness (index$\approx-1$) of the observed flux distribution, we need to incorporate other effects. 
+**in progress** (new figure?)
+
+
 \section{discussion}
 
 \subsection{Emission Physics and Burst Energetics}
-**Cut from gemini paper**
-The redshift measurement allows us to put FRB 121102’s energetics on a firmer footing, confirming \citet{LOC}.
+The measurement of a redshift to the host of \frb allows us to measure the burst luminosity. We now know that \frb\ is detectable with the VLA out to $z=0.7$ and much farther with Arecibo. This confirms the results presented in \citet{LOC}, which quoted a luminosity on the order of $10^{38}$\ erg. The more refined analysis presented here measures somewhat higher burst fluxes, so the brightest VLA burst luminosity is now on the order of $10^{40}$\ erg. 
 
-% from first paper
-For a nominal Gpc distance $D$ corresponding to redshifts $z\lesssim 0.3$, the received fluence $A_{\nu}$ from each burst implies  a burst energy
-$$E_{\rm burst} = 4\pi D^2 (\delta\Omega/4\pi) A_{\nu} \Delta\nu
-\approx 10^{38}\, {\rm erg}\,(\delta\Omega/4\pi) D_{\rm Gpc}^2  (A_{\nu} / 0.1\ {\rm Jy\ ms}) \Delta\nu_{\rm GHz}.$$
-The unknown  emission solid angle $\delta\Omega$
-could be very small due to relativistic beaming, and together with a distance possibly much smaller than 1~Gpc, could reduce the energy requirement significantly.  However, the {\it total} energy emitted could be larger depending on the duration of the emission in the source frame and other model-dependent details.
-Either way, the burst energies from \frb\ are not inconsistent with those that might be expected from the magnetosphere of a compact object\cite{2016MNRAS.457..232C}.
+However, the total energy emitted by \frb\ can be orders of magnitude larger or smaller than this value. While the emission process is not yet known, it is neccessarily coherent \citep{2016Natur.531..202S, WEIRD}, so relativistical beaming will amplify the apparent brightness. Propagation effects (e.g., scintillation, scattering) can also modify the radio signal in a variety of ways \citep{CORDES} and the duration of the emission in the source frame is not known. For these reasons, the luminosities described here are best described as isotropic, apparent luminosities. 
+
+**coherent emission from neutron stars** **extreme luminosities**
+\citep{2016MNRAS.462..941L, 2016MNRAS.457..232C}
 
 
-\subsection{Luminosity Distribution}
+\subsection{FRB Flux Distribution}
+Doubts were cast on the first FRB detection (``Lorimer burst'') due to its unusually high brightness. The lack of lower-significance detections suggested that this burst was unlikely to be part of any astrophysical population. With more detections, it has become clear that the FRB population has a relatively flat flux distribution \citep{2016ApJ...830...75V, 2016arXiv160206099L, 2016arXiv161100458L}. This fact was demonstrated with yet another detection of an extremely bright FRB \citep{2016arXiv161105758R}.
 
-Doubts were cast on the first FRB detection (``Lorimer burst'') due to its unusually high brightness. The lack of lower-significance detections suggested that this burst was unlikely to be part of any astrophysical population. With more detections, it has become clear that the FRB population has a relatively flat flux distribution \citep{2016ApJ...830...75V, 2016arXiv161100458L}. This fact was demonstrated with yet another detection of an extremely bright FRB \citep{2016arXiv161105758R}.
 
-\frb\ is detectable with the VLA out to $z=0.7$ and much farther with Arecibo...
-
-Discuss comparison FRB 121102 luminosity distribution to that of FRB population...
-
-Imagine physical log N/log S with cut-offs and scattering can bias the intrinsic into the observed distribution (Macquart and Johnston)...
-
-Simulate cosmic volume uniformly filled with \frb... Also once done with a theoretical model based on young pulsars \citep{2016MNRAS.462..941L}
-
+Flux distribution... (\S \ref{sec:disn})
 Scaling up assumes that this source is representative. Propagation effects may amplify or alter burst brightness statistical properties. Some such effects are possible near the burst source (e.g., Jim's caustic analysis), which would effectively be intrinsid in this context.
 
 \subsection{Repetition}
