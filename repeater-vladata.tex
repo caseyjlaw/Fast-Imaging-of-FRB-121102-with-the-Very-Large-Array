@@ -321,11 +321,7 @@ There is weak evidence that the \frb\ burst rate changed during the last 27 hour
 %\end{figure}
 
 During the August--September 2016 observing campaign, the typical observation lasted about two hours and was sampled with a 5~ms cadence. We used the Lomb-Scargle periodogram \citep{1982ApJ...263..835S} to search for periodic structure over a wide range of timescales. The time series is calculated by binning the burst detection rate per 100~ms \citep[always either 0 or 1, see also]{2011MNRAS.417.1871P}. 
-The spectral power is calculated for periods between 0.8 and 80 s and a 95\% confidence bound is estimated from a sample of 100 random shuffles of the data. 
-
-Figure \ref{fig:ls} shows that while no single period dominates the spectral power, there is excess power for periods shorter than {\color{red}xx s}. It is easy to generate excess power in a Lomb-Scargle periodogram with a non-stationary noise process. However, that tends to create spectral power on low frequencies \citep["red noise"][]{}. We verified that simulating nine bursts drawn from a simple rotational model would produce a strong, narrow peak in \ref{fig:ls}. If astrophysical, this excess power is consistent with the idea that the bursts imperfectly trace an underlying rotational period, as has been observed from many classes of neutron star. Examples include magnetars, which typically have wide pulse phase windows \citep{2007ApJ...663..497C} and glitches that change their periods \citep{2013Natur.497..591A}.
-
-
+The spectral power calculated for periods between 0.8 and 80 s shows no power in excess of the typical 95\% confidence bound estimated from shuffled data. We verified that simulating nine bursts drawn from a simple rotational model would produce excess power using this approach. However, it is difficult to put strong constraints on more complex rotational models \citep[e.g., with wide pulse phase windows or glitches][]{2007ApJ...663..497C, 2013Natur.497..591A}
 
 \subsection{Luminosity and Brightness Distribution}
 \label{sec:disn}
@@ -352,11 +348,7 @@ These simulations confirm previous work that shows that in many circumstances th
 \subsection{Emission Physics and Burst Energetics}
 The measurement of a redshift to the host of \frb allows us to measure the burst luminosity. We now know that \frb\ is detectable with the VLA out to $z=0.7$ and much farther with Arecibo. This confirms the results presented in \citet{LOC}, which quoted a luminosity on the order of $10^{38}$\ erg. The more refined analysis presented here measures somewhat higher burst fluxes, so the brightest VLA burst luminosity is now on the order of $10^{40}$\ erg. 
 
-However, the total energy emitted by \frb\ can be orders of magnitude larger or smaller than this value. While the emission process is not yet known, it is neccessarily coherent \citep{2016Natur.531..202S, WEIRD}, so relativistical beaming will amplify the apparent brightness. Propagation effects (e.g., scintillation, scattering) can also modify the radio signal in a variety of ways \citep{CORDES} and the duration of the emission in the source frame is not known. For these reasons, the luminosities described here are best described as isotropic, apparent luminosities. 
-
-**coherent emission from neutron stars** **extreme luminosities**
-\citep{2016MNRAS.462..941L, 2016MNRAS.457..232C}
-
+However, the total energy emitted by \frb\ can be orders of magnitude different than this isotropic, apparent luminosity. While the emission process is not yet known, it is neccessarily coherent \citep{2016Natur.531..202S, WEIRD}, so relativistical beaming will amplify the apparent brightness. Propagation effects (e.g., scintillation, scattering) can also modify the radio signal in a variety of ways \citep{CORDES} and the duration of the emission in the source frame is not known. In any case, the luminosity scale is still larger than any Galactic class of fast radio transient and requires either a new process or dramatic scaling of known emission processes \citep{2016MNRAS.462..941L, 2016MNRAS.457..232C}.
 
 \subsection{FRB Flux Distribution}
 Doubts were cast on the first FRB detection (``Lorimer burst'') due to its unusually high brightness. The lack of lower-significance detections suggested that this burst was unlikely to be part of any astrophysical population. With more detections, it has become clear that the FRB population has a relatively flat flux distribution \citep{2016ApJ...830...75V, 2016arXiv160206099L, 2016arXiv161100458L}. This fact was demonstrated with yet another detection of an extremely bright FRB \citep{2016arXiv161105758R}.
@@ -376,34 +368,25 @@ Fewer FRBs out there...
 
 
 \subsection{FRB Rate}
-% cut from gemini paper. TODO: incorporate referee comments on rate scale
+% cut from gemini paper. TODO: incorporate referee comments on rate scale. Sarah?
 Assuming that \frb is from the same population as the other FRBs, the measurement of a distance for the host of \frb allows us to re-evaluate the cosmic volume and event rate per galaxy for the FRB population. The estimated projected FRB rate $R_p$ understates the true rate by a beaming fraction $\Omega_b$ \citep[$\sim$10\%;][]{1998MNRAS.298..625T}.. For a comoving volume $V(z)$ and galaxy number density $\Phi(M)$, the rate per galaxy is $R_{FRB} = R_p \Omega_b /(\Phi(M)V (z))$. 
 
 The first such rate estimate was made by \citet{2013Sci...341...53T}, who used the measured DM to estimate a characteristic distance for their sample of 4 FRBs. They assumed that all of the extragalactic component of the DM was caused by the IGM and scaled as $DM\approx z\times1200 \rm{pc} \rm{cm}^{-3}$ \citep{2003ApJ...598L..79I,2004MNRAS.348..999I}. They also calculated the number of galaxies by assuming a characteristic $L_*$ galaxy \citep[corresponding to stellar mass $M_* \approx 1010.66 M$][]{2012MNRAS.421..621B}.
 
-Our calculation differs in that we have better estimates of all three parameters. First, the projected FRB rate is now believed to be closer to $2\times10^3 \rm{sky}^{-1} \rm{day}^{-1}$\ at high Galactic latitudes and flux densities brighter than 1 Jy ms \citep{2016arXiv161100458L,2016MNRAS.460L..30C}. \frb\ is associated with a relatively small galaxy, which are roughly a factor of 100 more abundant \citep[$\Phi(M) \approx 10^{-2} \rm{Mpc}^{-3}$][]{2007ApJ...665..265F}. Finally, the measured distance for FRB 121102 suggests that roughly half of the extragalactic DM is intrinsic to the host and half is from the IGM.
+Our calculation differs in that we have better estimates of all three parameters. First, the projected FRB rate is now believed to be closer to $2\times10^3 \rm{sky}^{-1} \rm{day}^{-1}$\ at high Galactic latitudes and flux densities brighter than 1 Jy ms \citep{2016arXiv161100458L,2016MNRAS.460L..30C}. \frb\ is associated with a relatively small galaxy, which are roughly a factor of 100 more abundant \citep[$\Phi(M) \approx 10^{-2} \rm{Mpc}^{-3}$;][]{2007ApJ...665..265F}. Finally, the measured distance for FRB 121102 suggests that roughly half of the extragalactic DM is intrinsic to the host and half is from the IGM.
 
 This reduces the characteristic distance by a factor of two and the volume by an order of magnitude. Considering these factors, we assume a characteristic FRB redshift of 0.4 to estimate $R_{FRB} \approx 10^{-4} (0.1/\Omega_b) \rm{galaxy}^{-1} \rm{year}^{-1}$, which is two orders of magnitude lower than previously estimated \citep[assuming isotropic radiation;]{2013Sci...341...53T}.
 
 There are significant caveats to the comparison of this rate to the rates of other classes of transient. This isotropic FRB rate assumes a projected FRB rate at a single (observationally defined) flux limit and that no bursts repeat. Using this calculation with data from more sensitive telescopes, we might infer a higher rate. However, if we assume that \frb\ is representative of the overall FRB population, then more sensitive observations would be more likely to find repeating FRBs that would effectively depress the estimate of the underlying isotropic rate per source. In this model, these two effects partially cancel, although without a physical model it is difficult to say how well.
 
 \subsection{Observing Strategies}
-
-Repetition implies that targeting known FRBs is optimal.
-
-Repetition and shallow luminosity distribution show that shallow and wide is the best way to blindly find FRBs.
-
-Given that bursts have $<1$~GHz-scale spectra, wide bandwidths improve odds of detection.
-
+As discussed above, \citet{2016MNRAS.458L..89C} note that the FRB repetition implies that the number of FRB-generating sources is smaller than the number of bursts. In some scenarios, this means that there are areas on the sky that may contain no FRBs. Wide, shallow surveys are the preferred strategy for blind detection of FRBs. However, future efforts to localize FRBs are still most likely to success by targeting known FRBs to catch repetitions. Finally, we note that the spectral coverage of bursts from \frb\ are relatively narrow ($<1$~GHz) and change dramatically between bursts. Thus, the odds of detecting a burst will improve linearly with bandwidth for bandwidths wider than this characteristic scale.
 
 \subsection{Naming Convention}
-
-The cosmological distance for \frb\ and consistency with the overall population suggests that most FRBs repeat. The current naming convention for FRBs is analogous to supernovae, with six numbers defining the year, month, and day of detection. If all FRBs repeat, then this naming convention is only useful for identifying its discovery. A more useful convention would be the more common one that uses the coordinates. But there are already two FRBs that have consistent celestial positions and different DMs.
-
-We suggest a convention of referring to FRBs as Jhhmm+dd or appending DM...
-
+The consistency of \frb\ properties (e.g., luminosity distribution) with the overall population suggests other FRBs likely repeat. If so, the current naming convention for FRBs (analogous to cataclysmic supernovae), will likely become uninformative, especially as large FRB survey projects come online \citep{2014SPIE.9145E..22B}. If all FRBs repeat, then a more useful convention would be based on coordinates. However, there are already two FRBs that have consistent celestial positions and different DMs. Therefore, we suggest an FRB naming convention as Jhhmm+ddDMmmmm.
 
 \section{Conclusions}
+Prior to being established as a cosmological source, the low Galactic latitude of \frb\ made it a somewhat compromised member of the FRB class. With its cosmological distance firmly established, \frb\ now serves as a new kind of standard by which FRBs are defined. 
 
 
  % include timeline and science scope for new localizations? realfast plug and reference cosmology papers, contingency on DMhost, etc.
