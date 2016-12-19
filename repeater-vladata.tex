@@ -78,6 +78,7 @@
 %\affiliation{Joint Institute for VLBI ERIC, Postbus 2, 7990 AA Dwingeloo, The Netherlands}
 
 \author{D.~Michilli}
+\affiliation{ASTRON, Netherlands Institute for Radio Astronomy, Postbus 2, 7990 AA, Dwingeloo, The Netherlands}
 \affiliation{Anton Pannekoek Institute for Astronomy, University of Amsterdam, Science Park 904, 1098 XH Amsterdam, The Netherlands}
 
 \author{M.~A.~McLaughlin}
@@ -217,7 +218,7 @@ This simultaneous detection of a burst from roughly 1 to 4~GHz shows that some b
 
 \subsubsection{Spectra}
 \label{sec:spec}
-Figure \ref{fig:sgram} shows the dynamic spectra of all nine bursts detected by the VLA. We improved on the initial analysis presented in \citet{LOC} by using a better calibration scheme and optimizing the detection significance over a fine grid of DM ($\Delta \rm{DM}=1 \rm{pc} \rm{cm}^{-3}$). Table \ref{tab:spec} shows the improved burst parameters using this new scheme. 
+Figure \ref{fig:sgram} shows the dynamic spectra of all nine bursts detected by the VLA. We improved on the initial analysis presented in \citet{LOC} by using a better calibration scheme and optimizing the detection significance over a fine grid of DM ($\Delta \rm{DM}=1 \rm{pc}\ \rm{cm}^{-3}$). Table \ref{tab:spec} shows the improved burst parameters using this new scheme. 
 
 \begin{table*}
 \caption{Properties of Bursts from \frb}
@@ -273,11 +274,11 @@ The burst spectra are generally characterized by a broad, Gaussian shape that wi
 All but two of the best-fit Gaussians are centered inside the 3~GHz band and most appear contained by the 1~GHz wide band. This is consistent with previous detections of \frb by Arecibo, which showed quasi-broadband structure \citep{2016arXiv160308880S} and large variation in the implied spectral index \citep{2014ApJ...790..101S}. A detailed discussion of high-resolution \frb\ burst spectra seen by the Arecibo Observatory will be presented elsewhere \citep{WEIRD}.
 
 \subsubsection{Dispersion}
-The initial VLA detections were made by searching a DM grid that allowed inter-DM sensitivity losses up to roughly 10\% \citep[$\Delta DM=10 \rm{pc} \rm{cm}^{-3}$][]{2003ApJ...596.1142C}. In optimizing detection significance over a fine DM grid, we find optimal DM values range from 552 to 572 pc cm$^{-3}$. However, the uncertainty in the peak DM measurement is defined by the DM sensitivity loss curve and the significance of the burst. 
+The initial VLA detections were made by searching a DM grid that allowed inter-DM sensitivity losses up to roughly 10\% \citep[$\Delta DM=10 \rm{pc}\ \rm{cm}^{-3}$][]{2003ApJ...596.1142C}. In optimizing detection significance over a fine DM grid, we find optimal DM values range from 552 to 572 pc cm$^{-3}$. However, the uncertainty in the peak DM measurement is defined by the DM sensitivity loss curve and the significance of the burst. 
 
 Given that the apparent DM can potentially change due to intrinsic or extrinsic effects, we developed a more sophisticated system for modeling dispersion. We created a generative model to sample the likelihood distribution of a class of dispersion models \citep{2010arXiv1008.4686H}. We use the Gaussian shape (see \S \ref{sec:spec}) along the spectral axis and apply a frequency-depndent delay for a given dispersion model. The likelihood is directly sampled by calculating the product of probabilities on a per-pixel basis of the 2-dimensional dynamic spectrum. Uncertainties in each pixel are drawn from a uniform Gaussian error distribution that is estimated from the data.
 
- **Preliminary** Figure \ref{fig:dmmodel} compares the 95\% confidence intervals on the DM for all nine VLA bursts. The DM confidence intervals are not consistent with a single DM, which suggests that there are apparent DM changes between bursts. This change could be caused by intrinsic burst structure or actual changes to the DM column density. 
+ **Preliminary** Figure \ref{fig:dmmodel} compares the 95\% confidence intervals on the DM for all nine VLA bursts. The DM confidence intervals {\color{red} are/are not} consistent with a single DM... %, which suggests that there are apparent DM changes between bursts. This change could be caused by intrinsic burst structure or actual changes to the DM column density. 
 
 High-resolution dynamic spectra at 1.4~GHz have discovered spectro-temporal structure that can bias the apparent DM differently from burst to burst \citep{WEIRD}. Observations at 1.4~GHz have measured DM in the range from xx to yy pc cm$^{-3}$, which is **smaller than/consistent with** the range of observed values seen by the VLA at 3~GHz. The FRB emission process has not yet been defined, so it is not clear how the intrinsic structure can bias DM as a function of frequency. {\color{red} Laura, any input from DM at higher frequencies?}
 
@@ -365,9 +366,9 @@ If this statistical property describes other FRBs, it weakens previous constrain
 
 \subsection{FRB Rate}
 % cut from gemini paper. TODO: incorporate referee comments on rate scale. Sarah?
-Assuming that \frb is from the same population as the other FRBs, the measurement of a distance for the host of \frb allows us to re-evaluate the cosmic volume and event rate per galaxy for the FRB population. The estimated projected FRB rate $R_p$ understates the true rate by a beaming fraction $\Omega_b$ \citep[$\sim$10\%;][]{1998MNRAS.298..625T}.. For a comoving volume $V(z)$ and galaxy number density $\Phi(M)$, the rate per galaxy is $R_{FRB} = R_p \Omega_b /(\Phi(M)V (z))$. 
+Assuming that \frb is from the same population as the other FRBs, the measurement of a distance for the host of \frb allows us to re-evaluate the cosmic volume and event rate per galaxy for the FRB population. The estimated projected FRB rate $R_p$ understates the true rate by a beaming fraction $\Omega_b$ \citep[$\sim$10\%;][]{1998MNRAS.298..625T}.. For a comoving volume $V(z)$ and galaxy number density $\Phi(M)$, the rate per galaxy is $R_{FRB} = R_p /(\Omega_b \Phi(M)V (z))$. 
 
-The first such rate estimate was made by \citet{2013Sci...341...53T}, who used the measured DM to estimate a characteristic distance for their sample of 4 FRBs. They assumed that all of the extragalactic component of the DM was caused by the IGM and scaled as $DM\approx z\times1200 \rm{pc} \rm{cm}^{-3}$ \citep{2003ApJ...598L..79I,2004MNRAS.348..999I}. They also calculated the number of galaxies by assuming a characteristic $L_*$ galaxy \citep[corresponding to stellar mass $M_* \approx 1010.66 M$][]{2012MNRAS.421..621B}.
+The first such rate estimate was made by \citet{2013Sci...341...53T}, who used the measured DM to estimate a characteristic distance for their sample of 4 FRBs. They assumed that all of the extragalactic component of the DM was caused by the IGM and scaled as $DM\approx z\times1200 \rm{pc}\ \rm{cm}^{-3}$ \citep{2003ApJ...598L..79I,2004MNRAS.348..999I}. They also calculated the number of galaxies by assuming a characteristic $L_*$ galaxy \citep[corresponding to stellar mass $M_* \approx 1010.66 M$][]{2012MNRAS.421..621B}.
 
 Our calculation differs in that we have better estimates of all three parameters. First, the projected FRB rate is now believed to be closer to $2\times10^3 \rm{sky}^{-1} \rm{day}^{-1}$\ at high Galactic latitudes and flux densities brighter than 1 Jy ms \citep{2016arXiv161100458L,2016MNRAS.460L..30C}. \frb\ is associated with a relatively small galaxy, which are roughly a factor of 100 more abundant \citep[$\Phi(M) \approx 10^{-2} \rm{Mpc}^{-3}$;][]{2007ApJ...665..265F}. Finally, the measured distance for FRB 121102 suggests that roughly half of the extragalactic DM is intrinsic to the host and half is from the IGM.
 
