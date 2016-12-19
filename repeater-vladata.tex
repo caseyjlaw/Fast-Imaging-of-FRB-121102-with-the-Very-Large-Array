@@ -209,7 +209,7 @@ This simultaneous detection of a burst from roughly 1 to 4~GHz shows that some b
   \includegraphics[width=0.18\columnwidth]{sgram_57649.png}
  \end{minipage}
 
- \caption{Dynamic spectra (time vs frequency intensity maps) for the nine VLA bursts. Starting at the top left, they correspond to bursts 57623, 57633.68, 57633.70, 57638, 57643, 57645, 57646, 57648, and 57649. Note that bursts are detected in 5~ms images generated from dedispersed visibilities.
+ \caption{Dynamic spectra (time vs frequency intensity maps) for the nine VLA bursts. Starting at the top left, they correspond to bursts 57623, 57633.68, 57633.70, 57638, 57643, (bottom left) 57645, 57646, 57648, and 57649. Note that bursts are detected in 5~ms images generated from dedispersed visibilities.
  \label{fig:sgram}}
 \end{center}
 \end{figure*}
@@ -262,7 +262,7 @@ Figure \ref{fig:spec} shows the spectrum of the integration and DM that maximize
   \includegraphics[width=0.3\columnwidth]{spec_57648.png}
   \includegraphics[width=0.3\columnwidth]{spec_57649.png}
  \end{minipage}
-\caption{Spectra of nine bursts seen by the VLA from 2.5 to 3.5~GHz. Orthongonal circular polarizations (RR and LL) are plotted separately. **LABELS ALL SAME FREQ. SOME SHOULD START HIGHER FOR DROPPED CHANNELS**
+\caption{Spectra of nine bursts seen by the VLA from 2.5 to 3.5~GHz. Orthongonal circular polarizations (RR and LL) are plotted separately and example errorbars are shown at the top right of each panel. A binned spectrum is overplotted with a solid line.
 \label{fig:spec}}
 \end{center}
 \end{figure*}
@@ -308,6 +308,7 @@ Autocorrelation of the burst signal (both temporal and spectral) can be used to 
 The VLA S-band recievers natively measure circular polarization, although for observing efficiency we chose not include polarization calibration procedures. Crude constraints on circular polarization are possible by comparing the burst intensity in right and left-hand polarized data products. The apparent circular polarization fraction ($(RR-LL)/(RR+LL)$) for the most significant bursts are all less than 3\%. \frb was located 2.3 arcmin away from pointing center, where systematic effects have been measured as large as 3\% (Perley et al 2016, VLA memo). Given that systematic effects dominate the apparent circular polarization, we conclude that the true fractional circular polarization is less than 3\%.
 
 \subsection{Temporal Statistics}
+\label{sec:temp}
 Burst detections were made very inhomogenously through the larger (63 hours) observing campaign of FRB 121102. In the first 30 hours of observing at S-band no bursts were detected, while nine bursts were detected in the last 27 hours of S-band observing. The data quality is high, so the inhomogeneous burst distribution shows that the burst detection probability was not stationary. Assuming that the burst detection probability follows a Poisson distribution, the nondetection in the first half of S-band limits the FRB rate to $\rm{R}<0.1$ hour$^{-1}$ (95\% confidence limit). The mean detection rate for the last part of the campaign was $\rm{R}=0.3$ hour$^{-1}$.
 
 There is weak evidence that the \frb\ burst rate changed during the last 27 hours of the S-band campaign. We modeled the event detection probability as a Poisson probability function, $P_i(\lambda)$, with rate parameter that evolves linearly in time relative to the first VLA burst $\lambda = a + b (\rm{MJD}_i - 57623)$. By directly sampling the joint probability distribution, $\prod_{i} P_i$, we can exclude a constant rate with $\sim$85\% confidence. This weak constraint is consistent with the broader trend seen by the VLA and Arecibo.
@@ -351,21 +352,16 @@ The measurement of a redshift to the host of \frb allows us to measure the burst
 However, the total energy emitted by \frb\ can be orders of magnitude different than this isotropic, apparent luminosity. While the emission process is not yet known, it is neccessarily coherent \citep{2016Natur.531..202S, WEIRD}, so relativistical beaming will amplify the apparent brightness. Propagation effects (e.g., scintillation, scattering) can also modify the radio signal in a variety of ways \citep{CORDES} and the duration of the emission in the source frame is not known. In any case, the luminosity scale is still larger than any Galactic class of fast radio transient and requires either a new process or dramatic scaling of known emission processes \citep{2016MNRAS.462..941L, 2016MNRAS.457..232C}.
 
 \subsection{FRB Flux Distribution}
-Doubts were cast on the first FRB detection (``Lorimer burst'') due to its unusually high brightness. The lack of lower-significance detections suggested that this burst was unlikely to be part of any astrophysical population. With more detections, it has become clear that the FRB population has a relatively flat flux distribution \citep{2016ApJ...830...75V, 2016arXiv160206099L, 2016arXiv161100458L}. This fact was demonstrated with yet another detection of an extremely bright FRB \citep{2016arXiv161105758R}.
+Doubts were cast on the first FRB detection (``Lorimer burst'') due to its unusually high brightness. The lack of lower-significance detections suggested that this burst was unlikely to be part of any astrophysical population. With more detections, it has become clear that the FRB population has a relatively flat flux distribution \citep{2016ApJ...830...75V, 2016arXiv160206099L, 2016arXiv161100458L}. This fact was recently demonstrated by yet another detection of an extremely bright FRB \citep{2016arXiv161105758R}.
 
+**Discussion of luminosity/flux distribution analysis presented in \S \ref{sec:disn})**
 
-Flux distribution... (\S \ref{sec:disn})
-Scaling up assumes that this source is representative. Propagation effects may amplify or alter burst brightness statistical properties. Some such effects are possible near the burst source (e.g., Jim's caustic analysis), which would effectively be intrinsid in this context.
+It is not yet clear whether \frb\ can be treated as a representative of the broader FRB population. \citet{2016Natur.531..202S} describes burst spectral structure that is intrinsic, or at least dominated by propagation effects close to the emitting region. On the other hand, \citep{CORDES} have identified a variety of propagation effects in our own Galaxy that can plausibly modify the observed brightness distribution.
 
 \subsection{Repetition}
-Discussion of ``red spectrum'' and \citet{2016MNRAS.458L..89C}. Bursts predict bursts therefore repetition constraints of other FRBs are likely weaker than claimed...
+The burst rate analysis presented in \S \ref{sec:temp} shows that the detection probability of \frb\ is not stationary. As mentioned above, this could be caused by intrinsic events (e.g., magnetar outburst) or propagation effects. In either case, it demonstrates that \frb\ has a kind of "red spectrum" temporally, in which bursts tend to cluster in time \citep{2016MNRAS.458L..89C}. The detection of a burst improves odds of finding more bursts in near-future observations. 
 
-Constraints on repetition assuming "red spectrum" for whole population. Simulation using observed burst temporal statistics...
-
-Intrinsic versus refractive scintillation...
-
-Fewer FRBs out there...
-
+If this statistical property describes other FRBs, it weakens previous constraints on repetition \citep{2015MNRAS.454..457P,2015ApJ...807...16L}. It is possible that other FRBs have repeating bursts, although calculating a limit requires knowing the temporal powerlaw that defines the repetition. Observations of \frb\ have not yet detected enough bursts to reliably measure that index. This repetition also implies that there are fewer phyiscal sources of FRBs than implied by the burst detection rate.
 
 \subsection{FRB Rate}
 % cut from gemini paper. TODO: incorporate referee comments on rate scale. Sarah?
