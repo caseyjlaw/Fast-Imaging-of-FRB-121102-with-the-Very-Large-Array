@@ -41,8 +41,11 @@ def putdot(ax, i):
 			ax.scatter(pltx, plty, marker='o', s=600, linewidth=2, facecolor='none', edgecolor='k')
 			if int(burst[i]) > 2:
 				ax.scatter(pltx, plty, marker='o', s=900, linewidth=2, facecolor='none', edgecolor='k')
-
-	ax.scatter(pltx, plty, marker=psym[tel[i]], s=100, linewidth=3, facecolor=pcol[tel[i]], edgecolor='none')
+	if tel[i] == 'AMI':
+		s = 250
+	else:
+		s = 80
+	ax.scatter(pltx, plty, marker=psym[tel[i]], s=s, linewidth=3, facecolor=pcol[tel[i]], edgecolor='none')
 
 def d2n(yyyy, mm, dd):
 	return( date2num(datetime.date(yyyy, mm, dd)) )
