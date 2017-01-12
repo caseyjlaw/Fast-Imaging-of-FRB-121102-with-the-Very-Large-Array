@@ -236,7 +236,7 @@ This simultaneous detection of a burst from roughly 1 to 4~GHz shows that some b
 % \end{minipage}
 %
 % \caption{Dynamic spectra (time vs frequency intensity maps) for the nine VLA bursts. Starting at the top left, they correspond to bursts 57623, 57633.68, 57633.70, 57638, 57643, (bottom left) 57645, 57646, 57648, and 57649. Note that bursts are detected in 5~ms images generated from dedispersed visibilities.
- \includegraphics[width=0.9\columnwidth]{sgram_57623.png}
+ \includegraphics[width=1.9\columnwidth]{spec_57648.png}
  \caption{**Placeholder** Fill in with AO+VLA dynamic spectrum.
  \label{fig:sgram}}
 \end{center}
@@ -254,15 +254,15 @@ Figure \ref{fig:sgram} shows the dynamic spectra of all nine bursts detected by 
 \hline
 Date                & S$_{\rm{int}}$  & Image S/N & E$_{\rm{int}}$ & DM$_{\rm{opt}}$ & S$_{\rm{peak}}$  & Center & FWHM \\
 (MJD)               & (mJy)           &           & ($10^{38}$\ erg) & (pc cm$^{-3})$ & (Jy) & (GHz)  & (MHz) \\ \hline
-57623               & 258             & 38        & 7.1  & 561 & 0.41                                    & 2.8 & 300 \\
-57633.68            & 2000            & 179       & 56   & 554 & 1.89                                    & 3.1 & 520 \\
-57633.70\tablenotemark{a} & 105       & 15        & 5.5  & 559 & $>$0.28                                & $<$2.5 & $>$350 \\
-57638               & 65              & 12        & 1.7  & 556 & 0.07                                    & 3.1 & 430 \\
-57643               & 375             & 100       & 11   & 560 & 0.39                                    & 2.8 & 530 \\
-57645               & 38              & 13        & 1.0  & 572 & 0.05                                    & 2.8 & 350 \\
-57646\tablenotemark{a} & 69           & 20        & 3.4  & 555 & $>$0.16                                 & $<$2.5 & $>$380 \\
-57648\tablenotemark{b} & 97           & 25        & 2.6  & 559 & 0.11                                    & 2.8 & 420 \\
-57649               & 110             & 36        & 3.7  & 552 & 0.07                                    & 2.9 & 870 \\ \hline
+57623               & 258             & 38        & 7.8  & 562.5 & 0.46 & 2.8 & 300 \\
+57633.68            & 2000            & 179       & 65   & 561.4 & 2.20 & 3.2 & 520 \\
+57633.70\tablenotemark{a} & 105       & 15        & 5.9  & 555.4 & $>$0.32 & $<$2.5 & $>$320 \\
+57638               & 65              & 12        & 1.8  & 554.9 & 0.07 & 3.1 & 440 \\
+57643               & 375             & 100       & 13   & 559.3 & 0.44 & 2.8 & 530 \\
+57645               & 38              & 13        & 2.6  & 554.1 & 0.05 & 2.7 & 970 \\
+57646\tablenotemark{a} & 69           & 20        & 3.9  & 568.1 & $>$0.19 & $<$2.5 & $>$360 \\
+57648\tablenotemark{b} & 97           & 25        & 2.9  & 557.8 & 0.11 & 2.8 & 440 \\
+57649               & 110             & 36        & 6.3  & 559.9 & 0.08 & 2.9 & 1400 \\ \hline
 \end{tabular}
 \tablenotetext{a}{Best-fit Gaussian is not centered in 3~GHz band, so spectral parameters are limits.}
 \tablenotetext{b}{Detected simultaneously with Arecibo between 1.15 and 1.73~GHz.}
@@ -290,8 +290,7 @@ Figure \ref{fig:spec} shows the spectrum of the integration and DM that maximize
   \includegraphics[width=0.33\columnwidth]{spec_57648.png}
   \includegraphics[width=0.33\columnwidth]{spec_57649.png}
  \end{minipage}
-\caption{Spectra of nine bursts seen by the VLA from 2.5 to 3.5~GHz. Starting at the top left (moving right and then down), they correspond to bursts on MJDs 57623, 57633.68, 57633.70, 57638, 57643, 57645, 57646, 57648, and 57649. Note that bursts are detected in 5~ms images generated from dedispersed visibilities.
-The solid line is a best-fit Gaussian model derived from spectra binned by a factor of 4.
+\caption{Spectra and best-fit model for nine bursts seen by the VLA from 2.5 to 3.5~GHz. Starting at the top left (moving right and then down), they correspond to bursts on MJDs 57623, 57633.68, 57633.70, 57638, 57643, 57645, 57646, 57648, and 57649. The solid line is a best-fit Gaussian model found through probabilistic modeling. Note that bursts are detected in 5~ms images generated from dedispersed visibilities.
 \label{fig:spec}}
 \end{center}
 \end{figure*}
@@ -311,7 +310,7 @@ Figure \ref{fig:dmmodel} compares the 95\% confidence intervals on the DM for al
 \begin{figure}[htb]
 \begin{center}
 \includegraphics[width=0.9\columnwidth]{dmmodel}
-\caption{DM 95\% confidence intervals of the nine 3~GHz bursts detected by the VLA. The grey band shows the range of DM previously detected at 1.4~GHz ($\pm3$\ pc cm$^{-3}$).
+\caption{DM as a function of time for nine 3~GHz bursts detected by the VLA. The 95\% confidence interval on DM is shown with a bar and the dahsed line shows the best-fit DM$=560.5$\ pc cm$^{-3}$ inferred for Arecibo observations at 1.4~GHz (CITE: WEIRD).
 \label{fig:dmmodel}}
 \end{center}
 \end{figure}
@@ -326,7 +325,7 @@ Autocorrelation of the burst signal (both temporal and spectral) can be used to 
 \begin{figure}[htb]
 \begin{center}
 \includegraphics[width=0.9\columnwidth]{acf_57633_scan7}
-\caption{The spectral autocorrelation as a function of frequency for the burst from \frb\ at MJD 57633.68. Black dots show the autocorrelation for the burst and cyan shows the autocorrelation of a representative spectrum with no burst.
+\caption{The spectral autocorrelation as a function of frequency for the burst from \frb\ at MJD 57633.68. The largest black dots show the autocorrelation for the data, smaller dots show the autocorrelation for the best Gaussian model, and dashed line shows the autocorrelation of an off-burst spectrum.
 \label{fig:acf}}
 \end{center}
 \end{figure}
