@@ -155,13 +155,13 @@ This paper opens by describing the multi-telescope observing campaign and a refi
 The data presented here were obtained from multiple programs and telescopes, but the central goal was to interferometrically localize \frb\ with the VLA. The observing strategy was to ensure simultaneous observing between the VLA and Arecibo observatories and add other observatories on a best-effort basis. We coordinated observing between the VLA, Arecibo, Effelsberg, and AMI-LA telescopes, as shown in Figure \ref{fig:multi}. Below, we summarize these observations, with a focus on those conducted simultaneously with VLA burst detections from \frb.
 
 \subsection{VLA}
-The \frb\ observing campaign started in late 2015 with a 10~hr campaign observed at 1.4~GHz in the compact D configuration. In April through May 2016, we conducted a 40~hr campaign at 3~GHz in the C and CnB configurations in coordination with Arecibo. We concluded with a 40~hr, coordinated campaign from August through September 2016 in the B configuration and during the move to the most extended A configuration. In this last campaign, the first 34 hours of VLA observations were made at 3~GHz, while the last 6 hours were observed at 6~GHz. This paper focuses on the data collected at 3~GHz, which include all nine burst detections and is the widest bandwidth to have ever detected an FRB.
+The \frb\ observing campaign started in late 2015 with a 10~hr campaign observed at 1.4~GHz in the compact D configuration. In April through May 2016, we conducted a 40~hr campaign at 3~GHz in the C and CnB configurations in coordination with Arecibo. We concluded with a 40~hr, coordinated campaign from August through September 2016 in the B configuration and during the move to the most extended A configuration. In this last campaign, the first 34 hours of VLA observations were made at 3~GHz, while the last 6 hours were observed at 6~GHz. This paper focuses on the data collected at 3~GHz, which includes all nine burst detections and is the widest bandwidth to have ever detected an FRB.
 
-All VLA fast-sampled data were observed with 5~ms sampling, 256 channels, and dual-circular polarization \citep{2015ApJ...807...16L}. The channel frequency width was set to maximize sensitivity to the known DM of \frb, with the largest total bandwidth. The total bandwidth at L (1.4~GHz), S (3~GHz), and C (6~GHz) bands was 256~MHz, 1024~MHz, and 2048~MHz, respectively. The 3~GHz data were recorded data in eight spectral windows with 32 channels each.
+All VLA fast-sampled data were observed with 5~ms sampling, 256 channels, and dual-circular polarization \citep{2015ApJ...807...16L}. The channel frequency width was set to maximize sensitivity to the known DM of \frb with the largest total bandwidth. The total bandwidth at L (1.4~GHz), S (3~GHz), and C (6~GHz) bands was 256~MHz, 1024~MHz, and 2048~MHz, respectively. The 3~GHz data were recorded data in eight spectral windows with 32 channels each.
 
-Observations in August and September were searched by a prototype version of \rf\footnote{See \url{http://realfast.io}.}. \rf\ is a real-time, fast imaging transient search system. The current prototype runs on existing, CPU-based hardware of the VLA correlator backend with transient search pipeline software called \emph{rtpipe} \citep[\url{https://github.com/caseyjlaw/rtpipe};][]{2015ApJ...807...16L}. Images were formed for each integration with a DM grid of 0, 546, 556.9, 560, and 565 pc cm$^{-3}$ and a time resampling grid of 5, 10, 20, 40, and 80 ms. This DM grid was chosen to maintain 90\% sensitivity to the nominal DM range of 540--570 pc cm$^{-3}$, which includes the known \frb\ DM of 559 pc cm$^{-3}$. Gain calibration was made from observations of J0555+3948 by the ''telcal'' system, which uses phase-only calibration. A flux scale is calculated for each spectral window from an observation on {\color{red}xx (Bryan)} and applied to all burst spectra.
+Observations in August and September were searched by a prototype version of \rf\footnote{See \url{http://realfast.io}.}. \rf\ is a real-time, fast imaging transient search system. The current prototype runs on CPU-based hardware that is normally dedicated to the VLA correlator; for this experiment, it runs the transient search pipeline software called \emph{rtpipe} \citep[\url{https://github.com/caseyjlaw/rtpipe};][]{2015ApJ...807...16L}. Images were formed for each integration with a DM grid of 0, 546, 556.9, 560, and 565 pc cm$^{-3}$ and a time resampling grid of 5, 10, 20, 40, and 80 ms. This DM grid was chosen to maintain 90\% sensitivity to the nominal DM range of 540--570 pc cm$^{-3}$, which includes the known \frb\ DM of 559 pc cm$^{-3}$. Gain calibration was made from observations of J0555+3948 by the ''telcal'' system, which uses phase-only calibration. A flux scale is calculated for each spectral window from an observation on {\color{red}xx (Bryan)} and applied to all burst spectra.
 
-Burst detections and localizations were made within hours of data being recorded. The transient search starts when data are recorded and proceeds slower than real-time, so we refer to it as ''quasi real-time''. For each trial DM, integration, and time scale, we form an image and calculate the S/N ratio for the peak pixel in the dirty image. We empirically identified S/N thresholds of 6.4 and 7.4 as useful to capture data quality statistics and candidates for inspection, respectively. The higher threshold is relatively unlikely to be triggered by thermal noise in this configuration, so \rf\ generates a more detailed candidate visualization with an image and spectrum. All visibilities are recorded so detailed analysis, including improved calibration and localization, can be conducted offline. 
+Burst detections and localizations were made within hours of data being recorded. The transient search starts when data are recorded and proceeds slower than real-time, so we refer to it as ''quasi real-time''. For each trial DM, integration, and time scale, we form an image and calculate the S/N ratio for the peak pixel in the dirty image. We empirically identified S/N thresholds of 6.4 and 7.4 as useful to capture data quality statistics and candidates for inspection, respectively. The higher threshold is relatively unlikely to be triggered by thermal noise in this configuration, so \rf\ generates a more detailed (and computationally intensive) candidate visualization that includes an image and spectrum. All visibilities are recorded so detailed analysis, including improved calibration and localization, can be conducted offline. 
 
 Computational notebooks to reproduce the transient detection, localization, and analysis presented here can be found at \url{https://github.com/caseyjlaw/FRB121102}. Time cut-out visibility data and calibration products are available at \url{https://doi.org/10.7910/DVN/TLDKXG}. Original visibility data are available under VLA program codes 16A-459 and 16A-496 and can be downloaded at \url{http://archive.nrao.edu}.
 
@@ -229,9 +229,13 @@ This simultaneous detection of a burst from roughly 1.2 to 3.5~GHz shows that so
 \end{figure*}
 
 
-\subsubsection{Spectra}
+\subsubsection{Spectral Modeling}
 \label{sec:spec}
-Figure \ref{fig:sgram} shows the dynamic spectra of all nine bursts detected by the VLA. We improved on the initial analysis presented in \citet{LOC} by using a better calibration scheme and optimizing the detection significance over a fine grid of DM ($\Delta \rm{DM}=1\ \rm{pc}\ \rm{cm}^{-3}$). Table \ref{tab:spec} shows the optimal image integrated flux density, image S/N, and Stokes V using this new scheme. Improved burst spectral parameters are also measured from MCMC modeling of the dynamic spectra.
+We used two techniques to refine the analysis of the nine VLA radio burst spectra presented in \citet{LOC}. First, we improved on the initial analysis by using a better calibration scheme and optimizing the detection significance over a fine grid of DM ($\Delta \rm{DM}=1\ \rm{pc}\ \rm{cm}^{-3}$). In Table \ref{tab:spec}, the integrated burst flux density, image S/N, and Stokes V are measured from this optimized detection.
+
+Second, we extracted dynamic radio spectra (time versus frequency) to quantify the spectral structure and dispersion for all nine VLA bursts. After calibration and flagging, the visibility phases were rotated to the best-fit location for \frb \citep{LOC}. The Stokes I dynamic spectrum were formed by calculating the real part of the mean visibility over all baselines and both polarizations.
+
+The best model of the dynamic spectrum is described in Table \ref{tab:spec}. These values were calculated using a generative model to draw 2d dynamic spectra with the MCMC sampler \emph{emcee} \citep{2013PASP..125..306F}. The model consisted of a spectral component defined as a Gaussian shape with a temporal component (a delay as a function of frequency) defined by a start time, DM, and width. All parameters are calculated at floating point precision and then rounded to channel/integration units before calculating the log-likelihood. A flat prior was used over all parameters, including a prior that the Gaussian integral must produce a detection significance higher than 8$\sigma$. Since the spectral power shows up to 100\% modulation between channels, we estimate the model error as the maximum of the modeled flux and the measured, off-burst noise value. The off-burst noise is estimated from the median absolute deviation of time-frequency data before the start of the burst and is typically 70 mJy.
 
 \begin{table*}
 \caption{Properties of Bursts from \frb}
@@ -240,22 +244,24 @@ Figure \ref{fig:sgram} shows the dynamic spectra of all nine bursts detected by 
 \hline
 Date                & S$_{\rm{int}}$  & Image S/N & E$_{\rm{int}}$ & DM$_{\rm{opt}}$ & S$_{\rm{peak}}$ & Center & FWHM & S$_{\rm{V}}$ \\
 (MJD)               & (mJy)           &           & ($10^{38}$\ erg) & (pc cm$^{-3})$ & (mJy) & (GHz)  & (MHz) & (mJy) \\ \hline
-57623.74402686      & 258             & 38        & 7.8  & 562.5 & 460 & 2.8 & 300 & --2 \\
-57633.67986367      & 2000            & 179       & 65   & 561.4 & 2200 & 3.2 & 520 & --44 \\
-57633.69515938\tablenotemark{a} & 105       & 15        & 5.9  & 555.4 & $>$320 & $<$2.5 & $>$320 & +9 \\
-57638.49937435      & 65              & 12        & 1.8  & 554.9 & 70 & 3.1 & 440 & +4 \\
-57643.45730263      & 375             & 100       & 13   & 559.3 & 440 & 2.8 & 530 & +9 \\
-57645.42958602      & 38              & 13        & 2.6  & 554.1 & 50 & 2.7 & 970 & +3 \\
-57646.46600650\tablenotemark{a} & 69           & 20        & 3.9  & 568.1 & $>$190 & $<$2.5 & $>$360 & +3 \\
-57648.43691490\tablenotemark{b} & 97           & 25        & 2.9  & 557.8 & 110 & 2.8 & 440 & +7 \\
-57649.45175697      & 110             & 36        & 6.3  & 559.9 & 80 & 2.9 & 1400 & --1 \\ \hline
+57623.74402686      & 194             & 38        & 11 & 562.1 & 700 & 2.8 & 290 & +3 \\ % 7.8  & 562.5 & 460 & 2.8 & 300 & +3 \\
+57633.67986367      & 1500            & 179       & 97 & 561.3 & 3340 & 3.2 & 510 & --35 \\ % 65   & 561.4 & 2200 & 3.2 & 520 & --35 \\
+57633.69515938\tablenotemark{a} & 69  & 15        & 7 & 555.8 & $>$430 & $<$2.5 & 290 & +2 \\ % 5.9  & 555.4 & $>$320 & $<$2.5 & $>$320 & +2 \\
+57638.49937435      & 55              & 12        & 3 & 559.2 & 130 & 3.1 & 420 & +5 \\ % 1.8  & 554.9 & 70 & 3.1 & 440 & +5 \\
+57643.45730263      & 508             & 100       & 34 & 558.7 & 1170 & 2.8 & 510 & --5 \\ % 13   & 559.3 & 440 & 2.8 & 530 & --5 \\
+57645.42958602      & 64              & 13        & 4 & 555.9 & 170 & 2.8 & 380 & +3 \\ % 2.6  & 554.1 & 50 & 2.7 & 970 & +3 \\
+57646.46600650\tablenotemark{a} & 87  & 20        & 10 & 562.7 & $>$420 & $<$2.5 & 420 & +1 \\ % 3.9  & 568.1 & $>$190 & $<$2.5 & $>$360 & +1 \\
+57648.43691490\tablenotemark{b} & 111 & 25        & 7 & 557.4 & 260 & 2.8 & 470 & +9 \\ % 2.9  & 557.8 & 110 & 2.8 & 440 & +9 \\
+57649.45175697      & 167             & 36        & 12 & 559.9 & 290 & 3.0 & 690 & +1 \\ \hline % 6.3  & 559.9 & 80 & 2.9 & 1400 & +1 \\ \hline
 \end{tabular}
 \tablenotetext{a}{Best-fit Gaussian is not centered in 3~GHz band, so spectral parameters are limits.}
 \tablenotetext{b}{Detected simultaneously with Arecibo between 1.15 and 1.73~GHz.}
 \label{tab:spec}
 \end{table*} 
 
-Figure \ref{fig:spec} shows the spectrum of the integration and DM that maximizes the burst detection significance. After DM optimization, most bursts appear unresolved at the 5~ms time resolution of the VLA data. One exception is the brightest burst at 57633.68, for which roughly 10\% of the peak flux density is seen in adjacent 5~ms integrations. **elaborate on 57633.68 time width**
+Figure \ref{fig:spec} shows the spectra
+
+**elaborate on 57633.68 time width**
 
 \begin{figure*}[ht]
 \begin{center}
