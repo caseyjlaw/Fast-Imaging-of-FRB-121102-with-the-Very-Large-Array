@@ -231,11 +231,7 @@ This simultaneous detection of a burst from roughly 1.2 to 3.5~GHz shows that so
 
 \subsubsection{Spectral Modeling}
 \label{sec:spec}
-We used two techniques to refine the analysis of the nine VLA radio burst spectra presented in \citet{LOC}. First, we improved on the initial analysis by using a better calibration scheme and optimizing the detection significance over a fine grid of DM ($\Delta \rm{DM}=1\ \rm{pc}\ \rm{cm}^{-3}$). In Table \ref{tab:spec}, the integrated burst flux density, image S/N, and Stokes V are measured from this optimized detection.
-
-Second, we extracted dynamic radio spectra (time versus frequency) to quantify the spectral structure and dispersion for all nine VLA bursts. After calibration and flagging, the visibility phases were rotated to the best-fit location for \frb \citep{LOC}. The Stokes I dynamic spectrum were formed by calculating the real part of the mean visibility over all baselines and both polarizations.
-
-The best model of the dynamic spectrum is described in Table \ref{tab:spec}. These values were calculated using a generative model to draw 2d dynamic spectra with the MCMC sampler \emph{emcee} \citep{2013PASP..125..306F}. The model consisted of a spectral component defined as a Gaussian shape with a temporal component (a delay as a function of frequency) defined by a start time, DM, and width. All parameters are calculated at floating point precision and then rounded to channel/integration units before calculating the log-likelihood. A flat prior was used over all parameters, including a prior that the Gaussian integral must produce a detection significance higher than 8$\sigma$. Since the spectral power shows up to 100\% modulation between channels, we estimate the model error as the maximum of the modeled flux and the measured, off-burst noise value. The off-burst noise is estimated from the median absolute deviation of time-frequency data before the start of the burst and is typically 70 mJy.
+We used two techniques to refine the analysis of the nine VLA radio burst spectra described in \citet{LOC}. First, we improved on the initial analysis by using a better calibration scheme and optimizing the detection significance over a fine grid of DM ($\Delta \rm{DM}=1\ \rm{pc}\ \rm{cm}^{-3}$). After calibration and flagging, the visibility phases were rotated to the best-fit location to extract a Stokes I spectrum that maximizes the image S/N for each burst. Table \ref{tab:spec} gives the resulting integrated burst flux density, image S/N, and Stokes V, while Figure \ref{fig:spec} shows the Stokes I spectra. Generally, the burst spectra are characterized by a broad, Gaussian shape with inter-channel modulation as high as 100\%.
 
 \begin{table*}
 \caption{Properties of Bursts from \frb}
@@ -259,9 +255,9 @@ Date                & S$_{\rm{int}}$  & Image S/N & E$_{\rm{int}}$ & DM$_{\rm{op
 \label{tab:spec}
 \end{table*} 
 
-Figure \ref{fig:spec} shows the spectra
+To better understand the spectra, we extracted dynamic radio spectra (time versus frequency) for 2d modeling with the MCMC sampler \emph{emcee} \citep{2013PASP..125..306F}. These dynamic spectral were modeled as the product of a Gaussian shape (amplitude, center, width) and a temporal shape (start time, DM, and width). These 6-dimensional fits were sampled with 100 walkers taking 500 steps; typically, the first 200 steps were used to burn in the walkers and were ignored. A flat prior was used over all ranges with valid data, including a requirement that the Gaussian integral produce a detection significance higher than 8$\sigma$. To represent the strong inter-channel modulation, the model error was estimated as the maximum of the modeled flux and the measured, off-burst noise value (typically 70 mJy per 5~ms integration and 4~MHz channel).
 
-**elaborate on 57633.68 time width**
+The parameters for the best model of the dynamic spectrum are given in Table \ref{tab:spec} and the resulting Gaussian model overlaid on Figure \ref{fig:spec}. The typical burst has a spectral width of 500~MHz. All but two of the best-fit Gaussians are centered inside the 3~GHz band and some appear contained by the 1~GHz wide band. This is consistent with previous detections of \frb\ by Arecibo, which showed quasi-broadband structure \citep{2016arXiv160308880S} and large variation in the implied spectral index \citep{2014ApJ...790..101S}. A detailed discussion of high-resolution \frb\ burst spectra seen by the Arecibo Observatory will be presented elsewhere \citep{WEIRD}.
 
 \begin{figure*}[ht]
 \begin{center}
@@ -286,11 +282,6 @@ Figure \ref{fig:spec} shows the spectra
 \label{fig:spec}}
 \end{center}
 \end{figure*}
-
-The burst spectra are generally characterized by a broad, Gaussian shape with strong inter-channel modulation. We fit a Gaussian shape to each burst to estimate its characteristic width and peak flux (Table \ref{tab:spec}). There is strong structure on smaller scales with channel-to-channel modulation is as high as 100\% (see \S \ref{sec:auto}). This introduces a strong bias to the best-fit Gaussian, but these simple fits are reliable enough to show that the typical burst has a spectral width of 500~MHz.
-% TODO: fit with generative model with 100% amplitude modulations (emcee?)
-
-All but two of the best-fit Gaussians are centered inside the 3~GHz band and some appear contained by the 1~GHz wide band. This is consistent with previous detections of \frb\ by Arecibo, which showed quasi-broadband structure \citep{2016arXiv160308880S} and large variation in the implied spectral index \citep{2014ApJ...790..101S}. A detailed discussion of high-resolution \frb\ burst spectra seen by the Arecibo Observatory will be presented elsewhere \citep{WEIRD}.
 
 \subsubsection{Dispersion}
 The initial VLA detections were made by searching a DM grid that allowed inter-DM sensitivity losses up to roughly 10\% \citep[$\Delta DM=10\ \rm{pc}\ \rm{cm}^{-3}$][]{2003ApJ...596.1142C}. In optimizing detection significance over a fine DM grid, we find optimal DM values range from 552 to 572 pc cm$^{-3}$. However, the uncertainty in the peak DM measurement is defined by the signal-to-noise of the burst and how this changes with DM.
