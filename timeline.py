@@ -9,7 +9,7 @@ from pylab import date2num
 from astropy import time
 
 # parse obs data
-(obs, t1, t2, tel, burst) = loadtxt('obs_data.txt', dtype=str, unpack=True)
+(obs, t1, t2, tel, burst, band) = loadtxt('obs_data.txt', dtype=str, unpack=True)
 for i in range(len(obs)):
 	if obs[i] == 'mjd':
 		t1c = time.Time(float(t1[i]), format='mjd').iso
@@ -36,16 +36,17 @@ def putdot(ax, i):
 	pltx = obsdate[i]
 	plty = offset[tel[i]]
 	if int(burst[i]):
-		ax.scatter(pltx, plty, marker='o', s=300, linewidth=2, facecolor='none', edgecolor='k')
+		ax.scatter(pltx, plty, marker='o', s=400, linewidth=2, facecolor='none', edgecolor='k')
 		if int(burst[i]) > 1:
-			ax.scatter(pltx, plty, marker='o', s=600, linewidth=2, facecolor='none', edgecolor='k')
+			ax.scatter(pltx, plty, marker='o', s=800, linewidth=2, facecolor='none', edgecolor='k')
 			if int(burst[i]) > 2:
-				ax.scatter(pltx, plty, marker='o', s=900, linewidth=2, facecolor='none', edgecolor='k')
+				ax.scatter(pltx, plty, marker='o', s=1200, linewidth=2, facecolor='none', edgecolor='k')
 	if tel[i] == 'AMI':
 		s = 250
 	else:
 		s = 80
-	ax.scatter(pltx, plty, marker=psym[tel[i]], s=s, linewidth=3, facecolor=pcol[tel[i]], edgecolor='none')
+	ax.text(pltx, plty, s=band[i], verticalalignment='center', horizontalalignment='center')
+#	ax.scatter(pltx, plty, marker=psym[tel[i]], s=s, linewidth=3, facecolor=pcol[tel[i]], edgecolor='none')
 
 def d2n(yyyy, mm, dd):
 	return( date2num(datetime.date(yyyy, mm, dd)) )
@@ -74,11 +75,11 @@ ax.set_ylim( (-0.4, 3.4) )
 ax.tick_params(labelright='off', labelleft='off')
 
 # boxes for simultaneous coverage of VLA bursts
-axhspan(0., 3., 0.6855, 0.6855, fill=False, linestyle='dashed') # 57643
-axhspan(0., 3., 0.743, 0.743, fill=False, linestyle='dashed') # 57645
-axhspan(0., 3., 0.8285, 0.8285, fill=False, linestyle='dashed') # 57648 57649
-axhspan(2., 3., 0.8285, 0.8285, fill=False, lw=3, linestyle='solid') # 57648 57649
-axhspan(0., 3., 0.857, 0.857, fill=False, linestyle='dashed') # 57648 57649
+axhspan(0.1, 2.9, 0.6855, 0.6855, fill=False, linestyle='dashed') # 57643
+axhspan(0.1, 2.9, 0.743, 0.743, fill=False, linestyle='dashed') # 57645
+axhspan(0.1, 2.9, 0.8285, 0.8285, fill=False, linestyle='dashed') # 57648 57649
+axhspan(2.1, 2.9, 0.8285, 0.8285, fill=False, lw=3, linestyle='solid') # 57648 57649
+axhspan(0.1, 2.9, 0.857, 0.857, fill=False, linestyle='dashed') # 57648 57649
 
 ax.set_yticks( [0, 1, 2, 3] )
 #ax0.spines['left'].set_visible(True)
