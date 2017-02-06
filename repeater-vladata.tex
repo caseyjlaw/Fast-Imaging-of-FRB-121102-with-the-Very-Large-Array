@@ -371,15 +371,6 @@ We visualize and model the burst energy distribution in two ways. First, the top
 \end{center}
 \end{figure}
 
-**Does this flat distribution explain FRB flux flatness?**
-
-Assuming that \frb\ is representative of the overall FRB population, we can use the energy distribution of the former to explore the flux distribution of the latter. We use a Monte-Carlo technique to simulate an FRB population with a given energy/luminosity and spatial distribution. To reproduce the observed FRB sample, we select the brightest $N$\ bursts and fit their fluxes with a powerlaw. The tail of this distribution selects for extrema, such cut-offs in the intrinsic distribution or propagation effects \citep{2015MNRAS.451.3278M, CORDES}. Therefore, we sample 100 such populations and measure 95\% bounds on the distribution of cumulative flux distribution index.
-
-These simulations confirm previous work that shows that in many circumstances the cumulative flux distribution follows a Euclidean distribution \citep[index $=-1.5$;][]{2016MNRAS.462..941L}. To reproduce the flatness (index $\approx-1$) of the observed flux distribution, we need to incorporate other effects. 
-**in progress** (new figure?)
-
-**caveats of S-band assumption**
-
 \section{discussion}
 
 \subsection{Emission Physics and Burst Energetics}
@@ -388,11 +379,26 @@ The refined analysis shows that \frb\ has even higher isotropic energies than pr
 Propagation effects (e.g., scintillation, scattering) can also modify the radio signal in a variety of ways and the duration of the emission in the source frame is not known \citep{2016arXiv160505890C}. \citet{CORDES} describe a model where plasma lensing near the source of an FRB can magnify radio emission by orders of mangitude. That model argues that the simultaneous appearance of a burst from 1.2 to 3.5~GHz requires a lens with the focal frequency be $\gtrsim 3.5$~GHz. This gives a constraint on the combination $\frac{\rm DM_0}{a_{\rm AU}^2} \frac{d_{sl}d_{lo}/d_{so}}{1\, \rm kpc} \gtrsim (3.5 / 39.1)^2$, where $DM_0$, $a$, and $d_*$\ are the electron column density of the lens, size of the lens, and lensing distances, respectively. A lens placed at $d_{sl}\approx1$~kpc is consistent with typical properties of the interstellar medium. Lenses that are influenced by the source would be much nearer to the source $d_{\sl} \ll 1$~kpc, requiring large values of ${\rm DM_0 / a_{\rm AU}^2$.
 
 \subsection{FRB Flux Distribution}
-The Lorimer burst was surprising for its unusually high brightness with a lack of lower-significance detections. With more detections, it has become clear that the FRB population has a relatively flat flux distribution \citep{2016ApJ...830...75V, 2016arXiv160206099L, 2016arXiv161100458L}. This fact was recently demonstrated by yet another detection of an extremely bright FRB \citep{2016arXiv161105758R}.
+The Lorimer burst was surprising for its unusually large flux with a lack of lower-significance detections. As more FRBs have been detected, it has become clear that the FRB population has a relatively flat flux distribution \citep[cumulative flux distribution index $-0.5<\alpha<-1$;][]{2016ApJ...830...75V, 2016arXiv160206099L, 2016arXiv161100458L}. This fact was recently demonstrated by yet another detection of an extremely bright FRB \citep{2016arXiv161105758R}.
 
-**Discussion of energy/flux distribution analysis presented in \S \ref{sec:disn})**
+Assuming that the \frb\ energy distribution is typical of FRBs, we can use it to simulate FRB populations and compare their flux distributions to the observed distribution. First, we assume an FRB population that is uniformly distributed in space from redshifts $z1$\ to $z2$. For each FRB source, we sample one FRB burst luminosity from a powerlaw distribution and calculate its flux.
+%(uniform for energies from $10^{38}$\ to $10^{40}$; \S \ref{sec:disn} 
+We sample 100 such populations and measure 95\% bounds on the distribution of cumulative flux distribution index.
+We can show that the flux distribution powerlaw is --1.5 for a standard candle-like luminosity distribution at low redshift. For distributions out to $z2>1$, the distribution flattens slightly ($sim0.3$ in the index) due to cosmological space distortions.
+For a large ($N\sim2000) population of such bursts, we select the brightest $M\sim20$\ to represent the flux-limited FRB sample of known FRBs...
+The tail of this distribution selects for extrema, such cut-offs in the intrinsic distribution or propagation effects \citep{2015MNRAS.451.3278M, CORDES}. 
+We then fit the flux distribution of those $M$\ events with a powerlaw.
+
+These simulations confirm previous work that shows that...
+The cumulative flux distribution follows a Euclidean distribution \citep[index $=-1.5$;][]{2016MNRAS.462..941L} when...
+Flatness has been observed...
+This requires...
+
 
 It is not yet clear whether \frb\ can be treated as a representative of the broader FRB population. \citet{2016Natur.531..202S} describes burst spectral structure that is intrinsic, or at least dominated by propagation effects close to the emitting region. On the other hand, \citep{CORDES} have identified a variety of propagation effects in our own Galaxy that can plausibly modify the observed brightness distribution.
+
+
+**caveats of S-band assumption**
 
 \subsection{Repetition}
 The burst rate analysis presented in \S \ref{sec:temp} shows that the detection probability of \frb\ is not stationary. As mentioned above, this could be caused by intrinsic events (e.g., magnetar outburst) or propagation effects. While a detailed analysis of temporal correlation will require more bursts and/or more sophistication, it is clear that \frb\ has significant correlation on short timescales \citep[sometimes called a ''red spectrum'';][]{2016MNRAS.458L..89C}. Another way of stating this is that the detection of a burst improves odds of finding more bursts in near-future observations. 
