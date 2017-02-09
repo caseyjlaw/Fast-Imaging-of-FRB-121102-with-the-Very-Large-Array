@@ -25,6 +25,9 @@
 \author[0000-0002-4119-9963]{C.~J.~Law}
 \affiliation{Department of Astronomy and Radio Astronomy Lab, University of California, Berkeley, CA 94720, USA}
 
+\author{R.~S.~Wharton}
+\affiliation{Cornell Center for Astrophysics and Planetary Science and Department of Astronomy, Cornell University, Ithaca, NY 14853, USA}
+
 \author{C.~G.~Bassa}
 \affiliation{ASTRON, Netherlands Institute for Radio Astronomy, Postbus 2, 7990 AA, Dwingeloo, The Netherlands}
 
@@ -118,9 +121,6 @@
 
 \author{D.~Titterington}
 \affiliation{University of Cambridge, UK}
-
-\author{R.~S.~Wharton}
-\affiliation{Cornell Center for Astrophysics and Planetary Science and Department of Astronomy, Cornell University, Ithaca, NY 14853, USA}
 
 \author{P.~K.~G.~Williams}
 \affiliation{Harvard-Smithsonian Center for Astrophysics, Cambridge, MA, USA}
@@ -340,45 +340,61 @@ The spectral power calculated for periods between 0.8 and 80 s shows no power in
 
 \subsection{Energy and Brightness Distribution}
 \label{sec:disn}
-Knowing the burst distance, we calculate their total energy by integrating flux in time and frequency (Table \ref{tab:spec}). Some VLA burst spectra seem to be contained by the 2.5 to 3.5~GHz band and most of them seem to have Gaussian envelopes that are well modeled by the emission within the 2.5 to 3.5~GHz band. Assuming that the Gaussian shape defines the emission window, the mean S-band flux density can be converted to a total energy with no further assumptions about their spectral properties. We proceed under this assumption here and discuss caveats later.
+Knowing the burst distance, we calculate their total energy by integrating flux in time and frequency (Table \ref{tab:spec}). Some VLA burst spectra seem to be contained by the 2.5 to 3.5~GHz band and most of them seem to have Gaussian envelopes that are well modeled by the emission within the 2.5 to 3.5~GHz band. Assuming that the Gaussian shape defines the emission window, the mean S-band flux density can be converted to a total energy with no further assumptions about their spectral properties. We proceed under this assumption here and discuss caveats is \S \ref{sec:disc}.
 
-The \frb\ burst energy distribution (Figure \ref{fig:ed}) is relatively flat, as seen in the range of significance of the nine bursts (12 to 179$\sigma$). We modeled the differential energy distribution, $dN/d\log{E}$, as a Poisson probability distribution with a rate function $\lambda\proptoE^{\alpha}$. Using a maximum likelihood technique, we estimate the best powerlaw index of $\alpha=-0.6^{+0.4}_{-0.6}$. This is equivalent to a differential energy distribution, $dN/dE \propto E^{-1.6}$. Note that all VLA bursts are much brighter than the sensitivity limit ($8\sigma$) and data quality are relatively uniform and good, so the distribution is not affected by a completeness limit.
+Figure \ref{fig:ed} shows the \frb\ burst energy cumulative distribution and best-fit model. We modeled the differential energy distribution, $dN/d\log{E}$, as a Poisson probability distribution with a rate function $\lambda\propto E^{\alpha}$. Using a maximum likelihood technique, we estimate the best powerlaw index of $\alpha=-0.6^{+0.4}_{-0.6}$, which is equivalent to a $dN/dE$\ powerlaw index of --1.6. This model assumes a completeness limit for a luminosity equivalent to an $8\sigma$\ flux density limit. This is consistent with the high and uniform data quality and the false positive rate in this observing campaign.
 
 \begin{figure}[htb]
 \begin{center}
 \includegraphics[width=0.9\columnwidth]{energy_disn}
-\caption{Dots and solid line show the  \frb\ burst energy cumulative distribution. The dashed line shows the best fit from a maximum likelihood analysis using the powerlaw model $dN/d\log{E} \propto E^{\alpha}$. The 95\% bounds on the best-fit powerlaw index is $\alpha=-1.6^{+0.4}_{-0.6}$. \label{fig:ed}}
+\caption{Dots and solid line show the  \frb\ burst energy cumulative distribution. The dashed line shows the best fit from a maximum likelihood analysis using the powerlaw model $dN/d\log{E} \propto E^{\alpha}$. The 95\% bounds on the best-fit powerlaw index is $\alpha=-0.6^{+0.4}_{-0.6}$. \label{fig:ed}}
 \end{center}
 \end{figure}
 
 \section{discussion}
-
+\label{sec:disc}
 \subsection{Emission Physics and Burst Energetics}
-The refined analysis shows that \frb\ has even higher isotropic energies than previously reported, reaching energies $E_{\rm{max}}\approx10^{40}$\ erg. We now know that \frb\ is detectable with the VLA out to $z=0.7$\ and much farther with Arecibo. \frb\ has isotropic energies orders of magnitude higher than the strongest Crab pulsar pulses ($\sim10^{35}$~erg) and comparable brightness temperatures \citep[$T_b^{\rm{Crab}}\sim10^{41}$~K versus $T_b^{\rm{FRB 121102}}\sim10^{38}$~K;][]{2003Natur.422..141H,2014PhRvD..89j3009K}. While this emission is coherent and strongly beamed \citep{2016Natur.531..202S, WEIRD}, the energy scale is still larger than any Galactic class of fast radio transient and requires either a new process or dramatic scaling of known emission processes \citep{2016MNRAS.462..941L, 2016MNRAS.457..232C}.
+The refined analysis shows that \frb\ has even higher isotropic energies than previously reported, reaching energies $E_{\rm{max}}\approx10^{40}$\ erg. We now know that \frb\ is detectable with the VLA out to $z=0.7$\ and much farther with Arecibo. \frb\ has isotropic energies orders of magnitude higher than the strongest Crab pulsar pulses ($\sim10^{35}$~erg) and comparable brightness temperatures \citep[$T_b^{\rm{Crab}}\sim10^{41}$~K versus $T_b^{\rm{FRB 121102}}\sim10^{38}$~K;][]{2003Natur.422..141H,2014PhRvD..89j3009K}. While this emission is coherent and strongly beamed \citep{2016Natur.531..202S, WEIRD}, the energy scale is still larger than any known Galactic radio transient and requires either a new process or dramatic scaling of known emission processes \citep{2016MNRAS.462..941L, 2016MNRAS.457..232C}.
+
+-- Self-organized criticality in the sun. energy powerlaw=-1.7 \citep{2011SoPh..274...99A}
+-- **Similarity to magnetar energy distribution**
 
 Propagation effects (e.g., scintillation, scattering) can also modify the radio signal in a variety of ways and the duration of the emission in the source frame is not known \citep{2016arXiv160505890C}. \citet{CORDES} describe a model where plasma lensing near the source of an FRB can magnify radio emission by orders of mangitude. That model argues that the simultaneous appearance of a burst from 1.2 to 3.5~GHz requires a lens with the focal frequency be $\gtrsim 3.5$~GHz. This gives a constraint on the combination 
 $$\frac{\rm DM_0}{a_{\rm AU}^2} \frac{d_{sl}d_{lo}/d_{so}}{1\, \rm kpc} \gtrsim (3.5 / 39.1)^2$$
 where $DM_0$, $a$, and $d_*$\ are the electron column density of the lens, size of the lens, and lensing distances, respectively. A lens placed at $d_{sl}\approx1$~kpc is consistent with typical properties of the interstellar medium. Lenses that are influenced by the source would be much nearer to the source $d_{\sl} \ll 1$~kpc, requiring large values of $\frac{\rm DM_0}{a_{\rm AU}^2}$.
 
 \subsection{FRB Flux Distribution}
-The Lorimer burst was surprising for its unusually large flux with a lack of lower-significance detections. As more FRBs have been detected, it has become clear that the FRB population has a relatively flat flux distribution \citep[cumulative flux distribution index $-0.5<\alpha<-1$;][]{2016ApJ...830...75V, 2016arXiv160206099L, 2016arXiv161100458L}. This fact was recently demonstrated by yet another detection of an extremely bright FRB \citep{2016arXiv161105758R}.
+The Lorimer burst was surprising for its unusually large flux with a lack of lower-significance detections. As more FRBs have been detected, we continue to be surprised by the apparent brightness of FRB \citep{2016arXiv161105758R}. This perception has been validated with analysis of the FRB fluence distribution, which when modeled as a powerlaw, $dN/dF \propto F^{\alpha}$, has $-0.5<\alpha<-0.9$ \citep{2016ApJ...830...75V, 2016arXiv160206099L, 2016arXiv161100458L}. For a uniform distribution of sources with a single luminosity, the nominal flux distribution index shoudl be --1.5 \citep[the ``Euclidean'' distribution, e.g.,][]{2016MNRAS.462..941L}.
 
-Assuming that the \frb\ energy distribution is typical of FRBs, we can use it to simulate FRB populations and compare their flux distributions to the observed distribution. First, we assume an FRB population that is uniformly distributed in space from redshifts $z1$\ to $z2$. For each FRB source, we sample one FRB burst luminosity from a powerlaw distribution and calculate its flux.
-%(uniform for energies from $10^{38}$\ to $10^{40}$; \S \ref{sec:disn} 
-We sample 100 such populations and measure 95\% bounds on the distribution of cumulative flux distribution index.
-We can show that the flux distribution powerlaw is --1.5 for a standard candle-like luminosity distribution at low redshift. For distributions out to $z2>1$, the distribution flattens slightly ($sim0.3$ in the index) due to cosmological space distortions.
-For a large ($N\sim2000$) population of such bursts, we select the brightest $M\sim20$\ to represent the flux-limited FRB sample of known FRBs...
-The tail of this distribution selects for extrema, such cut-offs in the intrinsic distribution or propagation effects \citep{2015MNRAS.451.3278M, CORDES}. 
-We then fit the flux distribution of those $M$\ events with a powerlaw.
+The energy distribution of \frb\ bursts has also produced some surprises. Although the source clearly has episodes of activity (Section \label{sec:temp}), the nine bursts were detected with a wide range of significance (12 to 179$\sigma$). If all FRBs luminosities are drawn from a distribution (rather than having a single luminosity), then the flux distribution will be modified by that underlying distribution and its interplay with redshift space distortions of a cosmological population.
 
-These simulations confirm previous work that shows that...
-The cumulative flux distribution follows a Euclidean distribution \citep[index $=-1.5$;][]{2016MNRAS.462..941L} when...
-Flatness has been observed...
-This requires...
+We tested this idea by simulating populations of FRB sources and bursts and measuring the properties of a flux-limited sub-sample. First, we assume an FRB population that is uniformly distributed in space from redshifts $z1$\ to $z2$. For each FRB source, we generate one FRB burst with a luminosity drawn from the \frb\ energy distribution and calculate its flux. Typically, a large ($N>10000$) population of such bursts is needed to avoid edge effects in the luminosity or redshift distribution. We then select the brightest 15 \citep[equal to the current sample size used in modeling;][]{2016ApJ...830...75V} and fit a powerlaw to the $dN/dF$\ distribution.
+%The tail of this distribution selects for extrema, such cut-offs in the intrinsic distribution or propagation effects \citep{2015MNRAS.451.3278M, CORDES}. 
 
+Figure \ref{fig:sim} shows an example of an FRB population simulation with a $dN/dE$\ distribution like \frb. We simulated a population for a range of parameters to ensure that the flux distribution measurements were not affected by edge effects. We can show that the flux distribution index is --1.5 for a standard candle-like luminosity distribution at low redshift. For distributions out to $z2\sim2$, the index flattens by $sim0.2$\ due to redshift space distortions.
+
+\begin{figure*}[htb]
+\begin{center}
+\includegraphics[width=0.9\columnwidth]{sim_L1.6}
+\caption{Example simulation of an FRB population.
+\label{fig:sim}}
+\end{center}
+\end{figure*}
+
+We sample 100 such populations and measure 68\% bounds on the distribution of cumulative flux distribution index.
+Flux distribution index is flat for flatter input luminosity (energy) distributions...
+Best constraint on the FRB flux distribution is consistent with an FRB populalation with a luminosity distribution similar to that of \frb.
+This implies a mean redshift and luminosity of detections... DM distribution in this case?
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=0.9\columnwidth]{sim_index_scaling}
+\caption{Scaling of apparent flux distribution index for given luminosity (or energy) distribution index.
+\label{fig:ind}}
+\end{center}
+\end{figure}
 
 It is not yet clear whether \frb\ can be treated as a representative of the broader FRB population. \citet{2016Natur.531..202S} describes burst spectral structure that is intrinsic, or at least dominated by propagation effects close to the emitting region. On the other hand, \citep{CORDES} have identified a variety of propagation effects in our own Galaxy that can plausibly modify the observed brightness distribution.
-
 
 **caveats of S-band assumption**
 
