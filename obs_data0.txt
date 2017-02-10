@@ -1,0 +1,47 @@
+# Date Start End Tel nbursts
+# VLA obs in last campaign (Aug 23 through Sep 22)
+mjd 57351 57351 VLA 0 L
+mjd 57357 0.1 VLA 0 L
+mjd 57359     0 VLA 0 L
+mjd 57361     0 VLA 0 L
+mjd 57363     0 VLA 0 L
+mjd 57365     0 VLA 0 L
+mjd 57367     0 VLA 0 L
+mjd 57369     0 VLA 0 L
+mjd 57371     0 VLA 0 L
+mjd 57373     0 VLA 0 L
+#
+mjd 57503     0 VLA 0 S
+mjd 57504     0 VLA 0 S
+mjd 57505     0 VLA 0 S
+mjd 57506     0 VLA 0 S
+mjd 57507     0 VLA 0 S
+mjd 57508     0 VLA 0 S
+mjd 57509     0 VLA 0 S
+mjd 57510     0 VLA 0 S
+mjd 57511     0 VLA 0 S
+mjd 57512     0 VLA 0 S
+mjd 57514     0 VLA 0 S
+mjd 57515     0 VLA 0 S
+mjd 57516     0 VLA 0 S
+mjd 57521     0 VLA 0 S
+mjd 57522     0 VLA 0 S
+mjd 57523     0 VLA 0 S
+mjd 57524     0 VLA 0 S
+mjd 57528     0 VLA 0 S
+mjd 57529     0 VLA 0 S
+mjd 57530     0 VLA 0 S
+mjd 57531     0 VLA 0 S
+mjd 57535 0 VLA 0 S
+
+
+# AO 
+mjd 57521 0 AO 0 L
+mjd 57522 0 AO 0 L
+mjd 57523 0 AO 0 L
+mjd 57524 0 AO 0 L
+mjd 57528 0 AO 0 L
+mjd 57529 0 AO 0 L
+mjd 57530 0 AO 0 L
+mjd 57531 0 AO 0 L
+mjd 57535 0 AO 0 L
