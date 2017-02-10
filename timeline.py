@@ -4,19 +4,22 @@
 
 from numpy import *
 from matplotlib.pyplot import *
+from matplotlib.dates import DateFormatter
 import datetime
 from pylab import date2num
 from astropy import time
 
 # parse obs data
-(obs, t1, t2, tel, burst, band) = loadtxt('obs_data.txt', dtype=str, unpack=True)
+(obs, t1, t2, tel, burst, band) = loadtxt(sys.argv[1], dtype=str, unpack=True)
+ymds = []
 for i in range(len(obs)):
-	if obs[i] == 'mjd':
-		t1c = time.Time(float(t1[i]), format='mjd').iso
-		t2c = time.Time(float(t2[i]), format='mjd').iso
-		obs[i], t1[i] = t1c.split()
-		_, t2[i] = t2c.split()
-obsdate = array(map(lambda od: datetime.datetime.strptime(od, "%Y-%m-%d"), obs))
+    if obs[i] == 'mjd':
+        t1c = time.Time(float(t1[i]), format='mjd').iso
+	ymd = t1c.split()[0]
+	ymds.append(ymd)
+    else:
+        ymds.append(obs[i])
+obsdate = list(map(lambda od: datetime.datetime.strptime(od, "%Y-%m-%d"), ymds))
 
 # Define an offset and symbol type for each telescope
 telescopes = ['AO', 'VLA', 'Effelsberg', 'AMI']
@@ -45,6 +48,7 @@ def putdot(ax, i):
 		s = 250
 	else:
 		s = 80
+#	ax.plot_date(pltx, plty)#, s=band[i], verticalalignment='center', horizontalalignment='center')
 	ax.text(pltx, plty, s=band[i], verticalalignment='center', horizontalalignment='center')
 #	ax.scatter(pltx, plty, marker=psym[tel[i]], s=s, linewidth=3, facecolor=pcol[tel[i]], edgecolor='none')
 
@@ -65,26 +69,34 @@ def labeltelright(ax, num):
 		xval = xr + 0.5
 		ax.text(xval, yval, teln, horizontalalignment='left', verticalalignment='center')
 
-xl = d2n(2016, 8, 19)
-xr = d2n(2016, 9, 23)
-fig, ax = subplots(1, 1, figsize=(15, 4))
+if obsdate[0].year == 2016:
+    xl = d2n(2016, 8, 19)
+    xr = d2n(2016, 9, 23)
+else:
+    xl = d2n(2015, 11, 23)
+    xr = d2n(2016, 5, 30)
+
+fig, ax = subplots(1, 1, figsize=(15, 4.5))
 for i in range(len(obsdate)):
 	putdot(ax, i)
 ax.set_xlim( (xl, xr) )
 ax.set_ylim( (-0.4, 3.4) )
 ax.tick_params(labelright='off', labelleft='off')
+ax.fmt_xdata = DateFormatter('%Y-%m-%d %H:%M:%S')
 
 # boxes for simultaneous coverage of VLA bursts
-axhspan(0.1, 2.9, 0.6855, 0.6855, fill=False, linestyle='dashed') # 57643
-axhspan(0.1, 2.9, 0.743, 0.743, fill=False, linestyle='dashed') # 57645
-axhspan(0.1, 2.9, 0.8285, 0.8285, fill=False, linestyle='dashed') # 57648 57649
-axhspan(2.1, 2.9, 0.8285, 0.8285, fill=False, lw=3, linestyle='solid') # 57648 57649
-axhspan(0.1, 2.9, 0.857, 0.857, fill=False, linestyle='dashed') # 57648 57649
+if obsdate[0].year == 2016:
+	axhspan(0.1, 2.9, 0.6855, 0.6855, fill=False, linestyle='dashed') # 57643
+	axhspan(0.1, 2.9, 0.743, 0.743, fill=False, linestyle='dashed') # 57645
+	axhspan(0.1, 2.9, 0.8285, 0.8285, fill=False, linestyle='dashed') # 57648 57649
+	axhspan(2.1, 2.9, 0.8285, 0.8285, fill=False, lw=3, linestyle='solid') # 57648 57649
+	axhspan(0.1, 2.9, 0.857, 0.857, fill=False, linestyle='dashed') # 57648 57649
 
 ax.set_yticks( [0, 1, 2, 3] )
 #ax0.spines['left'].set_visible(True)
 labeltelleft(ax, 0)
 labeltelright(ax, 0)
+fig.autofmt_xdate()
 
 #show()
 savefig('timeline.png')
