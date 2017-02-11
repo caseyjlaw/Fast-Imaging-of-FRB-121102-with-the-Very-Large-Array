@@ -25,6 +25,10 @@
 \author[0000-0002-4119-9963]{C.~J.~Law}
 \affiliation{Department of Astronomy and Radio Astronomy Lab, University of California, Berkeley, CA 94720, USA}
 
+\author{J.~W.~T.~Hessels}
+\affiliation{ASTRON, Netherlands Institute for Radio Astronomy, Postbus 2, 7990 AA, Dwingeloo, The Netherlands}
+\affiliation{Anton Pannekoek Institute for Astronomy, University of Amsterdam, Science Park 904, 1098 XH Amsterdam, The Netherlands}
+
 \author{R.~S.~Wharton}
 \affiliation{Cornell Center for Astrophysics and Planetary Science and Department of Astronomy, Cornell University, Ithaca, NY 14853, USA}
 
@@ -62,10 +66,6 @@
 
 \author{K.~Grainge}
 \affiliation{Jodrell Bank Centre for Astrophysics, Alan Turning Building, School of Physics \& Astronomy ,The University of Manchester, Oxford Road, Manchester M13 9PL, UK}
-
-\author{J.~W.~T.~Hessels}
-\affiliation{ASTRON, Netherlands Institute for Radio Astronomy, Postbus 2, 7990 AA, Dwingeloo, The Netherlands}
-\affiliation{Anton Pannekoek Institute for Astronomy, University of Amsterdam, Science Park 904, 1098 XH Amsterdam, The Netherlands}
 
 \author{J.~Hickish}
 \affiliation{Dept of Astronomy and Radio Astronomy Lab, University of California, Berkeley, CA 94720, USA}
@@ -301,24 +301,6 @@ Figure \ref{fig:dmmodel} compares the 95\% confidence intervals on the DM for al
 
 % TODO: Non-lambda$^{2}$ dispersion...
 
-
-\subsubsection{Spectral Autocorrelation}
-\label{sec:auto}
-Autocorrelation of the burst signal (both temporal and spectral) can be used to infer both intrinsic properties and modulation due to scintillation \citep{CORDES}. Figure \ref{fig:acf} shows the spectral autocorrellation for the strongest burst (MJD 57633.68). The is no strong excess correlation near the channel resolution, which limits the correlation width to less than roughly 4~MHz. This is broadly consistent with expectations of Galactic diffractive scintillation bandwidth \citep[3--9~MHz near 3~GHz][]{2002astro.ph..7156C}.
-
-%**Does channel-scale structure only appear around 3~GHz?**
-
-\begin{figure}[htb]
-\begin{center}
-\includegraphics[width=0.9\columnwidth]{acf_57633_scan7}
-\caption{The spectral autocorrelation as a function of frequency for the burst from \frb\ at MJD 57633.68. The largest black dots show the autocorrelation for the data, smaller dots show the autocorrelation for the best Gaussian model, and dashed line shows the autocorrelation of an off-burst spectrum.
-\label{fig:acf}}
-\end{center}
-\end{figure}
-
-\subsubsection{Circular Polarization}
-The VLA S-band recievers measure circular polarization, although for observing efficiency we choose not to include polarization calibration procedures. Constraints on circular polarization are possible since the gain calibrator is a well-known polarization calibrator with little Stokes V flux. In that case, the apparent circular polarization fraction is $(RR-LL)/(RR+LL)$, which for the most significant bursts is at most 3\%. \frb\ was located 2.3\arcmin away from pointing center, where systematic effects have been measured as large as 3\% (Perley et al 2016, VLA memo). Given that systematic effects dominate the apparent circular polarization, we conclude that the true fractional circular polarization is less than 3\%.
-
 \subsection{Temporal Statistics}
 \label{sec:temp}
 Geoff comments:
@@ -353,6 +335,23 @@ Figure \ref{fig:ed} shows the \frb\ burst energy cumulative distribution and bes
 \end{center}
 \end{figure}
 
+\subsubsection{Spectral Autocorrelation}
+\label{sec:auto}
+Autocorrelation of the burst signal (both temporal and spectral) can be used to infer both intrinsic properties and modulation due to scintillation \citep{CORDES}. Figure \ref{fig:acf} shows the spectral autocorrellation for the strongest burst (MJD 57633.68). The is no strong excess correlation near the channel resolution, which limits the correlation width to less than roughly 4~MHz. This is broadly consistent with expectations of Galactic diffractive scintillation bandwidth \citep[3--9~MHz near 3~GHz][]{2002astro.ph..7156C}.
+
+%**Does channel-scale structure only appear around 3~GHz?**
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=0.9\columnwidth]{acf_57633_scan7}
+\caption{The spectral autocorrelation as a function of frequency for the burst from \frb\ at MJD 57633.68. The largest black dots show the autocorrelation for the data, smaller dots show the autocorrelation for the best Gaussian model, and dashed line shows the autocorrelation of an off-burst spectrum.
+\label{fig:acf}}
+\end{center}
+\end{figure}
+
+\subsubsection{Circular Polarization}
+The VLA S-band recievers measure circular polarization, although for observing efficiency we choose not to include polarization calibration procedures. Constraints on circular polarization are possible since the gain calibrator is a well-known polarization calibrator with little Stokes V flux. In that case, the apparent circular polarization fraction is $(RR-LL)/(RR+LL)$, which for the most significant bursts is at most 3\%. \frb\ was located 2.3\arcmin away from pointing center, where systematic effects have been measured as large as 3\% (Perley et al 2016, VLA memo). Given that systematic effects dominate the apparent circular polarization, we conclude that the true fractional circular polarization is less than 3\%.
+
 \section{discussion}
 \label{sec:disc}
 \subsection{Emission Physics and Burst Energetics}
@@ -366,27 +365,23 @@ $$\frac{\rm DM_0}{a_{\rm AU}^2} \frac{d_{sl}d_{lo}/d_{so}}{1\, \rm kpc} \gtrsim 
 where $DM_0$, $a$, and $d_*$\ are the electron column density of the lens, size of the lens, and lensing distances, respectively. A lens placed at $d_{sl}\approx1$~kpc is consistent with typical properties of the interstellar medium. Lenses that are influenced by the source would be much nearer to the source $d_{\sl} \ll 1$~kpc, requiring large values of $\frac{\rm DM_0}{a_{\rm AU}^2}$.
 
 \subsection{FRB Flux Distribution}
-The Lorimer burst was surprising for its unusually large flux with a lack of lower-significance detections. As more FRBs have been detected, we continue to be surprised by the apparent brightness of FRB \citep{2016arXiv161105758R}. This perception has been validated with analysis of the FRB fluence distribution, which when modeled as a powerlaw, $dN/dF \propto F^{\alpha}$, has $-0.5<\alpha<-0.9$ \citep{2016ApJ...830...75V, 2016arXiv160206099L, 2016arXiv161100458L}. For a uniform distribution of sources with a single luminosity, the nominal flux distribution index shoudl be --1.5 \citep[the ``Euclidean'' distribution, e.g.,][]{2016MNRAS.462..941L}.
+The Lorimer burst was surprising for its unusually large flux with a lack of lower-significance detections. As more FRBs have been detected, we continue to be surprised by their apparent brightness of FRBs \citep{2016arXiv161105758R}. This perception has been validated with analysis of the FRB cumulative fluence distribution, which when modeled as a powerlaw ($dN/dF \propto F^{\alpha}$) has an index $-0.5<\alpha<-0.9$\ \citep{2016ApJ...830...75V, 2016arXiv160206099L, 2016arXiv161100458L}. For a uniform distribution of sources with a single luminosity, this index should be --1.5 \citep[the ``Euclidean'' distribution, e.g.,][]{2016MNRAS.462..941L}.
 
-The energy distribution of \frb\ bursts has also produced some surprises. Although the source clearly has episodes of activity (Section \label{sec:temp}), the nine bursts were detected with a wide range of significance (12 to 179$\sigma$). If all FRBs luminosities are drawn from a distribution (rather than having a single luminosity), then the flux distribution will be modified by that underlying distribution and its interplay with redshift space distortions of a cosmological population.
+The energy distribution of \frb\ bursts has also produced some surprises. The nine bursts were detected with a wide range of significance (12 to 179$\sigma$) and the apparent burst energy distribution can be characterized as a powerlaw $dN/dE\propto E^{-1.6}$. If all FRBs luminosities are drawn from such a distribution, then their flux distribution will be determined by the underlying energy distribution and its interplay with redshift space distortions.
 
-We tested this idea by simulating populations of FRB sources and bursts and measuring the properties of a flux-limited sub-sample. First, we assume an FRB population that is uniformly distributed in space from redshifts $z1$\ to $z2$. For each FRB source, we generate one FRB burst with a luminosity drawn from the \frb\ energy distribution and calculate its flux. Typically, a large ($N>10000$) population of such bursts is needed to avoid edge effects in the luminosity or redshift distribution. We then select the brightest 15 \citep[equal to the current sample size used in modeling;][]{2016ApJ...830...75V} and fit a powerlaw to the $dN/dF$\ distribution.
-%The tail of this distribution selects for extrema, such cut-offs in the intrinsic distribution or propagation effects \citep{2015MNRAS.451.3278M, CORDES}. 
+We tested this idea by simulating FRB populations and measuring the properties of a flux-limited sub-sample. First, we assume an FRB population that is uniformly distributed in space from redshifts $z1$\ to $z2$. For each FRB source, we generate one FRB burst with a luminosity drawn from the \frb\ energy distribution and calculate its flux. We then select the brightest 15 \citep[equal to the current sample size used in modeling;][]{2016ApJ...830...75V} and fit a powerlaw to the $dN/dF$\ distribution. Typically, a large ($N>10000$) population of such bursts is needed to avoid edge effects in the properties of the flux-limited subsample. 
 
-Figure \ref{fig:sim} shows an example of an FRB population simulation with a $dN/dE$\ distribution like \frb. We simulated a population for a range of parameters to ensure that the flux distribution measurements were not affected by edge effects. We can show that the flux distribution index is --1.5 for a standard candle-like luminosity distribution at low redshift. For distributions out to $z2\sim2$, the index flattens by $sim0.2$\ due to redshift space distortions.
+Figure \ref{fig:sim} shows an example of an FRB population simulation with a $dN/dE$\ distribution like \frb. We use visualizations like this to verify that the simulations are not affected by edge effects. We can also reproduce a Euclidean flux distribution for a standard candle-like luminosity distribution at low redshift and that distributions out to $z2\sim2$ have a flatter index ($\Delta\alpha\sim0.2$) due to redshift space distortions.
 
 \begin{figure*}[htb]
 \begin{center}
-\includegraphics[width=0.9\columnwidth]{sim_L1.6}
-\caption{Example simulation of an FRB population.
+\includegraphics[width=1.8\columnwidth]{sim_L1.6}
+\caption{An example of a simulated FRB population. (Top left) The input luminosity distribution, which follows the \frb\ distribution of $dN/dE\propto E^{-1.6}$. (Top right) The input redshift space distribution of a uniform distribution of FRB sources. (Bottom left) The measured flux distribution of the simulation with red lines showing fits to the whole population and brightest 15 FRBs. (Bottom right) The flux-redshift distribution of the simulated population. The dahsed line shows the limiting flux that includes the brightest 15 sources.
 \label{fig:sim}}
 \end{center}
 \end{figure*}
 
-We sample 100 such populations and measure 68\% bounds on the distribution of cumulative flux distribution index.
-Flux distribution index is flat for flatter input luminosity (energy) distributions...
-Best constraint on the FRB flux distribution is consistent with an FRB populalation with a luminosity distribution similar to that of \frb.
-This implies a mean redshift and luminosity of detections... DM distribution in this case?
+To study how the input parameters affect the measured flux distribution, so we generated 100 populations to measure 68\% confidence intervals on the cumulative flux distribution index. Figure \ref{fig:ind} shows the result of several such measurements for input luminosity distribution index ranging from --2.2 to --1.2. Generally, the measured flux distribution index flattens as the input luminosity distributions flattens. The best constraint on the flux distribution index \citep{2016ApJ...830...75V} requires an input energy distribution index between roughly --2.1 and --1.4, which is consistent with the measured energy distribution for \frb. These simulations predict a mean a mean redshift between 0.9 and 1.8, which is in weak tension with the mean FRB redshift inferred from DM. For a mean total DM of $750$\ pc cm$^{-3}$ and a mean host DM of 200 pc cm$^{-3}$, we expect a mean redshift of $\sim0.5$ \citep{2004MNRAS.348..999I}. 
 
 \begin{figure}[htb]
 \begin{center}
@@ -396,9 +391,7 @@ This implies a mean redshift and luminosity of detections... DM distribution in 
 \end{center}
 \end{figure}
 
-It is not yet clear whether \frb\ can be treated as a representative of the broader FRB population. \citet{2016Natur.531..202S} describes burst spectral structure that is intrinsic, or at least dominated by propagation effects close to the emitting region. On the other hand, \citep{CORDES} have identified a variety of propagation effects in our own Galaxy that can plausibly modify the observed brightness distribution.
-
-**caveats of S-band assumption**
+While the \frb\ burst energy distribution is consistent with the overall FRB population, this simulation ignores many observational biases (scattering, observing coverage) and the effects of galaxy evolution, which is likely significant over the range of redshifts to which \frb is detectable \citep[e.g.,][]{2010ApJ...709..644I}. The burst energies are estimated from observations from 2.5 to 3.5~GHz, which may be a biased selection of all bursts or may not include all burst emission. If the simulation is revealing a connection between \frb and the broader FRB population, it does not explain the physical mechanism that drives it. The burst energy distribution of the population could be dominated by intrinsic or extrinsic effects \citep{2015MNRAS.451.3278M,2016Natur.531..202S,CORDES}. More FRB detections will improve the quality of this inference as sample variance drops, while more burst detetions from \frb\ will improve the measurement of the intrinsic energy distribution.
 
 \subsection{Repetition}
 The burst rate analysis presented in \S \ref{sec:temp} shows that the detection probability of \frb\ is not stationary. As mentioned above, this could be caused by intrinsic events (e.g., magnetar outburst) or propagation effects. While a detailed analysis of temporal correlation will require more bursts and/or more sophistication, it is clear that \frb\ has significant correlation on short timescales \citep[sometimes called a ``red spectrum'';][]{2016MNRAS.458L..89C}. Another way of stating this is that the detection of a burst improves odds of finding more bursts in near-future observations. 
