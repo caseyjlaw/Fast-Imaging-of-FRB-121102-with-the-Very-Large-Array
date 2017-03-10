@@ -104,7 +104,7 @@
 \affiliation{Jodrell Bank Centre for Astrophysics, Alan Turning Building, School of Physics \& Astronomy ,The University of Manchester, Oxford Road, Manchester M13 9PL, UK}
 
 \author{P.~Scott}
-\affiliation{University of Cambridge, UK}
+\affiliation{Astrophysics Group, Cavendish Laboratory, 19 J. J. Thomson Avenue, Cambridge CB3 0HE, UK}
 
 \author{P.~Scholz}
 \affiliation{National Research Council of Canada, Herzberg Astronomy and Astrophysics, Dominion Radio Astrophysical Observatory, P.O. Box 248, Penticton, BC V2A 6J9, Canada}
@@ -120,7 +120,7 @@
 \affiliation{Department of Physics and McGill Space Institute, McGill University, 3600 University St., Montreal, QC H3A 2T8, Canada}
 
 \author{D.~Titterington}
-\affiliation{University of Cambridge, UK}
+\affiliation{Astrophysics Group, Cavendish Laboratory, 19 J. J. Thomson Avenue, Cambridge CB3 0HE, UK}
 
 \author{P.~K.~G.~Williams}
 \affiliation{Harvard-Smithsonian Center for Astrophysics, Cambridge, MA, USA}
@@ -282,12 +282,17 @@ The parameters for the best model of the dynamic spectrum are given in Table \re
 \end{center}
 \end{figure*}
 
+**Burst temporal width**
+
+**Corner plot?**
+
+**Does DM correlate with other spectral/flux properties?**
+
+
 \subsubsection{Dispersion}
 The initial VLA detections were made by searching a DM grid that allowed inter-DM sensitivity losses up to roughly 10\% \citep[$\Delta DM=10\ \rm{pc}\ \rm{cm}^{-3}$][]{2003ApJ...596.1142C}. In optimizing detection significance over a fine DM grid, we find optimal DM values range from 552 to 572 pc cm$^{-3}$. However, the uncertainty in the peak DM measurement is defined by the signal-to-noise of the burst and how this changes with DM.
 
 Given that the apparent DM can potentially change due to intrinsic or extrinsic effects, we developed a more sophisticated system for modeling dispersion. We created a generative model to sample the likelihood distribution as a function of DM \citep{2010arXiv1008.4686H}. We use the Gaussian shape (see \S \ref{sec:spec}) along the spectral axis and apply a frequency-dependent delay for a given dispersion model. The likelihood is directly sampled by calculating the product of probabilities on a per-pixel basis of the 2-dimensional dynamic spectrum. Uncertainties in each pixel are drawn from a uniform Gaussian error distribution that is estimated from the data.
-
-**Does DM correlate with other spectral/flux properties?**
 
 Figure \ref{fig:dmmodel} compares the 95\% confidence intervals on the DM for all nine VLA bursts to the range of DM previous observed \citep{2014ApJ...790..101S,2016arXiv160308880S}. The DM confidence intervals are not consistent with each other or a single DM. This suggests that there are apparent DM changes between bursts, either due to intrinsic burst structure or actual changes to the DM column density. Elsewhere, we present high-resolution dynamic spectra at 1.4~GHz that show how intrinsic spectral structure can bias the apparent DM of individual bursts \citep{WEIRD}. The FRB emission process has not yet been defined, so it is not clear how the intrinsic structure can bias DM as a function of frequency.
 
@@ -381,7 +386,7 @@ Figure \ref{fig:sim} shows an example of an FRB population simulation with a $dN
 \end{center}
 \end{figure*}
 
-To study how the input parameters affect the measured flux distribution, so we generated 100 populations to measure 68\% confidence intervals on the cumulative flux distribution index. Figure \ref{fig:ind} shows the result of several such measurements for input luminosity distribution index ranging from --2.2 to --1.2. Generally, the measured flux distribution index flattens as the input luminosity distributions flattens. The best constraint on the flux distribution index \citep{2016ApJ...830...75V} requires an input energy distribution index between roughly --2.1 and --1.4, which is consistent with the measured energy distribution for \frb. These simulations predict a mean a mean redshift between 0.9 and 1.8, which is in weak tension with the mean FRB redshift inferred from DM. For a mean total DM of $750$\ pc cm$^{-3}$ and a mean host DM of 200 pc cm$^{-3}$, we expect a mean redshift of $\sim0.5$ \citep{2004MNRAS.348..999I}. 
+To study how the input parameters affect the measured flux distribution, so we generated 100 populations to measure 68\% confidence intervals on the cumulative flux distribution index. Figure \ref{fig:ind} shows the result of several such measurements for input luminosity distribution index ranging from --2.2 to --1.2. Generally, the measured flux distribution index flattens as the input luminosity distributions flattens. The best constraint on the flux distribution index \citep{2016ApJ...830...75V} requires an input energy distribution index between roughly --2.1 and --1.4, which is consistent with the measured energy distribution for \frb. These simulations predict a mean a mean redshift between 0.9 and 1.8, which is in weak tension with the mean FRB redshift inferred from DM. For a mean total DM of $750$\ pc cm$^{-3}$ and a mean host DM of 200 pc cm$^{-3}$, we expect a mean redshift of $\sim0.6$ \citep[$z=DM/900$\ pc cm$^{-3}$;][]{2004MNRAS.348..999I}. 
 
 \begin{figure}[htb]
 \begin{center}

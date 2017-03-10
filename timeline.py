@@ -73,7 +73,7 @@ if obsdate[0].year == 2016:
     xl = d2n(2016, 8, 19)
     xr = d2n(2016, 9, 23)
 else:
-    xl = d2n(2015, 11, 23)
+    xl = d2n(2015, 11, 22)
     xr = d2n(2016, 5, 30)
 
 fig, ax = subplots(1, 1, figsize=(15, 4.5))
@@ -82,6 +82,7 @@ for i in range(len(obsdate)):
 ax.set_xlim( (xl, xr) )
 ax.set_ylim( (-0.4, 3.4) )
 ax.tick_params(labelright='off', labelleft='off')
+ax.xaxis.set_major_formatter(DateFormatter('%Y-%m-%d'))
 ax.fmt_xdata = DateFormatter('%Y-%m-%d %H:%M:%S')
 
 # boxes for simultaneous coverage of VLA bursts
