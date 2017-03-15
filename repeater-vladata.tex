@@ -194,19 +194,18 @@ We inspected the calibrated visibilities, and did not find any signal above 30 m
 \section{Results}
 
 \subsection{Multi-Observatory Burst Spectrum}
-Four of the VLA bursts were observed simultaneously with Arecibo and AMI-LA, while two were observed simultaneously with all four observatories (Figure \ref{fig:multi}). Of these bursts, only the VLA burst on MJD 57648 was simultaneously detected by another observatory, Arecibo. The VLA and Arecibo burst detections had significances of 25$\sigma$\ and xx$\sigma$, respectively. 
+Four of the VLA bursts were observed simultaneously with Arecibo and AMI-LA, while two were observed simultaneously with all four observatories (Figure \ref{fig:multi}). Of these bursts, only one VLA burst (on MJD 57648) was simultaneously detected by another observatory (Arecibo). The VLA and Arecibo burst detections had significances of 25$\sigma$\ and 39$\sigma$, respectively. The VLA and Arecibo integrated flux densities were 111 mJy and 14 mJy, respectively.
 
-Figure \ref{fig:sgram} shows a dynamic spectrum for the 57648 burst with the VLA and AO bursts resampled to the same grid. The temporal resolution of the VLA data (5~ms) is much coarser than that of Arecibo and barycentric corrections, so we only need to correct for DM to align the bursts in time.
+Figure \ref{fig:sgram} shows a dynamic spectrum for the 57648 burst with the VLA and AO data aligned in time. The temporal resolution of the VLA data (5~ms) is much coarser than that of Arecibo, so data were resampled to the same temporal grid after correcting for barycentric and dispersion measure offsets. The dispersion correction for both data sets assumed a DM of 560.5 pc cm$^{-3}$, which was typical of the source during the observing campaign \citep{WEIRD}. The regridded dynamic spectrum has an apparent DM error that is evident either as a frequency-dependent time drift within the Arecibo observation or in the relative alignment of Arecibo and the VLA bursts. Both of these drifts are consistent with an effective DM (i.e., one that maximizes the detection S/N ratio) of $sim$562 pc cm$^{-3}$.
 
-This simultaneous detection of a burst from roughly 1.2 to 3.5~GHz shows that some bursts emit over more than an octave of frequency. However, the other three...**
-** is one of three VLA bursts with L-band coverage by Arecibo, which implies that those bursts had a smaller spectral width. However, all three VLA bursts with L-band Arecibo observations were relatively weak, so it is difficult to rule out L-band emission entirely. However, as described in \S \ref{sec:spec}, some of the VLA bursts peak within the band from 2.5 to 3.5~GHz, which implies a much smaller spectral coverage for typical bursts.
+Three of the four VLA bursts with simultaneous observing coverage by Arecibo were not detected at Arecibo. Even the one simultaneous detection at Arecibo was an order of magnitude fainter than seen by the VLA, so it is clear that the 3~GHz burst flux is not correlated with that at 1.4~GHz.
 
 \subsection{VLA Bursts}
 
 \begin{figure*}[htb]
 \begin{center}
  \includegraphics[width=1.9\columnwidth]{aovla_spec.png}
- \caption{
+ \caption{Composite dynamic specrum for the burst from \frb\ on MJD 57648 with data from the VLA and Arecibo observatories. Both data sets have been barycentered and corrected for an assumed dispersion measure of 560.5 pc $^{-3}$. The black line separates data from the VLA (2.5 to 3.5~GHz) and Arecibo (1.0 to 1.8~GHz). The Arecibo to VLA gain ratio is assumed to be 10.
  \label{fig:sgram}}
 \end{center}
 \end{figure*}
@@ -343,17 +342,28 @@ The VLA S-band recievers measure circular polarization, although for observing e
 
 \section{discussion}
 \label{sec:disc}
-\subsection{Emission Physics and Burst Energetics}
-The refined analysis shows that \frb\ has even higher isotropic energies than previously reported, reaching energies $E_{\rm{max}}\approx10^{40}$\ erg. We now know that \frb\ is detectable with the VLA out to $z=0.7$\ and much farther with Arecibo. \frb\ has isotropic energies orders of magnitude higher than the strongest Crab pulsar pulses ($\sim10^{35}$~erg) and comparable brightness temperatures \citep[$T_b^{\rm{Crab}}\sim10^{41}$~K versus $T_b^{\rm{FRB 121102}}\sim10^{38}$~K;][]{2003Natur.422..141H,2014PhRvD..89j3009K}. While this emission is coherent and strongly beamed \citep{2016Natur.531..202S, WEIRD}, the energy scale is still larger than any known Galactic radio transient and requires either a new process or dramatic scaling of known emission processes \citep{2016MNRAS.462..941L, 2016MNRAS.457..232C}.
+\subsection{Burst Spectra}
+We present the first simultaneous detection of an FRB with multiple telescopes and over frequencies from 1.2 to 3.5~GHz. After correcting for barycentric and dispersion delays, we find a residual temporal drift in the burst spectrum. This is consistent with \citet{WEIRD}, which uses bright, coherently-dedispersed bursts to define a heuristic that distinguishes between intrinsic and extrinsic dispersion-like effects. The low-resolution dynamic spectra presented here cannot distinguish between these two effects. However, by assuming that the extrinsic (true) DM is consistent with the long-term average of 560.5 pc cm$^{-3}$, we can ascribe the observed burst drift (Figure \ref{fig:sgram}) to intrinsic effects. Under this assumption, the burst drift is intrinsic and consistent with the intrinsic drft rate measured in \citet[$\sim$100~MHz/ms;][]{WEIRD}.
 
--- Self-organized criticality in the sun. energy powerlaw=-1.7 \citep{2011SoPh..274...99A}
--- **Similarity to magnetar energy distribution**
+The 57648 burst is nearly an order of magnitude brighter near 3~GHz than at 1.4~GHz. Expressed as a spectral index ($S_{\nu} \propto \nu^{\alpha}$), we find $\alpha\approx2.7$. However, the bursts detected here and described in \citet{WEIRD} make it clear that burst spectral power is not well described by a powerlaw.
+
+Given the high sensitivity of Arecibo...
+Even the one AO detection is 10x fainter...
+** is one of three VLA bursts with L-band coverage by Arecibo, which implies that those bursts had a smaller spectral width. However, all three VLA bursts with L-band Arecibo observations were relatively weak, so it is difficult to rule out L-band emission entirely. However, as described in \S \ref{sec:spec}, some of the VLA bursts peak within the band from 2.5 to 3.5~GHz, which implies a much smaller spectral coverage for typical bursts.
+
+burst rate is correlated between vla and ao, but not the intensity of individual bursts...
 
 Propagation effects (e.g., scintillation, scattering) can also modify the radio signal in a variety of ways and the duration of the emission in the source frame is not known \citep{2016arXiv160505890C}. \citet{CORDES} describe a model where plasma lensing near the source of an FRB can magnify radio emission by orders of mangitude. That model argues that the simultaneous appearance of a burst from 1.2 to 3.5~GHz requires a lens with the focal frequency be $\gtrsim 3.5$~GHz. This gives a constraint on the combination 
 $$\frac{\rm DM_0}{a_{\rm AU}^2} \frac{d_{sl}d_{lo}/d_{so}}{1\, \rm kpc} \gtrsim (3.5 / 39.1)^2$$
 where $DM_0$, $a$, and $d_*$\ are the electron column density of the lens, size of the lens, and lensing distances, respectively. A lens placed at $d_{sl}\approx1$~kpc is consistent with typical properties of the interstellar medium. Lenses that are influenced by the source would be much nearer to the source $d_{\sl} \ll 1$~kpc, requiring large values of $\frac{\rm DM_0}{a_{\rm AU}^2}$.
 
-\subsection{FRB Flux Distribution}
+\subsection{Energy and Flux Distribution}
+The refined analysis shows that \frb\ has even higher isotropic energies than previously reported, reaching energies $E_{\rm{max}}\approx10^{40}$\ erg. We now know that \frb\ is detectable with the VLA out to $z=0.7$\ and much farther with Arecibo. \frb\ has isotropic energies orders of magnitude higher than the strongest Crab pulsar pulses ($\sim10^{35}$~erg) and comparable brightness temperatures \citep[$T_b^{\rm{Crab}}\sim10^{41}$~K versus $T_b^{\rm{FRB 121102}}\sim10^{38}$~K;][]{2003Natur.422..141H,2014PhRvD..89j3009K}. While this emission is coherent and strongly beamed \citep{2016Natur.531..202S, WEIRD}, the energy scale is still larger than any known Galactic radio transient and requires either a new process or dramatic scaling of known emission processes \citep{2016MNRAS.462..941L, 2016MNRAS.457..232C}.
+
+-- Self-organized criticality in the sun. energy powerlaw=-1.7 \citep{2011SoPh..274...99A}
+-- **Similarity to magnetar energy distribution**
+
+
 The Lorimer burst was surprising for its unusually large flux with a lack of lower-significance detections. As more FRBs have been detected, we continue to be surprised by their apparent brightness of FRBs \citep{2016arXiv161105758R}. This perception has been validated with analysis of the FRB cumulative fluence distribution, which when modeled as a powerlaw ($dN/dF \propto F^{\alpha}$) has an index $-0.5<\alpha<-0.9$\ \citep{2016ApJ...830...75V, 2016arXiv160206099L, 2016arXiv161100458L}. For a uniform distribution of sources with a single luminosity, this index should be --1.5 \citep[the ``Euclidean'' distribution, e.g.,][]{2016MNRAS.462..941L}.
 
 The energy distribution of \frb\ bursts has also produced some surprises. The nine bursts were detected with a wide range of significance (12 to 179$\sigma$) and the apparent burst energy distribution can be characterized as a powerlaw $dN/dE\propto E^{-1.6}$. If all FRBs luminosities are drawn from such a distribution, then their flux distribution will be determined by the underlying energy distribution and its interplay with redshift space distortions.
