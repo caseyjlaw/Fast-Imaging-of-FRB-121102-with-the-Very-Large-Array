@@ -210,36 +210,39 @@ Three of the four VLA bursts with simultaneous observing coverage by Arecibo wer
 \end{center}
 \end{figure*}
 
-
 \subsubsection{Spectral Modeling}
 \label{sec:spec}
-We used two techniques to refine the analysis of the nine VLA radio burst spectra described in \citet{LOC}. First, we improved on the initial analysis by using a better calibration scheme and optimizing the detection significance over a fine grid of DM ($\Delta \rm{DM}=1\ \rm{pc}\ \rm{cm}^{-3}$). After calibration and flagging, the visibility phases were rotated to the best-fit location \citep[(RA, Dec) $=$ (05h31m58.70s, +33d08m52.5s);][]{LOC} to extract a Stokes I spectrum that maximizes the image S/N for each burst. Table \ref{tab:spec} gives the resulting integrated burst flux density, image S/N, and Stokes V, while Figure \ref{fig:spec} shows the Stokes I spectra. Generally, the burst spectra are characterized by a broad, Gaussian shape with inter-channel modulation as high as 100\%.
+This paper refine the analysis of the nine VLA radio burst spectra described in \citet{LOC} in a few ways. We use a better calibration scheme and have optimized the detection significance over a fine grid of DM ($\Delta \rm{DM}=1\ \rm{pc}\ \rm{cm}^{-3}$). After calibration and flagging, the visibility phases were rotated to the best-fit location \citep[(RA, Dec) $=$ (05h31m58.70s, +33d08m52.5s);][]{LOC} to extract a Stokes I spectrum that maximizes the image S/N for each burst.
+
+Table \ref{tab:spec} summarizes the properties of all nine VLA bursts. Parameters such as integrated flux density, S/N, and Stokes V were measured from the burst properties integrated in frequency. Stokes V values estimated from the dual-circular feeds ($(RR-LL)/(RR+LL)\approx3\%$ and are comparble to the systematic error expected from the primary beam (Perley et al 2016, VLA memo). Given that systematic effects dominate the apparent circular polarization, we conclude that the true fractional circular polarization is less than 3\%.
 
 \begin{table*}
-\caption{Properties of Bursts from \frb}
+\caption{Properties of Bursts from \frb **update**}
 \centering
-\begin{tabular}{lcccccccc}
+\begin{tabular}{lccccccccc}
 \hline
-Date                & S$_{\rm{I,int}}$  & Image S/N & E$_{\rm{int}}$ & DM$_{\rm{opt}}$ & S$_{\rm{I,peak}}$ & Center & FWHM & S$_{\rm{V}}$ \\
-(MJD)               & (mJy)           &           & ($10^{38}$\ erg) & (pc cm$^{-3})$ & (mJy) & (GHz)  & (MHz) & (mJy) \\ \hline
-57623.74402686      & 194             & 38        & 11 & 562.1 & 690 & 2.8 & 290 & +3 \\ % 7.8  & 562.5 & 460 & 2.8 & 300 & +3 \\
-57633.67986367      & 1500            & 179       & 97 & 561.3 & 3350 & 3.2 & 510 & --35 \\ % 65   & 561.4 & 2200 & 3.2 & 520 & --35 \\
-57633.69515938\tablenotemark{a} & 69  & 15        & 7 & 555.8 & $>$430 & $<$2.5 & 290 & +2 \\ % 5.9  & 555.4 & $>$320 & $<$2.5 & $>$320 & +2 \\
-57638.49937435      & 55              & 12        & 3 & 558.6 & 130 & 3.1 & 410 & +5 \\ % 1.8  & 554.9 & 70 & 3.1 & 440 & +5 \\
-57643.45730263      & 508             & 100       & 34 & 558.7 & 1170 & 2.8 & 510 & --5 \\ % 13   & 559.3 & 440 & 2.8 & 530 & --5 \\
-57645.42958602      & 64              & 13        & 4 & 555.9 & 170 & 2.8 & 380 & +3 \\ % 2.6  & 554.1 & 50 & 2.7 & 970 & +3 \\
-57646.46600650\tablenotemark{a} & 87  & 20        & 10 & 562.4 & $>$420 & $<$2.5 & 420 & +1 \\ % 3.9  & 568.1 & $>$190 & $<$2.5 & $>$360 & +1 \\
-57648.43691490\tablenotemark{b} & 111 & 25        & 7 & 557.4 & 260 & 2.8 & 470 & +9 \\ % 2.9  & 557.8 & 110 & 2.8 & 440 & +9 \\
-57649.45175697      & 167             & 36        & 12 & 559.9 & 290 & 3.0 & 690 & +1 \\ \hline % 6.3  & 559.9 & 80 & 2.9 & 1400 & +1 \\ \hline
+Date                & S$_{\rm{I,int}}$  & Image S/N & E$_{\rm{int}}$ & DM$_{\rm{opt}}$ & dt & S$_{\rm{I,peak}}$ & Center & FWHM & S$_{\rm{V}}$ \\
+(MJD)               & (mJy)           &           & ($10^{38}$\ erg) & (pc cm$^{-3})$ & (ms) & (mJy) & (GHz)  & (MHz) & (mJy) \\ \hline
+57623.74402686      & 194             & 38        & 11 & 562.1 & & 690 & 2.8 & 290 & +3 \\ % 7.8  & 562.5 & 460 & 2.8 & 300 & +3 \\
+57633.67986367      & 1500            & 179       & 97 & 561.3 & & 3350 & 3.2 & 510 & --35 \\ % 65   & 561.4 & 2200 & 3.2 & 520 & --35 \\
+57633.69515938\tablenotemark{a} & 69  & 15        & 7 & 555.8 & & $>$430 & $<$2.5 & 290 & +2 \\ % 5.9  & 555.4 & $>$320 & $<$2.5 & $>$320 & +2 \\
+57638.49937435      & 55              & 12        & 3 & 558.6 & & 130 & 3.1 & 410 & +5 \\ % 1.8  & 554.9 & 70 & 3.1 & 440 & +5 \\
+57643.45730263      & 508             & 100       & 34 & 558.7 & & 1170 & 2.8 & 510 & --5 \\ % 13   & 559.3 & 440 & 2.8 & 530 & --5 \\
+57645.42958602      & 64              & 13        & 4 & 555.9 & & 170 & 2.8 & 380 & +3 \\ % 2.6  & 554.1 & 50 & 2.7 & 970 & +3 \\
+57646.46600650\tablenotemark{a} & 87  & 20        & 10 & 562.4 & & $>$420 & $<$2.5 & 420 & +1 \\ % 3.9  & 568.1 & $>$190 & $<$2.5 & $>$360 & +1 \\
+57648.43691490\tablenotemark{b} & 111 & 25        & 7 & 557.4 & & 260 & 2.8 & 470 & +9 \\ % 2.9  & 557.8 & 110 & 2.8 & 440 & +9 \\
+57649.45175697      & 167             & 36        & 12 & 559.9 & & 290 & 3.0 & 690 & +1 \\ \hline % 6.3  & 559.9 & 80 & 2.9 & 1400 & +1 \\ \hline
 \end{tabular}
 \tablenotetext{a}{Best-fit Gaussian is not centered in 3~GHz band, so spectral parameters are limits.}
 \tablenotetext{b}{Detected simultaneously with Arecibo between 1.15 and 1.73~GHz.}
 \label{tab:spec}
 \end{table*} 
 
-To better understand the spectra, we extracted dynamic radio spectra (time versus frequency) for 2d modeling with the MCMC sampler \emph{emcee} \citep{2013PASP..125..306F}. These dynamic spectral were modeled as the product of a Gaussian shape (amplitude, center, width) and a temporal shape (start time, DM, and width). These 6-dimensional fits were sampled with 100 walkers taking 500 steps; typically, the first 200 steps were used to burn in the walkers and were ignored. A flat prior was used over all ranges with valid data, including a requirement that the Gaussian integral produce a detection significance higher than 8$\sigma$. To represent the strong inter-channel modulation, the model error was estimated as the maximum of the modeled flux and the measured, off-burst noise value (typically 70 mJy per 5~ms integration and 4~MHz channel).
+Figure \ref{fig:spec} shows that the Stokes I spectra are generally characterized by a broad, Gaussian shape with inter-channel modulation as high as 100\%. To better understand the spectra, we extracted dynamic radio spectra (time versus frequency) for 2d modeling with the MCMC sampler \emph{emcee} \citep{2013PASP..125..306F}. MCMC sampling requires a generative model for the data, so we wrote functions in Python to create 2d dynamic spectra. The dynamic spectra are modeled in the spectral domain as a Gaussian envelope and in the temporal domain by a dispersive delay (scaling as frequency squared). We further allow the pulses to have a finite temporal width. This brings the total number of parameters to 6 (Gaussian amplitude, center, width, start time, time width, and DM). 
 
-The parameters for the best model of the dynamic spectrum are given in Table \ref{tab:spec} and the resulting Gaussian model overlaid on Figure \ref{fig:spec}. The typical burst has a spectral width of 500~MHz. All but two of the best-fit Gaussians are centered inside the 3~GHz band and some appear contained by the 1~GHz wide band. This is consistent with previous detections of \frb\ by Arecibo, which showed quasi-broadband structure \citep{2016arXiv160308880S} and large variation in the implied spectral index \citep{2014ApJ...790..101S}. A detailed discussion of high-resolution \frb\ burst spectra seen by the Arecibo Observatory will be presented elsewhere \citep{WEIRD}.
+The 6-dimensional models were sampled with 100 walkers taking 500 steps. Typically, the first 200 steps were used to burn in the walkers and were ignored. A flat prior was used over all ranges with valid data. An additional requirement was that the integrated burst signal must have a detection significance higher than 8$\sigma$. The inter-channel modulation (scintillation) was ignored in the model. The measured, off-burst noise value was typically 70 mJy per 5~ms integration and 4~MHz channel.
+
+The parameters for the best model of the dynamic spectrum are given in Table \ref{tab:spec} and the resulting Gaussian model overlaid on Figure \ref{fig:spec}. The typical burst has a spectral width of 500~MHz. All but two of the best-fit Gaussians are centered inside the 3~GHz band and some appear contained by the 1~GHz wide band. This is consistent with previous detections of \frb\ by Arecibo, which showed quasi-broadband structure \citep{2016arXiv160308880S} and large variation in the implied spectral index \citep{2014ApJ...790..101S}. 
 
 \begin{figure*}[ht]
 \begin{center}
@@ -265,40 +268,44 @@ The parameters for the best model of the dynamic spectrum are given in Table \re
 \end{center}
 \end{figure*}
 
-**Burst temporal width**
+This analysis differs from traditional analysis in that it simultaneously models the spectral and temporal evolution of the burst. Since the burst crosses many time-frequency pixel boundaries, the temporal modeling is sensitive to temporal properties smaller than the 5~ms integration time. Table \ref{tab:spec} shows that the typical burst width is measured as $2\pm1$~ms (95\% confidence interval); the brightest burst (57633.68) has a temporal width of $2.05\pm0.05$~ms. The burst arrival times are typically measured with a precision of 1~ms; the brightest burst arrival time is measured with a precision of $\sim50\mu$s. Note that these errors are only accurate to the degree that the model represents the data. One potential bias in the model is that we do not model scintillation effects.
 
-**Corner plot?**
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=0.9\columnwidth]{corner57646}
+\caption{A scatterplot matrix that shows the correlation of every pair of parameters in the MCMC run for burst 57646. The equivalent plot for the other bursts show normally-distributed samples, but this burst shows significant structure in the samples.
+\label{fig:corner}}
+\end{center}
+\end{figure}
 
-**Does DM correlate with other spectral/flux properties?**
-
+While most bursts are modeled with well-defined parameter probability distributions, one burst is an outlier. Figure \ref{fig:corner} shows the scatterplot matrix for the MCMC run on burst 57646 \citep{corner}. Two clusters of samples are identified for this burst: one narrow, low-DM and one wide, high-DM. The model seems to be too simple for this burst. This is consistent with high-resolution Arecibo burst spectra \citep{WEIRD}, which show that bursts are composed of "sub-bursts" that drift in frequency.
 
 \subsubsection{Dispersion}
-The initial VLA detections were made by searching a DM grid that allowed inter-DM sensitivity losses up to roughly 10\% \citep[$\Delta DM=10\ \rm{pc}\ \rm{cm}^{-3}$][]{2003ApJ...596.1142C}. In optimizing detection significance over a fine DM grid, we find optimal DM values range from 552 to 572 pc cm$^{-3}$. However, the uncertainty in the peak DM measurement is defined by the signal-to-noise of the burst and how this changes with DM.
+The initial VLA detections were made with a matched-filter approach that allowed inter-DM sensitivity losses up to roughly 10\% \citep[$\Delta DM=10\ \rm{pc}\ \rm{cm}^{-3}$][]{2003ApJ...596.1142C}. 
+%In optimizing detection significance over a fine DM grid, we find optimal DM values range from 552 to 572 pc cm$^{-3}$. However, the uncertainty in the peak DM measurement is defined by the signal-to-noise of the burst and how this changes with DM.
+The MCMC modeling is more sophsticated in that it considers a wider range of parameters and models both data and observing effects (frequency-time pixel boundaries) simultaneously.
 
-Given that the apparent DM can potentially change due to intrinsic or extrinsic effects, we developed a more sophisticated system for modeling dispersion. We created a generative model to sample the likelihood distribution as a function of DM \citep{2010arXiv1008.4686H}. We use the Gaussian shape (see \S \ref{sec:spec}) along the spectral axis and apply a frequency-dependent delay for a given dispersion model. The likelihood is directly sampled by calculating the product of probabilities on a per-pixel basis of the 2-dimensional dynamic spectrum. Uncertainties in each pixel are drawn from a uniform Gaussian error distribution that is estimated from the data.
+The top panel of Figure \ref{fig:dmmodel} shows the 95\% confidence intervals on the DM for all nine VLA bursts as a function of burst time. The burst DMs are not consistent with any single value and tend to be larger than the reference value of 560.5 pc cm$^{-3}$. The range and variance in DM observed by the VLA is similar to that reported for \frb\ in \citet{2016arXiv160308880S}. As noted before, this is consistent with the idea that the DM measured at low resolution (e.g., by the VLA) is defined by true dispersion and some intrinsic structure that changes between bursts. The VLA data demonstrate that this intrinsic DM effect is visible at frequencies near 3~GHz. Assuming a "true" DM of 560.5 pc cm$^{-3}$, the excess DM can be thought of as a frequency-dependent delay that is intrinsic to the burst with a delay rate of 1--2~ms GHz$^{-1}$.
 
-Figure \ref{fig:dmmodel} compares the 95\% confidence intervals on the DM for all nine VLA bursts to the range of DM previous observed \citep{2014ApJ...790..101S,2016arXiv160308880S}. The DM confidence intervals are not consistent with each other or a single DM. This suggests that there are apparent DM changes between bursts, either due to intrinsic burst structure or actual changes to the DM column density. Elsewhere, we present high-resolution dynamic spectra at 1.4~GHz that show how intrinsic spectral structure can bias the apparent DM of individual bursts \citep{WEIRD}. The FRB emission process has not yet been defined, so it is not clear how the intrinsic structure can bias DM as a function of frequency.
+The bottom panel of Figure \ref{fig:dmmodel} compares the DM to the modeled temporal width of the bursts. There is a weak correlation between burst width and apparent DM. A change in width of $\sim1$~ms correlates with a change in apparent DM of approximately $5$~pc cm$^{-3}$. If the excess DM is 
 
 \begin{figure}[htb]
 \begin{center}
 \includegraphics[width=0.9\columnwidth]{dmmodel}
-\caption{DM as a function of time for nine 3~GHz bursts detected by the VLA. The 95\% confidence interval on DM is shown with a bar and the dahsed line shows the best-fit DM$=560.5$\ pc cm$^{-3}$ inferred for Arecibo observations at 1.4~GHz (CITE: WEIRD).
+
+\includegraphics[width=0.9\columnwidth]{burst_dmdt}
+
+\caption{(Top) DM as a function of time for nine 3~GHz bursts detected by the VLA. The 95\% confidence interval on DM is shown with a bar and the dahsed line shows the best-fit DM$=560.5$\ pc cm$^{-3}$ inferred for Arecibo observations at 1.4~GHz. (Bottom) Burst DM versus temporal width for all nine VLA bursts.
 \label{fig:dmmodel}}
 \end{center}
 \end{figure}
 
-% TODO: Non-lambda$^{2}$ dispersion...
-
 \subsection{Temporal Statistics}
 \label{sec:temp}
-Geoff comments:
--- need to clarify that burst rate change is significant
--- not clear how significant nondetections are, since observational details not obvious yet
+The burst rate for \frb\ varied dramatically throughout the 2016 observing campaign (Figure \cite{fig:multi}). In the early-2016 campaign, we observed for 30 hours at S-band and no bursts were detected. In the late-2016 observing campaign, nine bursts were detected in the last 27 hours of S-band observing. Overall, the data quality is uniform and high, so the inhomogeneous burst distribution shows that the burst detection probability was not stationary. Assuming that the burst detection probability follows a Poisson distribution, the nondetection in the first half of S-band limits the FRB rate to $\rm{R}<0.1$\ hour$^{-1}$\ (95\% confidence limit). The S-band burst rate was much higher during the late-2016 campaign, $\rm{R}=0.33\pm0.1$\ hour$^{-1}$.
 
-Burst detections were made very inhomogenously through the 2016 observing campaign and total 63 hours. In the early-2016 campaign, we observed for 30 hours at S-band and no bursts were detected. In the late-2016 observing campaign, nine bursts were detected in the last 27 hours of S-band observing. Overall, the data quality is uniform and high, so the inhomogeneous burst distribution shows that the burst detection probability was not stationary. Assuming that the burst detection probability follows a Poisson distribution, the nondetection in the first half of S-band limits the FRB rate to $\rm{R}<0.1$\ hour$^{-1}$\ (95\% confidence limit). The mean detection rate for S-band observing during the late-2016 campaign was $\rm{R}=0.33\pm0.1$\ hour$^{-1}$.
-
-There is weak evidence that the \frb\ burst rate decreased through the S-band observing in the late-2016 campaign. We modeled the event detection probability as a Poisson probability function, $P_i(\lambda)$, with rate parameter that evolves linearly in time relative to the first VLA burst $\lambda = a + b (\rm{MJD}_i - 57623)$. By directly sampling the joint probability distribution, $\prod_{i} P_i$, we can exclude a constant rate with $\sim$85\% confidence. This weak constraint is consistent with the broader trend of a changing rate seen on month timescales by Arecibo.
-
+%There is weak evidence that the \frb\ burst rate decreased through the S-band observing in the late-2016 campaign. We modeled the event detection probability as a Poisson probability function, $P_i(\lambda)$, with rate parameter that evolves linearly in time relative to the first VLA burst $\lambda = a + b (\rm{MJD}_i - 57623)$. By directly sampling the joint probability distribution, $\prod_{i} P_i$, we can exclude a constant rate with $\sim$85\% confidence. This weak constraint is consistent with the broader trend of a changing rate seen on month timescales by Arecibo.
+%
 %\begin{figure}[htb]
 %\begin{center}
 %\includegraphics[width=0.9\columnwidth]{event_rate_contours}
@@ -306,15 +313,15 @@ There is weak evidence that the \frb\ burst rate decreased through the S-band ob
 %\label{fig:rate}}
 %\end{center}
 %\end{figure}
-
-During the late-2016 observing campaign, the typical observation lasted about two hours and was sampled with a 5~ms cadence. We used the Lomb-Scargle periodogram \citep{1982ApJ...263..835S} to search for periodic structure over a wide range of timescales. The time series is calculated by binning the burst detection rate per 100~ms \citep[always either 0 or 1, see also][]{2011MNRAS.417.1871P}. 
-The spectral power calculated for periods between 0.8 and 80 s shows no power in excess of the typical 95\% confidence bound estimated from shuffled data. We verified that simulating nine bursts drawn from a simple rotational model would produce excess power using this approach. However, it is difficult to put strong constraints on more complex rotational models \citep[e.g., with wide pulse phase windows or glitches;][]{2007ApJ...663..497C, 2013Natur.497..591A}
+%
+%During the late-2016 observing campaign, the typical observation lasted about two hours and was sampled with a 5~ms cadence. We used the Lomb-Scargle periodogram \citep{1982ApJ...263..835S} to search for periodic structure over a wide range of timescales. The time series is calculated by binning the burst detection rate per 100~ms \citep[always either 0 or 1, see also][]{2011MNRAS.417.1871P}. 
+%The spectral power calculated for periods between 0.8 and 80 s shows no power in excess of the typical 95\% confidence bound estimated from shuffled data. We verified that simulating nine bursts drawn from a simple rotational model would produce excess power using this approach. However, it is difficult to put strong constraints on more complex rotational models \citep[e.g., with wide pulse phase windows or glitches;][]{2007ApJ...663..497C, 2013Natur.497..591A}
 
 \subsection{Energy and Brightness Distribution}
 \label{sec:disn}
-Knowing the burst distance, we calculate their total energy by integrating flux in time and frequency (Table \ref{tab:spec}). Some VLA burst spectra seem to be contained by the 2.5 to 3.5~GHz band and most of them seem to have Gaussian envelopes that are well modeled by the emission within the 2.5 to 3.5~GHz band. Assuming that the Gaussian shape defines the emission window, the mean S-band flux density can be converted to a total energy with no further assumptions about their spectral properties. We proceed under this assumption here and discuss caveats is \S \ref{sec:disc}.
+Knowing the source distance, we calculate the burst energy by integrating flux in time and frequency (Table \ref{tab:spec}). Some VLA burst spectra seem to be contained by the 2.5 to 3.5~GHz band and most of them seem to have Gaussian envelopes that are well modeled by the emission within the 2.5 to 3.5~GHz band. Assuming that the Gaussian shape defines the emission window, the mean S-band flux density can be converted to a total energy with no further assumptions about their spectral properties. We proceed under this assumption here and discuss caveats in \S \ref{sec:disc}.
 
-Figure \ref{fig:ed} shows the \frb\ burst energy cumulative distribution and best-fit model. We modeled the differential energy distribution, $dN/d\log{E}$, as a Poisson probability distribution with a rate function $\lambda\propto E^{\alpha}$. Using a maximum likelihood technique, we estimate the best powerlaw index of $\alpha=-0.6^{+0.2}_{-0.4}$ (68\% confidence interval), which is equivalent to a $dN/dE$\ powerlaw index of --1.6. This model assumes a completeness limit for a luminosity equivalent to an $8\sigma$\ flux density limit. This is consistent with the high and uniform data quality and the false positive rate in this observing campaign.
+Figure \ref{fig:ed} shows the \frb\ burst energy cumulative distribution and best-fit model. We modeled the differential energy distribution, $dN/d\log{E}$, as a Poisson probability distribution with a rate function $\lambda\propto E^{\alpha}$. Using a maximum likelihood technique, we estimate the best powerlaw index of $\alpha=-0.6^{+0.2}_{-0.4}$ (68\% confidence interval), which is equivalent to a $dN/dE$\ powerlaw index of --1.6. This model assumes a completeness limit for a luminosity equivalent to an $8\sigma$\ flux density limit, which is consistent with the high and uniform data quality.
 
 \begin{figure}[htb]
 \begin{center}
@@ -323,22 +330,19 @@ Figure \ref{fig:ed} shows the \frb\ burst energy cumulative distribution and bes
 \end{center}
 \end{figure}
 
-\subsubsection{Spectral Autocorrelation}
-\label{sec:auto}
-Autocorrelation of the burst signal (both temporal and spectral) can be used to infer both intrinsic properties and modulation due to scintillation \citep{CORDES}. Figure \ref{fig:acf} shows the spectral autocorrellation for the strongest burst (MJD 57633.68). The is no strong excess correlation near the channel resolution, which limits the correlation width to less than roughly 4~MHz. This is broadly consistent with expectations of Galactic diffractive scintillation bandwidth \citep[3--9~MHz near 3~GHz][]{2002astro.ph..7156C}.
-
+%\subsubsection{Spectral Autocorrelation}
+%\label{sec:auto}
+%Autocorrelation of the burst signal (both temporal and spectral) can be used to infer both intrinsic properties and modulation due to scintillation \citep{CORDES}. Figure \ref{fig:acf} shows the spectral autocorrellation for the strongest burst (MJD 57633.68). The is no strong excess correlation near the channel resolution, which limits the correlation width to less than roughly 4~MHz. This is broadly consistent with expectations of Galactic diffractive scintillation bandwidth \citep[3--9~MHz near 3~GHz][]{2002astro.ph..7156C}.
+%
 %**Does channel-scale structure only appear around 3~GHz?**
-
-\begin{figure}[htb]
-\begin{center}
-\includegraphics[width=0.9\columnwidth]{acf_57633_scan7}
-\caption{The spectral autocorrelation as a function of frequency for the burst from \frb\ at MJD 57633.68. The largest black dots show the autocorrelation for the data, smaller dots show the autocorrelation for the best Gaussian model, and dashed line shows the autocorrelation of an off-burst spectrum.
-\label{fig:acf}}
-\end{center}
-\end{figure}
-
-\subsubsection{Circular Polarization}
-The VLA S-band recievers measure circular polarization, although for observing efficiency we choose not to include polarization calibration procedures. Constraints on circular polarization are possible since the gain calibrator is a well-known polarization calibrator with little Stokes V flux. In that case, the apparent circular polarization fraction is $(RR-LL)/(RR+LL)$, which for the most significant bursts is at most 3\%. \frb\ was located 2.3\arcmin away from pointing center, where systematic effects have been measured as large as 3\% (Perley et al 2016, VLA memo). Given that systematic effects dominate the apparent circular polarization, we conclude that the true fractional circular polarization is less than 3\%.
+%
+%\begin{figure}[htb]
+%\begin{center}
+%\includegraphics[width=0.9\columnwidth]{acf_57633_scan7}
+%\caption{The spectral autocorrelation as a function of frequency for the burst from \frb\ at MJD 57633.68. The largest black dots show the autocorrelation for the data, smaller dots show the autocorrelation for the best Gaussian model, and dashed line shows the autocorrelation of an off-burst spectrum.
+%\label{fig:acf}}
+%\end{center}
+%\end{figure}
 
 \section{discussion}
 \label{sec:disc}
