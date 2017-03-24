@@ -386,19 +386,18 @@ The chance of detecting a burst with the VLA changes substantially on day--month
 
 If this statistical property describes other FRBs, it weakens previous constraints on repetition \citep{2015MNRAS.454..457P,2015ApJ...807...16L}. It is possible that other FRBs have repeating bursts, but calculating a limit requires knowing their temporal correlation function. Wide, shallow surveys are the preferred strategy for blind detection of FRBs. Also, since ''bursts predict bursts'', many short observations are more likely to blindly detect an FRB than a single long observation of the same total length. 
 
-\subsection{Rate Comparison}
+\subsection{Revised Volumetric Rate}
 
-The calculation of a volumetric rate has been used to study classes of optical and high-energy transient \citep{2006ARA&A..44..507W}. \citet{2013Sci...341...53T} used this approach to estimate a rate of $10^{-3}$\ galaxy$^{-1}$\ yr$^{-1}$ by assuming an isotropic emitter in a Milky Way-type galaxy out to a characteristic redshift horizon of 0.9. This rate is high \citep[comparable to the rate of core-collapse supernovae;][]{2006Natur.439...45D}, which has been used to argue that FRBs are likely not associated with other classes of transient, such as GRBs or rarer SNe.
+%The calculation of a volumetric rate has been used to study classes of optical and high-energy transient \citep{2006ARA&A..44..507W}. 
+\citet{2013Sci...341...53T} estimated an isotropic FRB rate of $10^{-3}$\ galaxy$^{-1}$\ yr$^{-1}$ by calculating the number of Milky Way-type galaxies out to a distance implied by assming all extragalactic DM originates in the IGM \citep[$z\approx0.9$\ for $DM\approx z\times900 \rm{pc}\ \rm{cm}^{-3}$;][]{2003ApJ...598L..79I,2004MNRAS.348..999I}. This rate is high \citep[comparable to the rate of core-collapse supernovae;][]{2006Natur.439...45D}, which has been used to argue that FRBs are likely not associated with other classes of transient, such as LGRBs or rarer SNe \citep{2006ARA&A..44..507W}. However, this estimate depends on the telescope sensitivity, so is not easy to compare to other estimates based on source counts. Here we reevaluate the FRB volumetric rate by assuming \frb\ is a prototype of the class. 
 
-However, inferences based on this and related rates are difficult, since they are strongly dependent on the sensitivity of the telescopes. Here we reevaluate the FRB volumetric rate by assuming \frb\ is a prototype of the class. We also update the volumetric rate to use the latest projected FRB rate \citep[$2\times10^3\ \rm{sky}^{-1} \rm{day}^{-1}$\ at high Galactic latitudes and flux densities brighter than 1 Jy ms; ][]{2016arXiv161100458L, 2016MNRAS.460L..30C, 2016MNRAS.455.2207R}. 
+First, we recast the estimate as volumetric rate of FRB sources by including beaming and repetition effects. The volumetric source rate is $R_{FRB} = R_p /(N_r \Omega_b V (z))$, where $R_p$\ is the projected FRB rate, $N_r$\ is the number of bursts per source, $\Omega_b$\ is the beaming fraction, and $V(z)$\ is the volume out to redshift $z$. The newest estimates of the projected FRB rate are lower by a factor of 5 \citep[$2\times10^3\ \rm{sky}^{-1} \rm{day}^{-1}$\ at high Galactic latitudes and flux densities brighter than 1~Jy~ms; ][]{2016arXiv161100458L, 2016MNRAS.460L..30C, 2016MNRAS.455.2207R}. 
 
-We recast the estimate as volumetric rate of FRB sources by including beaming and repetition effects. The volumetric source rate is $R_{FRB} = R_p /(N_r \Omega_b V (z))$, where $R_p$\ is the projected FRB rate, $N_r$\ is the number of bursts per source, $\Omega_b$\ is the beaming fraction, and $V(z)$\ is the volume out to redshift $z$. 
+The burst rate depends on the fluence limit of past FRB surveys, but \frb\ has an absolute energy scale that can be used to estimate FRB fluence at a given distance. At the typical Parkes survey parameters \citep{}, a fluence limit of 1~Jy~ms is detectable at $z\approx1$. The distance inferred from the largest DMs observed \citep[$\sim1500$\ pc cm$^{-3}$;][]{2016MNRAS.460L..30C} is somewhat higher, but it is likely that DM has significant contributions from the host galaxy and intervening galaxies \citep{OPT, 2014ApJ...780L..33M}. For reference, we note that cosmic star formation rate peaks between redshift of 2 and 3\citep{2014ARA&A..52..415M}.
 
-The characteristic distance scale for FRBs can be inferred from the detectability of \frb. The projected FRB rate is defined for a fluence limit of 1 Jy ms which is detectable out to $z=2\ for the Parkes surveys that have detected the most FRBs. This distance is consistent with that inferred from the largest DMs observed \citep[$\sim1500$\ pc cm$^{-3}$;][]{2016MNRAS.460L..30C}. This assumes that DM is dominated by the IGM \citep[$DM\approx z\times900 \rm{pc}\ \rm{cm}^{-3}$\ for realistic ionization state;][]{2003ApJ...598L..79I,2004MNRAS.348..999I}, although other contributions are likely significant \citep{2014ApJ...780L..33M}. An independent argument for a characteristic distance of $z=2$\ is that it corresponds to the peak the in the cosmic star formation history \citep{2014ARA&A..52..415M} and most leading models for FRBs are driven by star formation \citep{2016MNRAS.462..941L,2016ApJ...826..226K,2017arXiv170104815K}.
+Using an assumed horizon redshift of 1, we estimate a rate of $R_p \approx 5\times10^{-5} N_r^{-1} (0.1/\Omega_b)$\ Mpc$^{-3}$\ yr$^{-1}$. The narrow burst spectral structure seen for \frb\ implies that observations have undercounted the rate by a factor of a few by ignoring bursts outside the band. There is also relatively little constraint on the beaming factor \citep[$\sim0.1$ for pulsars;][]{1998MNRAS.298..625T}. This estimate also assumes that propagation effects do not significantly affect the detectability of FRBs, although scintillation likely plays a significant role \citep{2015MNRAS.451.3278M, CORDES}.
 
-Using an assumed horizon redshift of 2, we estimate a rate of $R_p = 10^{-5} N_r^{-1} (0.1/\Omega_b)$\ Mpc$^{-3}$\ yr$^{-1}$. Narrow burst spectral structure implies that observations underestimate by missing bursts that fall outside the observing band. For a typical burst envelope width of 500~MHz centered at GHz-scale frequencies, past observations (typically using bandwidths of a few hundred MHz near 1.4~GHz) would underestimate the rate by a factor of a few. There is also relatively little constraint on the beaming factor \citep[$\sim0.1$ for pulsars;][]{1998MNRAS.298..625T}. This estimate also assumes that propagation effects do not significantly affect the detectability of FRBs, although scintillation likely plays a significant role \citep{2015MNRAS.451.3278M, CORDES}.
-
-This revised volumetric estimate makes many assumptions, but is now appropriate for comparison to rates used for other classes of transient. The LGRB and SLSN-I rates are {\color{red}xx} and $10^{-8}$ Mpc$^{-3}$\ yr$^{-1}$, respectively \citep{?,2012Sci...337..927G}. These higher-energy transients can be considered sources of FRB-generating systems if all FRBs repeat with $N_r\approx10^3$\ with burst energies near $10^{40}$\ erg. \citep{2017arXiv170102370M} calculate the maximum number of bursts that can be powered the magnetic field of a magnetar as $\approx300$, assmuming $\Omega_b=0.1$\ and $E_b=10^{40}$\ erg. This is in rough agreement, given the assumptions required in both both the observations and modeling.
+Despite its many assumptions, this is the first volumetric rate appropriate for comparison to rates used for other classes of transient. The LGRB and SLSN-I rates are {\color{red}xx} and $10^{-8}$ Mpc$^{-3}$\ yr$^{-1}$, respectively \citep{?,2012Sci...337..927G}. Comparing the FRB rate to these rates implies that FRB-emitting sources can be generated in LGRBs and SLSN-I if FRBs repeat with $xx$\ and $5\times10^3$, respectively (assuming burst energies of $10^{40}$\ erg). \citet{2017arXiv170102370M} use the young magnetar model for FRBs to calculate the maximum number of bursts that can be powered its magnetic field as $\approx300$. Under the magnetar mdoel for FRBs, LGRBs, and SLSN-I, this rate comparison suggests that the LGRB rate is most consistent with the FRB rate.
 
 %\subsection{Naming Convention}
 %The consistency of \frb\ properties (e.g., energy distribution) with the overall population suggests other FRBs likely repeat. If so, the current naming convention for FRBs (analogous to cataclysmic supernovae), will likely become uninformative, especially as large FRB survey projects come online \citep{2014SPIE.9145E..22B}. If all FRBs repeat, then a more useful convention would be based on coordinates. However, there are already two FRBs that have consistent celestial positions and different DMs. Therefore, we suggest an FRB naming convention as Jhhmm+ddDMmmmm.
@@ -431,28 +430,6 @@ Liam Connor
 
 
 \bibliography{fasttrants.bib}
-
-%\begin{figure}[htb]
-%\begin{center}
-%\includegraphics[width=0.9\columnwidth]{}
-%\caption{
-%\label{fig:name}}
-%\end{center}
-%\end{figure}
-
-%\begin{table}
-%\caption{Caption}
-%\footnotesize
-%\centering
-%\begin{tabular}{l|cc|cc|c}
-%\hline
-%Field       & RA          & Dec   & Lon. & Lat.     & Time \\
-%            & \multicolumn{2}{|c|}{(J2000)}  & \multicolumn{2}{|c|}{(Galactic; deg)} & (hrs) \\ \hline
-%RA02        & 2:27:53  &  +9:13:24 & 159.0 & --46.8    & 26.25 \\
-%PSR J2248-0101 & 22:48:27 & --1:1:48 & 69.3 & --50.6 & 6.5 \\ \hline
-%\end{tabular}
-%\label{fields}
-%\end{table} 
 
 \end{document}
 
