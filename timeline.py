@@ -30,6 +30,9 @@ psym = dict(zip(telescopes, psyms))
 pcols = ['g','r','b','y']
 pcol = dict(zip(telescopes, pcols))
 
+if obsdate[0].year == 2015:
+    telescopes = telescopes[:-1]
+
 # set font properties
 rc('font', family='sans-serif')
 rc('font', serif='Times New Roman')
@@ -60,44 +63,82 @@ def d2n(yyyy, mm, dd):
 def labeltelleft(ax, num):
 	for teln in telescopes:
 		yval = offset[teln]
-		xval = xl - 0.5
-		ax.text(xval, yval, teln, horizontalalignment='right', verticalalignment='center')
+		xval = xl[num] - 0.5
+   		ax.text(xval, yval, teln, horizontalalignment='right', verticalalignment='center')
 
 def labeltelright(ax, num):
 	for teln in telescopes:
 		yval = offset[teln]
-		xval = xr + 0.5
-		ax.text(xval, yval, teln, horizontalalignment='left', verticalalignment='center')
+		xval = xr[num] + 0.5
+   		ax.text(xval, yval, teln, horizontalalignment='left', verticalalignment='center')
 
 if obsdate[0].year == 2016:
-    xl = d2n(2016, 8, 19)
-    xr = d2n(2016, 9, 23)
+    xl = [d2n(2016, 8, 22)]
+    xr = [d2n(2016, 9, 23)]
 else:
-    xl = d2n(2015, 11, 22)
-    xr = d2n(2016, 5, 30)
+    xl = [d2n(2015, 11, 22), d2n(2016, 4, 23)]
+    xr = [d2n(2015, 12, 21), d2n(2016, 5, 29)]
 
-fig, ax = subplots(1, 1, figsize=(15, 4.5))
-for i in range(len(obsdate)):
+if obsdate[0].year == 2016:
+    fig, ax = subplots(1, 1, figsize=(15, 4.5))
+    for i in range(len(obsdate)):
 	putdot(ax, i)
-ax.set_xlim( (xl, xr) )
-ax.set_ylim( (-0.4, 3.4) )
-ax.tick_params(labelright='off', labelleft='off')
-ax.xaxis.set_major_formatter(DateFormatter('%Y-%m-%d'))
-ax.fmt_xdata = DateFormatter('%Y-%m-%d %H:%M:%S')
+    axs = [ax]
+else:
+    fig, ax = subplots(1, 1, figsize=(15, 4.5))
+    gs = GridSpec(1, 2, width_ratios=[1,1.2])
+    axs = [subplot(gs[0]), subplot(gs[1])]
+    for i in range(len(obsdate)):
+        if obsdate[i].year == 2015:        
+            ax = axs[0]
+        else:
+            ax = axs[1]
+        putdot(ax, i)
+
+for ax in axs:
+    ax.tick_params(labelright='off', labelleft='off')
+    ax.xaxis.set_major_formatter(DateFormatter('%Y-%m-%d'))
+    ax.fmt_xdata = DateFormatter('%Y-%m-%d %H:%M:%S')
+
+    if obsdate[0].year == 2016:
+        ax.set_ylim( (-0.4, 3.4) )
+        ax.set_xlim( (xl[0], xr[0]) )
+    else:
+        ax.set_ylim( (0.6, 3.4) )
+        i = axs.index(ax)
+        ax.set_xlim( (xl[i], xr[i]) )
 
 # boxes for simultaneous coverage of VLA bursts
-if obsdate[0].year == 2016:
-	axhspan(0.1, 2.9, 0.6855, 0.6855, fill=False, linestyle='dashed') # 57643
-	axhspan(0.1, 2.9, 0.743, 0.743, fill=False, linestyle='dashed') # 57645
-	axhspan(0.1, 2.9, 0.8285, 0.8285, fill=False, linestyle='dashed') # 57648 57649
-	axhspan(2.1, 2.9, 0.8285, 0.8285, fill=False, lw=3, linestyle='solid') # 57648 57649
-	axhspan(0.1, 2.9, 0.857, 0.857, fill=False, linestyle='dashed') # 57648 57649
+for ax in axs:
+    if obsdate[0].year == 2016:
+        axhspan(0.1, 2.9, 0.657, 0.657, fill=False, linestyle='dashed') # 57643
+        axhspan(0.1, 2.9, 0.718, 0.718, fill=False, linestyle='dashed') # 57645
+        axhspan(0.1, 2.9, 0.813, 0.813, fill=False, linestyle='dashed') # 57648 57649
+        axhspan(2.1, 2.9, 0.813, 0.813, fill=False, lw=3, linestyle='solid') # 57648 57649
+        axhspan(0.1, 2.9, 0.844, 0.844, fill=False, linestyle='dashed') # 57648 57649
+        ax.set_yticks( [0, 1, 2, 3] )
+    else:
+#    	axhspan(1.1, 2.9, 0.657, 0.657, fill=False, linestyle='dashed') # 57643
+#	    axhspan(1.1, 2.9, 0.718, 0.718, fill=False, linestyle='dashed') # 57645
+        ax.set_yticks( [1, 2, 3] )
 
-ax.set_yticks( [0, 1, 2, 3] )
-#ax0.spines['left'].set_visible(True)
-labeltelleft(ax, 0)
-labeltelright(ax, 0)
+
+for ax in axs:
+    ax.tick_params(labelright='off', labelleft='off', width=0)
+    i = axs.index(ax)
+    if obsdate[0].year == 2016:
+        labeltelleft(ax, i)
+        labeltelright(ax, i)
+    else:
+        if i == 0:
+            labeltelleft(ax, i)
+            ax.spines['right'].set_visible(False)
+        elif i == 1:
+            labeltelright(ax, i)
+            ax.spines['left'].set_visible(False)
+
 fig.autofmt_xdate()
 
 #show()
-savefig('timeline.png')
+pngsuff = '0' if '0' in sys.argv[1] else ''
+savefig('timeline{0}.png'.format(pngsuff))

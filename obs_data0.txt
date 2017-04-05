@@ -34,7 +34,6 @@ mjd 57530     0 VLA 0 S
 mjd 57531     0 VLA 0 S
 mjd 57535 0 VLA 0 S
 
-
 # AO 
 mjd 57521 0 AO 0 L
 mjd 57522 0 AO 0 L
@@ -45,3 +44,9 @@ mjd 57529 0 AO 0 L
 mjd 57530 0 AO 0 L
 mjd 57531 0 AO 0 L
 mjd 57535 0 AO 0 L
+
+# Eff
+mjd 57522 0 Effelsberg 0 C
+mjd 57523 0 Effelsberg 0 C
+mjd 57531 0 Effelsberg 0 C
+
