@@ -111,7 +111,7 @@ for ax in axs:
 # boxes for simultaneous coverage of VLA bursts
 for ax in axs:
     if obsdate[0].year == 2016:
-        axhspan(0.1, 2.9, 0.657, 0.657, fill=False, linestyle='dashed') # 57643
+        axhspan(0.1, 1.8, 0.657, 0.657, fill=False, linestyle='dashed') # 57643
         axhspan(0.1, 2.9, 0.718, 0.718, fill=False, linestyle='dashed') # 57645
         axhspan(0.1, 2.9, 0.813, 0.813, fill=False, linestyle='dashed') # 57648 57649
         axhspan(2.1, 2.9, 0.813, 0.813, fill=False, lw=3, linestyle='solid') # 57648 57649
