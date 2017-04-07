@@ -22,7 +22,7 @@ for i in range(len(obs)):
 obsdate = list(map(lambda od: datetime.datetime.strptime(od, "%Y-%m-%d"), ymds))
 
 # Define an offset and symbol type for each telescope
-telescopes = ['AO', 'VLA', 'Effelsberg', 'AMI']
+telescopes = ['Arecibo', 'VLA', 'Effelsberg', 'AMI-LA']
 offs = [3, 2, 1, 0]
 offset = dict(zip(telescopes, offs))
 psyms = ['+', 'v', 'x', '.']
