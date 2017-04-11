@@ -39,21 +39,21 @@ rc('font', serif='Times New Roman')
 rc('font', size=16)
 
 def putdot(ax, i):
-	pltx = obsdate[i]
-	plty = offset[tel[i]]
-	if int(burst[i]):
-		ax.scatter(pltx, plty, marker='o', s=400, linewidth=2, facecolor='none', edgecolor='k')
-		if int(burst[i]) > 1:
-			ax.scatter(pltx, plty, marker='o', s=800, linewidth=2, facecolor='none', edgecolor='k')
-			if int(burst[i]) > 2:
-				ax.scatter(pltx, plty, marker='o', s=1200, linewidth=2, facecolor='none', edgecolor='k')
-	if tel[i] == 'AMI':
-		s = 250
-	else:
-		s = 80
-#	ax.plot_date(pltx, plty)#, s=band[i], verticalalignment='center', horizontalalignment='center')
-	ax.text(pltx, plty, s=band[i], verticalalignment='center', horizontalalignment='center')
-#	ax.scatter(pltx, plty, marker=psym[tel[i]], s=s, linewidth=3, facecolor=pcol[tel[i]], edgecolor='none')
+    pltx = obsdate[i]
+    plty = offset[tel[i]]
+    if int(burst[i]) > 1:
+        linewidth=3
+    else:
+        linewidth=2
+
+    if int(burst[i]):
+        ax.scatter(pltx, plty, marker='o', s=400, linewidth=linewidth, facecolor='none', edgecolor='k')
+
+    if tel[i] == 'AMI':
+        s = 250
+    else:
+        s = 80
+    ax.text(pltx, plty, s=band[i], verticalalignment='center', horizontalalignment='center')
 
 def d2n(yyyy, mm, dd):
 	return( date2num(datetime.date(yyyy, mm, dd)) )

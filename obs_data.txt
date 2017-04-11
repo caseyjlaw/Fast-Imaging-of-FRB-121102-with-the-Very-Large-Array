@@ -21,20 +21,20 @@
 
 # Arecibo 
 # currently this only shows one burst detection that is coincident with VLA
-2016-09-07 0 0 Arecibo 1 L
-2016-09-08 0 0 Arecibo 1 L # no burst coverage
-2016-09-09 0 0 Arecibo 1 L
-2016-09-10 0 0 Arecibo 1 L
-2016-09-11 0 0 Arecibo 1 L
+2016-09-07 0 0 Arecibo 2 L
+2016-09-08 0 0 Arecibo 2 L # no burst coverage
+2016-09-09 0 0 Arecibo 2 L
+2016-09-10 0 0 Arecibo 2 L
+2016-09-11 0 0 Arecibo 2 L
 # 2016-09-12 0 0 Arecibo 0 C # burst coverage! (PUPPI down; mock C band also bad)
-2016-09-13 0 0 Arecibo 1 L
-2016-09-14 0 0 Arecibo 1 L  # burst coverage!
-2016-09-15 0 0 Arecibo 1 L # no burst coverage
-2016-09-16 0 0 Arecibo 1 L
-2016-09-17 0 0 Arecibo 1 L # 57648
-2016-09-18 0 0 Arecibo 1 L # 57649
-2016-09-21 0 0 Arecibo 1 L
-2016-09-28 0 0 Arecibo 1 L
+2016-09-13 0 0 Arecibo 2 L
+2016-09-14 0 0 Arecibo 2 L  # burst coverage!
+2016-09-15 0 0 Arecibo 2 L # no burst coverage
+2016-09-16 0 0 Arecibo 2 L
+2016-09-17 0 0 Arecibo 2 L # 57648
+2016-09-18 0 0 Arecibo 2 L # 57649
+2016-09-21 0 0 Arecibo 2 L
+2016-09-28 0 0 Arecibo 2 L
 
 # AMI-LA
 mjd 57638.3923  57638.4583 AMI-LA 0 U # no burst coverage
