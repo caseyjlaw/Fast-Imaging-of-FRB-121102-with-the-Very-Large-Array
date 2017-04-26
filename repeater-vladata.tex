@@ -115,6 +115,9 @@
 \author{L.~G.~Spitler}
 \affiliation{Max-Planck-Institut f\"ur Radioastronomie, Auf dem H\"ugel 69, D-53121 Bonn, Germany}
 
+\author{K.~Stovall}
+\affiliation{National Radio Astronomy Observatory, Socorro, NM 87801, USA}
+
 \author{S.~P.~Tendulkar}
 \affiliation{Department of Physics and McGill Space Institute, McGill University, 3600 University St., Montreal, QC H3A 2T8, Canada}
 
@@ -130,8 +133,6 @@
 \begin{abstract}
 We present results of the coordinated observing campaign that made the first subarcsecond localization of a Fast Radio Burst, FRB 121102. Of the nine bursts detected by the Very Large Array at 3~GHz, three had simultaneous observing coverage at other observatories. Only one VLA burst was detected by another observatory, the Arecibo Observatory at 1.4~GHz. We use multi-observatory constraints and modeling of bursts seen only at 3~GHz to confirm earlier results showing that burst spectra are not well characterized by a power law. We find that burst spectra are characterized by a $\sim500$~MHz envelope and apparent radio energy as high as $10^{40}$\ erg. We attribute significant changes in the apparent dispersion between bursts to frequency-dependent profiles that add a systematic random to the estimate of DM by up to 1\%. We use \frb\ as a prototype of the FRB class to estimate a volumetric birth rate of FRB sources $R_{\rm{FRB}} \approx 5\times10^{-5}/N_r$\ Mpc$^{-3}$\ yr$^{-1}$, where $N_r$\ is the number of bursts per source over its lifetime. This rate is broadly consistent with models of FRBs from young pulsars or magnetars born in superluminous supernovae or long gamma-ray bursts, if the typical FRB repeats on the order of $10^3$\ times during its lifetime.
 
-% ** be sure future high-burst rate paper from Arecibo doesn't rule this out **
-
 \end{abstract}
 
 \section{Introduction}
@@ -142,12 +143,9 @@ This paper is part of a series based on the first localization of an FRB and its
 
 Beginning in August of 2015 (MJD 57623), we made the first of nine detections of \frb\ with the Karl G.\ Jansky Very Large Array \citep[VLA;][]{LOC} and localized it with a precision of 0.1\arcsec. Deep optical observing with the Gemini Observatory associated the FRB with a host galaxy at $z=0.193$\ \citep{OPT} and the European VLBI Network detected four more bursts to localize the source with a precision of 0.01\arcsec, four orders of magnitude better than any other FRB \citep[precision of $\sim40$\ pc in linear distance;][]{EVN}. The lookback and luminosity distances for \frb\ are 746 and 972 Mpc, respectively, assuming a concordance cosmology with parameters given by \citet{2016A&A...594A..13P}. If \frb\ is representative of all FRBs, then we should expect them to be useful as probes of the intergalactic medium and their host galaxies. Thus, the confirmation of a cosmological distance for \frb\ has begun to fulfil the promise implied by the first FRB detection.
 
-Many new models for the origin of FRBs have been developed in response to the localization of \frb\ \citep{2017arXiv170104815K, 2017arXiv170102370M, 2017arXiv170104094Z, 2017arXiv170102492D, 2017arXiv170208644B, 2017arXiv170300393T}. The association of \frb\ with a compact, persistent radio source is consistent with bursts coming from a young magnetar that powers a luminous pulsar wind nebula \citep{2017arXiv170104815K}. At the same time, \frb\ is found in a low-metallicity dwarf galaxy \citep{OPT, 2017arXiv170102370M}, which is not a prediction of models that scale with stellar mass or star formation \citep{2017arXiv170400022N}. These galaxies are the preferred environment for long GRBs and Type-I superluminous supernovae (LGRB and SLSN-I, respectively), which have been suggested are signatures of the magnetar birth \citep{2008AJ....135.1136M, 2014ApJ...787..138L}.
+Many new models for the origin of FRBs have been developed in response to the localization of \frb\ \citep{2017arXiv170104815K, 2017arXiv170102370M, 2017arXiv170104094Z, 2017arXiv170102492D, 2017arXiv170208644B, 2017arXiv170300393T}. The association of \frb\ with a compact, persistent radio source is consistent with bursts coming from a young magnetar that powers a luminous pulsar wind nebula \citep{2017arXiv170104815K}. At the same time, \frb\ is found in a low-metallicity dwarf galaxy \citep{OPT, 2017arXiv170102370M}, which was not predicted by origin models that scale with stellar mass or star formation \citep{2017arXiv170400022N}. These galaxies are the preferred environment for long GRBs and Type-I superluminous supernovae (LGRB and SLSN-I, respectively), which have been suggested are signatures of the magnetar birth \citep{2008AJ....135.1136M, 2014ApJ...787..138L}.
 
-%Also, it has not been demonstrated that \frb\ is representative of the overall FRB population. In fact, the repetition of its bursts is unique among all FRBs \citep{2015MNRAS.454..457P}, so it is natural to ask whether \frb\ is representative. An important first step is to demonstrate that the properties of \frb\ are consistent with the significant body of facts for the overall population \citep{2015MNRAS.451.3278M, 2016MPLA...3130013K}. The repeating nature of \frb\ provides us with a sample of bursts covering a range of spectral properties, temporal properties, and luminosities that can be used to test its connection to the larger FRB population.
-
-This paper presents an analysis of the spectral properties of VLA bursts implied by simultaneous observing at Effelsberg, GBT, AMI-LA, and Arecibo, including the first simultaneous detection of an FRB at two observatories. If we assume that \frb\ is representative of all FRBs, we can use it to constrain the physical processes at play in the overall FRB population. The repetition of \frb\ also has strong implications for calculations of their rate of occurrence \citep{2016MNRAS.458L..89C} and comparison to other classes of transient, such as superluminous supernovae \citep{OPT}.
-%More data is needed to determine if bursts trace intrinsic processes, such as coherent, pulsar-like emission \citep{2014PhRvD..89j3009K, 2014ApJ...785L..26L, 2016MNRAS.457..232C} or if extrinsic effects also play a role \citep{2015MNRAS.451.3278M, CORDES}. 
+This paper presents an analysis of the spectral properties of VLA bursts implied by simultaneous observing at Arecibo, Effelsberg, the Long-Wavelength Array (LWA), and the Arcminute Microkelvin Imager Large Array (AMI-LA). This includes the first simultaneous detection of an FRB at two observatories, between the VLA and Arecibo. If we assume that \frb\ is representative of all FRBs, we can use it to constrain the physical processes at play in the overall FRB population. The repetition of \frb\ also has strong implications for calculations of their rate of occurrence \citep{2016MNRAS.458L..89C} and comparison to other classes of transient, such as superluminous supernovae \citep{OPT}.
 
 In Section \ref{sec:obs}, we describe the multi-telescope observing campaign and a refined analysis of the nine VLA bursts. Section \ref{sec:res} presents the first spectrum of an FRB simultaneously detected at multiple telescopes and confirm that burst spectra cannot be modeled with a single spectral index. We then model the dynamic spectra to characterize the burst spectra, energies, and dispersion properties. Section \ref{sec:disc} discusses the properties of \frb\ bursts and its impact on inferences about the birth rate of FRB sources and strategies to find and/or localize new FRBs.
 
@@ -160,16 +158,14 @@ In Section \ref{sec:obs}, we describe the multi-telescope observing campaign and
 
 \includegraphics[width=2\columnwidth]{timeline}
 \caption{The top and bottom panels summarize the observations and detections of \frb\ in the 2015 and 2016 campaigns. Circles highlight observations that detected bursts from \frb\ with multiple burst detections indicated with a heavy line. The black dashed lines show the VLA burst detections with simultaneous coverage at other telescopes and the solid line shows the simultaneous burst detection. Circled observations with no line indicate observations on the same day that did not overlap. Symbols show days with observations with letters L, S, C, U referring to radio frequencies of 1.4, 3, 4.5, and 15~GHz, respectively.
+% ** add LWA as "V" for VHF?
 \label{fig:sched}}
 \end{center}
 \end{figure*}
 
-The data presented here were obtained from multiple programs and telescopes with a goal of interferometrically localizing \frb\ with the VLA. We coordinated observing between the VLA, Arecibo, Effelsberg, and AMI-LA telescopes, as shown in Figure \ref{fig:sched} and Table \ref{tab:obs}. Below, we summarize these observations, with a focus on those conducted simultaneously with VLA burst detections from \frb.
+The data presented here were obtained from multiple programs and telescopes with a goal of interferometrically localizing \frb\ with the VLA. We coordinated observing between the VLA, Arecibo, Effelsberg, LWA, and AMI-LA telescopes, as shown in Figure \ref{fig:sched} and Table \ref{tab:obs}. Below, we summarize these observations, with a focus on those conducted simultaneously with VLA burst detections from \frb.
 
 Computational (Jupyter) notebooks to reproduce the transient detection, localization, and analysis presented here can be found at \url{https://github.com/caseyjlaw/FRB121102}. Time cut-out visibility data and calibration products are available at \url{https://doi.org/10.7910/DVN/TLDKXG}. Original VLA visibility data are available under NRAO program codes 16A-459 and 16A-496 and can be downloaded at \url{http://archive.nrao.edu}.
-
-
-% ** add mjd colum **
 
 \startlongtable
 \begin{deluxetable}{lcccc}
@@ -178,60 +174,62 @@ Computational (Jupyter) notebooks to reproduce the transient detection, localiza
 %\centering
 %\begin{tabular}{lcccccc}
 \startdata
-Day & Start time & Duration & Freq. & Bursts \\% & Other Coverage & Other Detections \\
-(yyyy-mm-dd) & (hh:mm:ss) & (min) & (GHz) & \\ \hline
-2015-11-25 & 3:25:29 & 60 & 1.4 & 0 \\
-2015-12-01 & 5:31:31 & 60 & 1.4 & 0 \\
-2015-12-03 & 2:53:57 & 60 & 1.4 & 0 \\
-2015-12-05 & 4:45:44 & 60 & 1.4 & 0 \\
-2015-12-07 & 4:37:50 & 60 & 1.4 & 0 \\
-2015-12-09 & 9:29:25 & 60 & 1.4 & 0 \\
-2015-12-11 & 9:22:27 & 60 & 1.4 & 0 \\
-2015-12-13 & 9:13:7 & 60 & 1.4 & 0 \\
-2015-12-15 & 9:6:16 & 60 & 1.4 & 0 \\
-2015-12-17 & 8:57:51 & 60 & 1.4 & 0 \\
-2016-04-25 & 15:39:33 & 42 & 3 & 0  \\
-2016-04-26 & 21:49:35 & 15 & 3 & 0  \\
-2016-04-30 & 19:14:46 & 60 & 3 & 0  \\
-2016-05-01 & 18:8:21 & 60 & 3 & 0  \\
-2016-05-03 & 22:53:26 & 60 & 3 & 0  \\
-2016-05-04 & 22:50:30 & 60 & 3 & 0  \\
-2016-05-06 & 18:25:12 & 60 & 3 & 0  \\
-2016-05-07 & 19:34:13 & 60 & 3 & 0  \\
-2016-05-08 & 19:30:20 & 60 & 3 & 0  \\
-2016-05-13 & 17:12:48 & 135 & 3 & 0  \\
-2016-05-14 & 17:14:11 & 135 & 3 & 0  \\
-2016-05-15 & 17:15:26 & 135 & 3 & 0  \\
-2016-05-16 & 16:59:52 & 135 & 3 & 0  \\
-2016-05-20 & 16:45:46 & 135 & 3 & 0  \\
-2016-05-21 & 16:44:6 & 135 & 3 & 0  \\
-2016-05-22 & 16:43:53 & 135 & 3 & 0  \\
-2016-05-23 & 16:44:11 & 135 & 3 & 0  \\
-2016-05-27 & 16:29:34 & 135 & 3 & 0  \\
-2016-08-23 & 17:26:28 & 54 & 3 & 1  \\
-2016-09-02 & 15:52:17 & 54 & 3 & 2  \\
-2016-09-07 & 10:14:50 & 120 & 3 & 1  \\
-2016-09-08 & 10:14:40 & 120 & 3 & 0  \\
-2016-09-10 & 9:59:36 & 120 & 3 & 0  \\
-2016-09-11 & 9:59:49 & 120 & 3 & 0  \\
-2016-09-12 & 9:15:19 & 120 & 3 & 1\tablenotemark{a} \\ 
-2016-09-13 & 9:23:59 & 120 & 3 & 0  \\
-2016-09-14 & 9:20:23 & 120 & 3 & 1\tablenotemark{a,b} \\
-2016-09-15 & 9:16:29 & 120 & 3 & 1  \\
-2016-09-16 & 9:11:23 & 120 & 3 & 0  \\
-2016-09-17 & 8:59:20 & 120 & 3 & 1\tablenotemark{a,b,*,c} \\ 
-2016-09-18 & 8:59:27 & 120 & 3 & 1\tablenotemark{a,b,c} \\
-2016-09-19 & 8:44:32 & 120 & 3 & 0  \\
-2016-09-20 & 8:44:33 & 120 & 3 & 0  \\
-2016-09-20 & 17:19:3 & 120 & 6 & 0  \\
-2016-09-21 & 9:13:57 & 120 & 6 & 0  \\
-2016-09-22 & 9:12:24 & 120 & 6 & 0  \\
+MJD & Date/time & Duration & Freq. & Bursts \\
+ & (ymd/hms) & (min) & (GHz) & \\ \hline
+57351 & 2015-11-25/3:25:29 & 60 & 1.4 & 0 \\
+57357 & 2015-12-01/5:31:31 & 60 & 1.4 & 0 \\
+57359 & 2015-12-03/2:53:57 & 60 & 1.4 & 0 \\
+57361 & 2015-12-05/4:45:44 & 60 & 1.4 & 0 \\
+57363 & 2015-12-07/4:37:50 & 60 & 1.4 & 0 \\
+57365 & 2015-12-09/9:29:25 & 60 & 1.4 & 0 \\
+57367 & 2015-12-11/9:22:27 & 60 & 1.4 & 0 \\
+57369 & 2015-12-13/9:13:7 & 60 & 1.4 & 0 \\
+57371 & 2015-12-15/9:6:16 & 60 & 1.4 & 0 \\
+57373 & 2015-12-17/8:57:51 & 60 & 1.4 & 0 \\
+57503 & 2016-04-25/15:39:33 & 42 & 3 & 0  \\
+57504 & 2016-04-26/21:49:35 & 15 & 3 & 0  \\
+% ** symbols in the plot here. missing something from archive?
+57508 & 2016-04-30/19:14:46 & 60 & 3 & 0  \\
+57509 & 2016-05-01/18:8:21 & 60 & 3 & 0  \\
+57511 & 2016-05-03/22:53:26 & 60 & 3 & 0  \\
+57512 & 2016-05-04/22:50:30 & 60 & 3 & 0  \\
+57514 & 2016-05-06/18:25:12 & 60 & 3 & 0  \\
+57515 & 2016-05-07/19:34:13 & 60 & 3 & 0  \\
+57516 & 2016-05-08/19:30:20 & 60 & 3 & 0  \\
+57521 & 2016-05-13/17:12:48 & 135 & 3 & 0  \\
+57522 & 2016-05-14/17:14:11 & 135 & 3 & 0  \\
+57523 & 2016-05-15/17:15:26 & 135 & 3 & 0  \\
+57524 & 2016-05-16/16:59:52 & 135 & 3 & 0  \\
+57528 & 2016-05-20/16:45:46 & 135 & 3 & 0  \\
+57529 & 2016-05-21/16:44:6 & 135 & 3 & 0  \\
+57530 & 2016-05-22/16:43:53 & 135 & 3 & 0  \\
+57531 & 2016-05-23/16:44:11 & 135 & 3 & 0  \\
+57535 & 2016-05-27/16:29:34 & 135 & 3 & 0  \\
+57523 & 2016-08-23/17:26:28 & 54 & 3 & 1  \\
+57533 & 2016-09-02/15:52:17 & 54 & 3 & 2  \\
+57538 & 2016-09-07/10:14:50 & 120 & 3 & 1  \\
+57539 & 2016-09-08/10:14:40 & 120 & 3 & 0  \\
+57541 & 2016-09-10/9:59:36 & 120 & 3 & 0  \\
+57542 & 2016-09-11/9:59:49 & 120 & 3 & 0  \\
+57543 & 2016-09-12/9:15:19 & 120 & 3 & 1\tablenotemark{d} \\ 
+57544 & 2016-09-13/9:23:59 & 120 & 3 & 0  \\
+57545 & 2016-09-14/9:20:23 & 120 & 3 & 1\tablenotemark{a,d} \\
+57546 & 2016-09-15/9:16:29 & 120 & 3 & 1  \\
+57547 & 2016-09-16/9:11:23 & 120 & 3 & 0  \\
+57548 & 2016-09-17/8:59:20 & 120 & 3 & 1\tablenotemark{a,*,b,d} \\ 
+57549 & 2016-09-18/8:59:27 & 120 & 3 & 1\tablenotemark{a,b,d} \\
+57550 & 2016-09-19/8:44:32 & 120 & 3 & 0  \\
+57551 & 2016-09-20/8:44:33 & 120 & 3 & 0  \\
+57551 & 2016-09-20/17:19:3 & 120 & 6 & 0  \\
+57552 & 2016-09-21/9:13:57 & 120 & 6 & 0  \\
+57553 & 2016-09-22/9:12:24 & 120 & 6 & 0  \\ \hline
 \enddata
 \tablecomments{Times are in UT. Frequency is the approximate center of the bandwidth.}
-\tablenotetext{a}{AMI-LA coverage at 15~GHz.}
-\tablenotetext{b}{Arecibo coverage at 1.4~GHz.}
+\tablenotetext{a}{Arecibo coverage at 1.4~GHz.}
 \tablenotetext{*}{Arecibo detection at 1.4~GHz.}
-\tablenotetext{c}{Effelsberg coverage at 4.5~GHz.}
+\tablenotetext{b}{Effelsberg coverage at 4.5~GHz.}
+\tablenotetext{c}{LWA coverage at **xx** MHz.}
+\tablenotetext{d}{AMI-LA coverage at 15~GHz.}
 %\end{tabular}
 %\tablenotetext{a}{}
 %\label{tab:obs}
@@ -274,9 +272,7 @@ We inspected the calibrated visibilities, and did not find any signal above 30 m
 
 Four of the VLA bursts had simultaneous observing coverage with either Arecibo, Effelsberg, or AMI-LA. Two of the VLA bursts had simultaneous observing coverage by all four observatories (Figure \ref{fig:sched}). Of these bursts, only one VLA burst (on MJD 57648) was simultaneously detected by another observatory (Arecibo). 
 
-% ** uncertainties in dm delay? **
-
-Figure \ref{fig:sgram} shows a dynamic spectrum for this burst with both VLA and Arecibo data. The temporal resolution of the VLA data (5~ms) is much coarser than that of Arecibo, so data were resampled to the Arecibo temporal grid after correcting for barycentric and dispersion measure offsets. We assumed a DM of 560.5 pc cm$^{-3}$ (Hessels et al., in prep) to calculate a dispersion delay of 189 and 734~ms from infinite frequency to the top of the VLA and Arecibo bands, respectively. We used PRESTO \citep{2001PhDT.......123R} to calculate a relative barycentric time correction of 3.8~ms between the VLA and Arecibo at the time of observation.
+Figure \ref{fig:sgram} shows a dynamic spectrum for this burst with both VLA and Arecibo data. The temporal resolution of the VLA data (5~ms) is much coarser than that of Arecibo, so data were resampled to the Arecibo temporal grid after correcting for barycentric and dispersion measure offsets. We assumed a DM of 560.5 pc cm$^{-3}$ (Hessels et al., in prep) to calculate a dispersion delay of 189 and 734~ms from infinite frequency to the top of the VLA and Arecibo bands, respectively. An error in the DM of 1 pc cm$^{-3}$\ corresponds to a delay time correction error of 0.3 and 1.4~ms for the VLA and Arecibo bands, respectively. We used PRESTO \citep{2001PhDT.......123R} to calculate a relative barycentric time correction of 3.8~ms between the VLA and Arecibo at the time of observation.
 
 The regridded dynamic spectrum has an apparent DM error that is evident both as a frequency-dependent time drift within the Arecibo observation and as an offset between the Arecibo and VLA bursts. Both of these drifts are consistent with an apparent DM of $\sim$565 pc cm$^{-3}$. More refined modeling of the VLA dynamic spectrum alone (\S \ref{sec:spec} and Table \ref{tab:spec}) are consistent with this higher DM value.
 
@@ -288,17 +284,15 @@ The regridded dynamic spectrum has an apparent DM error that is evident both as 
 \end{center}
 \end{figure}
 
-% ** errorbars on flux densities?
-
-Figure \ref{fig:multi} shows coarse spectra built from integrated flux densities measured (or limited) for three bursts with multi-telescope observing coverage. The burst on MJD 57648 was detected with VLA and Arecibo with significances of 25$\sigma$\ and 39$\sigma$, which corresponds to peak flux densities in 5~ms of 111 mJy and 14 mJy at 3 and 1.4~GHz, respectively. Here we assume a typical pulse width of 2~ms to measure VLA and Arecibo integrated flux densities of 278 and 64 mJy at 3 and 1.4~GHz, respectively. Assuming a power law flux density model ($S_{\nu} \propto \nu^{\alpha}$), we find a spectral index $\alpha=1.9$. This is inconsistent with the spectral index limit implied by the Effelsberg nondetection at 4.5~GHz ($\alpha<-1.7$\ for a 2~ms burst and $5\sigma$ limit).
+Figure \ref{fig:multi} shows coarse spectra built from integrated flux densities measured (or limited) for three bursts with multi-telescope observing coverage. The burst on MJD 57648 was detected with VLA and Arecibo with significances of 25$\sigma$\ and 39$\sigma$, which corresponds to peak flux densities in 5~ms of $111\pm5$\ mJy and $14\pm0.4$\ mJy at 3 and 1.4~GHz, respectively. The VLA observations underresolve the pulses in time, so to compare these values, we assume a typical pulse width of 2~ms. Under this assumption, the VLA and Arecibo integrated flux densities are $278\pm13$\ and $64\pm2$\ mJy at 3 and 1.4~GHz, respectively. Assuming a power law flux density model ($S_{\nu} \propto \nu^{\alpha}$), we find a spectral index $\alpha=1.9$. This is inconsistent with the spectral index limit implied by the Effelsberg nondetection at 4.5~GHz ($\alpha<-1.7$\ for a 2~ms burst and $5\sigma$ limit).
 
 Overall, the bursts with simultaneous observing coverage are not well described by a power-law model. Two Arecibo nondetections and two Effelsberg nondetections of VLA bursts place mutually inconsistent lower and upper limits on the spectral index. The Arecibo and Effelsberg upper limits at 1.4 and 4.5~GHz, respectively, limit all burst spectral indices $\alpha_{1.4/3}>+4.8$ and $\alpha_{3/4.5}<-2.7$. The strictest limits on $\alpha_{1.4/3}$\ and $\alpha_{3/4.5}$\ are both derived from the burst on MJD 57649, which shows that a power law model is inappropriate even for a single burst.
-% could note that these limits are understated by VLA integrated flux underestimate
 
 \begin{figure}[htb]
 \begin{center}
  \includegraphics[width=\columnwidth]{multispec.png}
- \caption{Broadband spectral measurements and limits for three bursts of \frb\ with simultaneous multi-telescope observing coverage (Arecibo at 1.4~GHz, VLA at 3~GHz, and Effelsberg at 4.5~GHz). Measurements are shown with dots and upper limits with triangles. Upper limits assume a pulse width of 2~ms and a $5\sigma$ detection threshold. Overlapping points are offset by tens of MHz in frequency for visualization.
+ \caption{Broadband spectral measurements and limits for three bursts of \frb\ with simultaneous multi-telescope observing coverage (Arecibo at 1.4~GHz, VLA at 3~GHz, and Effelsberg at 4.5~GHz). Measurements are shown with dots and upper limits with triangles. Upper limits assume a pulse width of 2~ms and a $5\sigma$ detection threshold. Errors in flux density are comparable to the symbol size and are not shown. Overlapping points are offset by tens of MHz in frequency for clarity.
+ % ** useful to add LWA?
  \label{fig:multi}}
 \end{center}
 \end{figure}
@@ -312,7 +306,7 @@ This paper refines the analysis of the nine VLA radio burst spectra described in
 Table \ref{tab:spec} summarizes the properties of all nine VLA bursts. Parameters such as integrated flux density, S/N, and Stokes V were measured from the burst properties integrated in frequency. Stokes V values estimated from the dual-circular feeds as $(RR-LL)/(RR+LL)\approx3\%$, which is comparble to the systematic error induced by the primary beam\footnote{See EVLA memo \#195 at \url{https://library.nrao.edu/public/memos/evla/EVLAM_195.pdf}.}. Given that systematic effects dominate the apparent circular polarization, this observation limits the fractional circular polarization to less than 3\%.
 
 \begin{table*}
-\caption{Properties of \frb\ Bursts at 3~GHz}
+\caption{Properties of \frb\ Bursts Seen by VLA at 3~GHz}
 \centering
 \begin{tabular}{cc|rrr|ccrrrr}
 \multicolumn{2}{c|}{Time} & \multicolumn{3}{c|}{Observed properties} & \multicolumn{6}{c}{Modeled properties} \\ \hline
@@ -399,12 +393,10 @@ While most bursts are modeled with well-defined parameter probability distributi
 
 \subsubsection{Dispersion}
 
-The initial VLA detections were made with a matched-filter approach that allowed inter-DM sensitivity losses up to roughly 10\% \citep[$\Delta \rm{DM}=10\ \rm{pc}\ \rm{cm}^{-3}$][]{2003ApJ...596.1142C}. 
-%In optimizing detection significance over a fine DM grid, we find optimal DM values range from 552 to 572 pc cm$^{-3}$. However, the uncertainty in the peak DM measurement is defined by the signal-to-noise of the burst and how this changes with DM.
-The MCMC modeling is more sophisticated in that it considers a wider range of parameters and models both data and observing effects (frequency-time pixel boundaries) simultaneously.
+The initial VLA detections were made with a matched-filter approach that allowed inter-DM sensitivity losses up to roughly 10\% \citep[$\Delta \rm{DM}=10\ \rm{pc}\ \rm{cm}^{-3}$][]{2003ApJ...596.1142C}. The MCMC modeling is more sophisticated in that it considers a wider range of parameters and models both data and observing effects (frequency-time pixel boundaries) simultaneously.
 
 Figure \ref{fig:dmmodel} compares the 68\% confidence intervals on the DM for all nine VLA bursts against detection time (top panel) and the modeled burst temporal width (bottom panel). The error weighted mean burst DM is 567.8$\pm$0.1 pc cm$^{-3}$, significantly larger than the long-term average of 560.5 pc cm$^{-3}$ seen by Arecibo during this campaign. However, we note that the 95\% confidence intervals in DM for multiple bursts are not consistent with this mean nor each other, which suggests that some burst-specific property can bias the measured DM. The variation in DM observed by the VLA at 3~GHz is similar to that reported for Arecibo observations of \frb\ in \citet{2016arXiv160308880S}.
-%As noted before, this is consistent with the idea that the DM measured at low temporal resolution (e.g., by the VLA or by single-dish observatories without coherent dedispersion) is determined by extrinsic (an electron column) dispersion and some spectrotemporal structure that changes between bursts. 
+% This is consistent with the idea that the DM measured at low temporal resolution (e.g., by the VLA or by single-dish observatories without coherent dedispersion) is determined by extrinsic (an electron column) dispersion and some spectrotemporal structure that changes between bursts. 
 
 The bottom panel of Figure \ref{fig:dmmodel} compares the DM to the modeled temporal width of the bursts. There is a weak correlation between burst width and apparent DM. A change in width of $\sim1$~ms correlates with a change in apparent DM of approximately $5$~pc cm$^{-3}$.
 
