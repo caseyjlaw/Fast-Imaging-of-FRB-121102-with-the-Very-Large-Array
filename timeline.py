@@ -22,13 +22,9 @@ for i in range(len(obs)):
 obsdate = list(map(lambda od: datetime.datetime.strptime(od, "%Y-%m-%d"), ymds))
 
 # Define an offset and symbol type for each telescope
-telescopes = ['Arecibo', 'VLA', 'Effelsberg', 'AMI-LA']
-offs = [3, 2, 1, 0]
+telescopes = ['LWA', 'Arecibo', 'VLA', 'Effelsberg', 'AMI-LA']
+offs = [2, 4, 3, 1, 0]
 offset = dict(zip(telescopes, offs))
-psyms = ['+', 'v', 'x', '.']
-psym = dict(zip(telescopes, psyms))
-pcols = ['g','r','b','y']
-pcol = dict(zip(telescopes, pcols))
 
 if obsdate[0].year == 2015:
     telescopes = telescopes[:-1]
@@ -61,16 +57,16 @@ def d2n(yyyy, mm, dd):
 # Paint on all dots, then fiddle
 
 def labeltelleft(ax, num):
-	for teln in telescopes:
-		yval = offset[teln]
-		xval = xl[num] - 0.5
-   		ax.text(xval, yval, teln, horizontalalignment='right', verticalalignment='center')
+    for teln in telescopes:
+        yval = offset[teln]
+        xval = xl[num] - 0.5
+        ax.text(xval, yval, teln, horizontalalignment='right', verticalalignment='center')
 
 def labeltelright(ax, num):
-	for teln in telescopes:
-		yval = offset[teln]
-		xval = xr[num] + 0.5
-   		ax.text(xval, yval, teln, horizontalalignment='left', verticalalignment='center')
+    for teln in telescopes:
+        yval = offset[teln]
+        xval = xr[num] + 0.5
+        ax.text(xval, yval, teln, horizontalalignment='left', verticalalignment='center')
 
 if obsdate[0].year == 2016:
     xl = [d2n(2016, 8, 22)]
@@ -101,21 +97,21 @@ for ax in axs:
     ax.fmt_xdata = DateFormatter('%Y-%m-%d %H:%M:%S')
 
     if obsdate[0].year == 2016:
-        ax.set_ylim( (-0.4, 3.4) )
+        ax.set_ylim( (-0.4, 4.4) )
         ax.set_xlim( (xl[0], xr[0]) )
     else:
-        ax.set_ylim( (0.6, 3.4) )
+        ax.set_ylim( (0.6, 4.4) )
         i = axs.index(ax)
         ax.set_xlim( (xl[i], xr[i]) )
 
 # boxes for simultaneous coverage of VLA bursts
 for ax in axs:
     if obsdate[0].year == 2016:
-        axhspan(0.1, 1.8, 0.657, 0.657, fill=False, linestyle='dashed') # 57643
-        axhspan(0.1, 2.9, 0.718, 0.718, fill=False, linestyle='dashed') # 57645
-        axhspan(0.1, 2.9, 0.813, 0.813, fill=False, linestyle='dashed') # 57648 57649
-        axhspan(2.1, 2.9, 0.813, 0.813, fill=False, lw=3, linestyle='solid') # 57648 57649
-        axhspan(0.1, 2.9, 0.844, 0.844, fill=False, linestyle='dashed') # 57648 57649
+        axhspan(0.1, 2.8, 0.657, 0.657, fill=False, linestyle='dashed') # 57643
+        axhspan(0.1, 3.9, 0.718, 0.718, fill=False, linestyle='dashed') # 57645
+        axhspan(0.1, 3.9, 0.813, 0.813, fill=False, linestyle='dashed') # 57648 57649
+        axhspan(3.1, 3.9, 0.813, 0.813, fill=False, lw=3, linestyle='solid') # 57648 57649
+        axhspan(0.1, 3.9, 0.844, 0.844, fill=False, linestyle='dashed') # 57648 57649
         ax.set_yticks( [0, 1, 2, 3] )
     else:
 #    	axhspan(1.1, 2.9, 0.657, 0.657, fill=False, linestyle='dashed') # 57643
