@@ -137,4 +137,4 @@ fig.autofmt_xdate()
 
 #show()
 pngsuff = '0' if '0' in sys.argv[1] else ''
-savefig('timeline{0}.png'.format(pngsuff))
+savefig('timeline{0}.pdf'.format(pngsuff), format='pdf')
