@@ -348,7 +348,7 @@ Figure \ref{fig:spec} shows that the Stokes I spectra are generally characterize
 
 The dynamic radio spectra (time versus frequency) were modeled using a Markov chain Monte Carlo (MCMC) method. We used the Goodman and Weare affine invariant sampler \citep{goodman2010ensemble} as implemented in \emph{emcee} \citep{2013PASP..125..306F}. The dynamic spectra were modeled prior to dispersion correction. The spectral structure was modeled as a broad Gaussian envelope as:
 \begin{equation}
-G(\nu) = \frac{\rm{A}}{\sqrt{2\pi} \sigma} \exp{\left[-\frac{1}{2} \left(\frac{\nu - \nu_0}{\sigma}\right)^2\right]}
+G(\nu) = \rm{A} \exp{\left[-\frac{1}{2} \left(\frac{\nu - \nu_0}{\sigma}\right)^2\right]}
 \end{equation}
 \noindent where ``A'' is in mJy per 5~ms integration, $\nu_0$\ is the Gaussian center frequency, and $\sigma$\ is its width. The arrival time was modeled with a cold plasma dispersion law with the arrival time in units of integrations of:
 \begin{equation}
