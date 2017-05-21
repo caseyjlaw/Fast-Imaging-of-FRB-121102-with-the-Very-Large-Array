@@ -23,7 +23,8 @@ obsdate = list(map(lambda od: datetime.datetime.strptime(od, "%Y-%m-%d"), ymds))
 
 # Define an offset and symbol type for each telescope
 telescopes = ['LWA', 'Arecibo', 'VLA', 'Effelsberg', 'AMI-LA']
-offs = [2, 4, 3, 1, 0]
+#offs = [2, 4, 3, 1, 0]
+offs = [4, 3, 2, 1, 0]
 offset = dict(zip(telescopes, offs))
 
 if obsdate[0].year == 2015:
@@ -107,10 +108,10 @@ for ax in axs:
 # boxes for simultaneous coverage of VLA bursts
 for ax in axs:
     if obsdate[0].year == 2016:
-        axhspan(0.1, 2.8, 0.657, 0.657, fill=False, linestyle='dashed') # 57643
-        axhspan(0.1, 3.9, 0.718, 0.718, fill=False, linestyle='dashed') # 57645
+        axhspan(0.1, 1.8, 0.657, 0.657, fill=False, linestyle='dashed') # 57643
+        axhspan(0.1, 2.8, 0.718, 0.718, fill=False, linestyle='dashed') # 57645
         axhspan(0.1, 3.9, 0.813, 0.813, fill=False, linestyle='dashed') # 57648 57649
-        axhspan(3.1, 3.9, 0.813, 0.813, fill=False, lw=3, linestyle='solid') # 57648 57649
+        axhspan(2.2, 2.8, 0.813, 0.813, fill=False, lw=3, linestyle='solid') # 57648 57649
         axhspan(0.1, 3.9, 0.844, 0.844, fill=False, linestyle='dashed') # 57648 57649
         ax.set_yticks( [0, 1, 2, 3] )
     else:
