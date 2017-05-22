@@ -6319,8 +6319,8 @@ width 0pt\relax\fi}}}
 
 
 %% get rid of \jobname Notes being sent to .aux file:
-\let\bibdata@app\relax
-\def\pre@bibdata{}
+%\let\bibdata@app\relax
+%\def\pre@bibdata{}
 
 \def\frontmatter@author@produce@script{%
   \begingroup
