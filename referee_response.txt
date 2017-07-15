@@ -1,3 +1,6 @@
+General comments:
+- We left the latex shortcut for the source name ("\frb") in the title during submission. That has been changed to the full name, "FRB 121102".
+
 Responses start with ">>>"
 
 ==================
@@ -10,7 +13,7 @@ Please also use the full references for the items noted under the \software comm
 
 emcee (Foreman-Mackey et al. 2013)
 
->>> Done.
+>>> Done. Thanks for the reminder.
 
 =======
 Referee Report
@@ -23,10 +26,7 @@ General comments on the manuscript:
 
 1. Throughout the text it is mentioned that this is the first simultaneous detection of an FRB pulse at multiple observatories, but I don't believe this is correct. The observations detailed in Marcote et al. 2017 include VLBI observations of individual pulses from FRB 121102 detected at different observatories. In that sense, this paper does not present the first simultaneous detection. Perhaps the authors mean first simultaneous detection at multiple radio frequencies, but if this is the case this statement should be revised throughout the manuscript.
 
->>> I do believe the VLA+AO burst is the first of its kind both as a multi-frequency and as a multi-telescope detection. I see two ways to show this:
->>> 1. The first VLA+Arecibo burst was detected on 17 September, while the bursts reported in Marcote et al were detected on 20 September.
->>> 2. Marcote et al was published simultaneously with Chatterjee et al; the latter paper made the first report of this coincident VLA+AO burst.
->>> I would prefer to keep the current wording.
+>>> I do believe the VLA+AO burst is the first of its kind both as a multi-frequency and as a multi-telescope detection. The first VLA+Arecibo burst was detected on 17 September, while the bursts reported in Marcote et al were detected on 20 September. The publication date of the VLA+AO (discussed in Chatterjee et al 2017) and EVN bursts were simultaneous, so it is not even true that one was published first. I would prefer to keep the current wording.
 
 2. While the simultaneous detection of an FRB pulse at multiple frequencies is indeed quite interesting I would argue that the _non-detections_ while observing with the VLA and other telescopes is also extremely important and stick out to me as a key result of this paper. This isn't well highlighted in the abstract or the text of the paper and throughout the manuscript these non-detections are not presented in a straightforward way. The observations are reported as "simultaneous coverage" without mention of detection or non-detection (although non-detection is implied). In a revised version of the manuscript it would be valuable to see these non-detections presented more centrally and directly -- see individual sections for locations where this would be particularly helpful to the reader.
 
@@ -40,11 +40,15 @@ Abstract:
 
 i. "simultaneous observing coverage at other observatories." : Please also mention that these observatories were observing at different radio frequencies and how many VLA pulses were detected and not detected at other observatories.
 
+>>> Done.
+
 Introduction:
 
 i. "22 FRBs" : Now 23 with the publication of the ASKAP detection
 
 ii. $0\farcs1$ and $0.01\arcsec$ : Please check for consistency in the placement of the arcseconds symbol throughout the manuscript
+
+>>> Done.
 
 Observations:
 
@@ -55,31 +59,51 @@ Figure 1: This figure is very busy and difficult to parse. I would suggest the f
 - Use circles to indicate overlapping frequency coverage and dispense with bold circles and dashed lines
 - Use a solid line to indicate the observation where a burst was detected at both VLA and Arecibo
 
+>>> I agree that Figure 1 is fairly dense and takes time to interpret. I confess that it's design is limited also by my understanding of our plotting library. Some features that you suggest, such as the circles (squared ellipses?) that span multiple rows are beyond my skill to create. Would it help the current design to add a frequency label along with the telescope name on the right column?
+
 Table 1: All times should be in the format HH:MM:SS, e.g. 03:25:29
 Table 1: Footnote ordering: Footnotes should be labeled in the order in which they appear, so footnote d should be relabeled as b and so on
 Table 1: Footnote wording: This relates to comment #2 at the beginning of this report. I believe it would be better to label these as "detection" and "non-detection" since this is what is implied by "coverage" and the lack of a * icon indicating detection.
+
+>>> Done. The last point was a bit unclear to me. After rewording, I decided to use a letter footnote symbol for all nondetections and keep the * symbol to denote the Arecibo detection.
 
 2.1 VLA:
 
 A. It would be nice to see the details contained in paragraph 2 of this subsection (as well as the observing setup description paragraphs of other subsections) summarized in a table with information like center observing frequency, bandwidth, time resolution, frequency resolution, dispersion smearing, sensitivity, FWHM, etc.
 
+>>>
+
 i. "256 channels" : 256 frequency channels
+
+>>> Done
 
 ii. "prototype version of \textit{realfast}. \textit{realfast} is a" : prototype version of \textit{realfast}, a
 
+>>> Done
+
 iii. "The transient search starts ... and proceeds slower than real-time" : please state how much slower than real-time the search is. If this speed is RFI- or array configuration-dependent provide a range.
+
+>>> Done. Many factors determine the speed of the pipeline, but antenna configuration tends to dominate.
 
 2.2 Arecibo:
 
 i. Please include a citation for the PUPPI pulsar backend if there is one.
 
+>>>
+
 ii. "Three of those observations ... coverage of VLA bursts and one of those Arecibo observations detected the VLA burst" : This is unclear as it is currently written. It would be better to write up front how many simultaneous observations detected no coincident pulses and how many observations did.
+
+>>> Done.
 
 2.3 Effelsberg:
 
 i. Please include a citation for the S60mm receiver if there is one.
 
+>>> No publication exists for the S60mm receiver.
+
 ii. Please provide the width of the frequency channels in the Effelsberg setup (in the text and in an observing details table).
+
+>>> 
 
 2.4 LWA:
 
@@ -91,20 +115,30 @@ iii. "Two of the VLA ... had simultaneous coverage with the LWA1" : Here again p
 
 iv. "up to 48 seconds" : What is the motivation for searching up to 48 seconds in width? Are there physical justifications for searching for such long duration signals in time?
 
+>>> Done. On the last point, the long search duration is standard for the search pipeline, but is more appropriate for other kinds of transients.
+
 2.5 AMI-LA:
 
 i. "MJDs 57638, ... 57649." : Refer to Figure 1 here.
 
+>>> Done.
+
 Results:
 
 It would be nice to see an introductory paragraph before Section 3.1 detailing the main results that will be presented in the following sub-sections: How many VLA pulses were detected in total, how many of those were not detected at other observatories, how many of them were detected at other observatories, what kinds of frequency structure were observed etc. This is a long and complex section of the paper and a preamble might help to guide the reader through the upcoming interesting results.
+
+>>> 
 
 3.1 Multi-Observatory Burst Spectrum:
 
 Figure 2: Why plot from MJD 57648.437788874842? The justification behind this start time is not given in the text or the caption.
 Figure 2: "DM = 560.5 pc $^{-3}$" : missing unit here
 
+>>> Fixed. Figure 2 is merely centered on the burst in time. Absolute time provided to be explicit.
+
 Figure 3: Make this figure a little bit bigger so it fills the available column space
+
+>>> Done. Glad you like it!
 
 3.2 VLA Bursts:
 
@@ -112,17 +146,30 @@ Figure 3: Make this figure a little bit bigger so it fills the available column 
 
 Equation 1: A is typically used for a unitless amplitude, but in this case is given in units of flux density. If this value is indeed meant to be the flux density of the pulse then $S$ should be used as the symbol for flux density instead of A.
 
+>>> Done.
+
 A. Paragraph beginning "The parameters for the best model ... " : Your fits to the pulse spectra seem to indicate that all but two of the VLA burst detections are well-modeled by a Gaussian envelope completely contained within the 3 GHz band. How likely is this? It seems to be implying that 3 GHz was the perfect frequency at which to center your observations. While this seems fortunate it doesn't make immediate physical sense to me. I might have expected some uniformly broadband pulses, some with an envelope within your observing band, and some with an envelope that extends beyond the observing band, but you find that most are described by an entirely in-band envelope. Is this physical or could this be an artefact of the model fits you have applied to the data? If you believe that this is indeed an intrinsic effect I would like to see more discussion of the physical mechanism behind the very fortunate 3 GHz observing window.
+
+>>> My interpretation is that this is a detection bias and has no physical meaning. If the bursts have a peak spectrum, then it is easiest to detect bursts with a peak inside the observing band. Spectral peaks outside or at the edge of the band have reduced measured flux and lower significance. I'm not sure how to discuss this in the text, but I'd welcome suggestions.
 
 Table 2: Footnote labeling: The labeling here is not consistent with the labeling used in Table 1.
 
+>>> The addition of the last footnote requires this set of footnotes to be in a different order than in Table 1. I don't see a way to include all this information with the same footnote marks as in Table 1.
+
 i. "While most bursts are modeled ... into two subbursts." : This particular burst may be an outlier in this sample of bursts but it is not unique among the bursts detected from FRB 121102 which has many bursts that seem to be composed of interesting substructure. A sentence or two putting this particular pulse in that context would be useful.
 
+>>> The present paper is constrained to discuss published results on the bursts detected from FRB 121102. There have been some results presenting preliminary results on substructure seen in Arecibo bursts. However, there is nothing citable to discuss. For now, this paragraph will need to be stand on its own.
+
 Figure 4: Are each of the bursts plotted here dedispersed to the best-fit DM given in Table 2 or dedispersed to the best-fit DM of FRB 121102 of 560.5 pc/cm^3? If the former, what effect does it have on the spectrum of each pulse to force them all to a DM = 560.5 pc/cm^3? Is the structure you are seeing in the spectrum highly dependent on the DM fit?
+
+>>> The spectra are extracted at the best-fit (SNR maximizing) DM, which indeed varies from burst to burst. Forcing to a single DM would effectively cut some flux out, so the bursts would become narrower in frequency. In that sense, the spectrum is sensitive to the DM. Our method is intended to extract and model all flux from the burst.
 
 3.2.2 Dispersion:
 
 i. "There is a weak correlation between ... temporal width." : It would be useful information in this section if you could elaborate on how sensitive your observations are or aren't to substructure within each pulse that may be hindering DM fitting? For example, if there was a pulse with substructure within a single 5ms VLA time sample can you estimate the error this would propagate to the DM fit?
+
+>>> A sentence in the previous section ("Our approach simultanesously models...") attempts to give some context for what the modeling can do. The Bayesian approach cannot say anything about the appropriateness of the model, only what can be inferred by assuming the model is correct. Substructure within the pulses is not modeled in this analysis, but one could imagine extending the modeling in that way. I'll add a comment on that.
+>>> On a related note, I've reworded the second to last sentence in this paragraph to distinguish between "DM" and "apparent DM".
 
 3.3 Temporal, Energy, and Brightness Distributions of Bursts:
 
@@ -132,7 +179,11 @@ ii. Equation 3: Similar to Equation 1, A is given in units of flux density and s
 
 iii. dN/d logE : Elsewhere in the text this is written as dN/dE. Please be consistent in notation.
 
+>>> Done. On the last point, we were referring to different trends/slopes, so the distinction between dN/d logE and dN/dE was deliberate.
+
 Figure 7: Please make this figure larger to fill the available column space. Axis labels and tick labels should be given in a larger font as well.
+
+>>> Done
 
 Discussion:
 
@@ -140,21 +191,33 @@ Discussion:
 
 A. I do not find the explanation or investigation here into the drastic DM change to be sufficient. The DM is changing (or being measured to change) by many units and disagrees with the best-fit DM at 1.4 GHz. This disagreement between 1.4 GHz and 3 GHz is either intrinsic or extrinsic (or both, I suppose). In the intrinsic case this is of enormous interest. Although an extrinsic explanation would be less physically interesting it would nonetheless provide some helpful answers. Paragraph 6 of this section gives some attention to this issue although it doesn't address the impact that some propagation effects might have on the pulse at different radio frequencies. Given the unique multi-radio-frequency aspect of this work, such a discussion would be valuable. An additional bit of text dedicated to this topic would be illuminating.
 
+>>>
+
 i. "We present the first ... to 3.5 GHz." : See comment #1 at the beginning of this report. Statements like these throughout the paper should either be re-worded or removed.
 
 ii. dN/dE : See comment from 3.2.2.
+
+>>> We've left the text unchanged, based on arguments given above.
 
 4.3. Flux Distribution:
 
 i. "an lower (redshifted) rate" : a lower (redshifted) rate
 
+>>> Done
+
 4.4 Repetition:
 
 A. A general caution for this section of the manuscript is in applying the lessons of FRB 121102 too widely. There needs to be some caveat in this discussion about how other FRBs have not been seen to repeat, particularly for FRBs that have been followed up as much as FRB 121102. Here you present results from 57 hours of observing with the VLA; some others have been observed for >100 hours without additional pulses and some mention of this should be included here. While indeed at the moment there is no conclusive evidence for multiple sub-populations so it makes sense to generalize a bit, but please also include a statement that not all FRBs might be like this.
 
+>>> The second paragraph, first sentence has been modified to include this caveat.
+
 i. "day-month" : day-to-month or day and month?
 
+>>> Changed to "day to month"
+
 ii. "At the typical Parkes ... at $z \approx 1$" : Please clarify this statement. Do you mean that a Parkes survey could detect the brightest pulse from FRB 121102? The brightest X pulses? The discovery pulse (I think this one was too weak for Parkes)? The "average" pulse?
+
+>>> Reworded. The largest burst energy detected by the VLA was 10^40, which is detectable by the typical Parkes survey at z=1.
 
 iii. "understated by a factor of a few by ignoring bursts that fall outside the observing band" : The data presented in this paper are the best currently available to actually constrain this factor. Would it be possible to provide an estimate of this factor using the detections/non-detections from these observations?
 
