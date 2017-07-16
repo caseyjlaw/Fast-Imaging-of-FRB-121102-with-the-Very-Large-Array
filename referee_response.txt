@@ -1,8 +1,12 @@
 General comments:
-- We left the latex shortcut for the source name ("\frb") in the title during submission. That has been changed to the full name, "FRB 121102".
+
+We thank the referee for a thorough review and suggestions for improvement.
+
 
 Responses start with ">>>"
 
+==================
+Responses to the editors
 ==================
 
 The authors should tag their DataVerse DOI with the \dataset mark up in AASTeX v6.0
@@ -15,7 +19,12 @@ emcee (Foreman-Mackey et al. 2013)
 
 >>> Done. Thanks for the reminder.
 
-=======
+>>> We left the latex shortcut for the source name ("\frb") in the title during submission. That has been changed to the full name, "FRB 121102".
+
+============
+Responses to the referee
+============
+
 Referee Report
 Reviewer's Comments:
 This paper presents a multi-year observing campaign with the VLA telescope to study the repeating pulses from FRB 121102. Many VLA observations were also simultaneous with observations at radio telescopes observing at other frequencies. In some cases pulses detected at the VLA were not detected at higher or lower frequencies and in one case a pulse was detected with both the VLA and the Arecibo Observatory and this information as well as the pulse spectra from the VLA can be used to constrain the emission properties of this source as well as a burst rate. This work is very interesting, and well-presented, and crucial for our understanding of FRB 121102 in specific, but also the possible properties of fast radio bursts in general.
@@ -26,7 +35,7 @@ General comments on the manuscript:
 
 1. Throughout the text it is mentioned that this is the first simultaneous detection of an FRB pulse at multiple observatories, but I don't believe this is correct. The observations detailed in Marcote et al. 2017 include VLBI observations of individual pulses from FRB 121102 detected at different observatories. In that sense, this paper does not present the first simultaneous detection. Perhaps the authors mean first simultaneous detection at multiple radio frequencies, but if this is the case this statement should be revised throughout the manuscript.
 
->>> I do believe the VLA+AO burst is the first of its kind both as a multi-frequency and as a multi-telescope detection. The first VLA+Arecibo burst was detected on 17 September, while the bursts reported in Marcote et al were detected on 20 September. The publication date of the VLA+AO (discussed in Chatterjee et al 2017) and EVN bursts were simultaneous, so it is not even true that one was published first. I would prefer to keep the current wording.
+>>> I do believe the VLA+AO burst is the first of its kind both as a multi-frequency and as a multi-telescope detection. The first VLA+Arecibo burst was detected on 17 September, while the bursts reported in Marcote et al were detected on 20 September. The publication date of the VLA+AO (discussed in Chatterjee et al 2017) and EVN bursts were simultaneous, so it is also not true that one was published first. I would prefer to keep the current wording.
 
 2. While the simultaneous detection of an FRB pulse at multiple frequencies is indeed quite interesting I would argue that the _non-detections_ while observing with the VLA and other telescopes is also extremely important and stick out to me as a key result of this paper. This isn't well highlighted in the abstract or the text of the paper and throughout the manuscript these non-detections are not presented in a straightforward way. The observations are reported as "simultaneous coverage" without mention of detection or non-detection (although non-detection is implied). In a revised version of the manuscript it would be valuable to see these non-detections presented more centrally and directly -- see individual sections for locations where this would be particularly helpful to the reader.
 
@@ -60,6 +69,8 @@ Figure 1: This figure is very busy and difficult to parse. I would suggest the f
 - Use a solid line to indicate the observation where a burst was detected at both VLA and Arecibo
 
 >>> I agree that Figure 1 is fairly dense and takes time to interpret. I confess that it's design is limited also by my understanding of our plotting library. Some features that you suggest, such as the circles (squared ellipses?) that span multiple rows are beyond my skill to create. Would it help the current design to add a frequency label along with the telescope name on the right column?
+
+>>>
 
 Table 1: All times should be in the format HH:MM:SS, e.g. 03:25:29
 Table 1: Footnote ordering: Footnotes should be labeled in the order in which they appear, so footnote d should be relabeled as b and so on
@@ -150,7 +161,8 @@ Equation 1: A is typically used for a unitless amplitude, but in this case is gi
 
 A. Paragraph beginning "The parameters for the best model ... " : Your fits to the pulse spectra seem to indicate that all but two of the VLA burst detections are well-modeled by a Gaussian envelope completely contained within the 3 GHz band. How likely is this? It seems to be implying that 3 GHz was the perfect frequency at which to center your observations. While this seems fortunate it doesn't make immediate physical sense to me. I might have expected some uniformly broadband pulses, some with an envelope within your observing band, and some with an envelope that extends beyond the observing band, but you find that most are described by an entirely in-band envelope. Is this physical or could this be an artefact of the model fits you have applied to the data? If you believe that this is indeed an intrinsic effect I would like to see more discussion of the physical mechanism behind the very fortunate 3 GHz observing window.
 
->>> My interpretation is that this is a detection bias and has no physical meaning. If the bursts have a peak spectrum, then it is easiest to detect bursts with a peak inside the observing band. Spectral peaks outside or at the edge of the band have reduced measured flux and lower significance. I'm not sure how to discuss this in the text, but I'd welcome suggestions.
+>>> My interpretation is that this is a detection bias and has no physical meaning. If the bursts have a peak in their spectrum, then it is easiest to detect bursts with a peak inside the observing band. Spectral peaks outside or at the edge of the band have reduced measured flux and lower significance. 
+>>> I'm not sure how to discuss this in the text, but I'd welcome suggestions.
 
 Table 2: Footnote labeling: The labeling here is not consistent with the labeling used in Table 1.
 
@@ -179,7 +191,7 @@ ii. Equation 3: Similar to Equation 1, A is given in units of flux density and s
 
 iii. dN/d logE : Elsewhere in the text this is written as dN/dE. Please be consistent in notation.
 
->>> Done. On the last point, we were referring to different trends/slopes, so the distinction between dN/d logE and dN/dE was deliberate.
+>>> Done. On the last point, the distinction between dN/d logE and dN/dE was deliberate, but we tried to avoid confusing readers. The issue is that we modeled the distribution in log space, but these kinds of results are typically discussed in linear space. Since the analysis is publicly available (Jupyter notebooks on github), I wanted to maintain some reference to the details of the analysis in the text. I can't do that without redoing the analysis approach entirely, as shown in the notebook.
 
 Figure 7: Please make this figure larger to fill the available column space. Axis labels and tick labels should be given in a larger font as well.
 
@@ -221,14 +233,25 @@ ii. "At the typical Parkes ... at $z \approx 1$" : Please clarify this statement
 
 iii. "understated by a factor of a few by ignoring bursts that fall outside the observing band" : The data presented in this paper are the best currently available to actually constrain this factor. Would it be possible to provide an estimate of this factor using the detections/non-detections from these observations?
 
+>>> I do not believe that these data can address this question. We have identified a quasi-broadband structure for burst spectra and have shown that detection of a burst at one frequency does not predict the detection of that same burst at another frequency. As we discuss, an implication of this is that the burst rate cannot be defined from any single observing band.
+>>> We are working on a comprehensive analysis of the Arecibo data (at 1.4 GHz) during this observing period. The joint consideration of the VLA and AO burst rates, along with their time and luminosity distributions, will be required to estimate this "true" burst rate.
+
 iv. "$5 \times 10^2$ and $5 \times 10^3$ times" : Is this range of repetition times sufficient for the repeater? In the observations from just the past 1 year this FRB has emitted O[100] pulses, I believe, and was active at least back to 2012, possibly much longer. Have you or others in the FRB 121102 team attempted to estimate the total number of pulses this FRB may have given off assuming this activity? In doing this does this particular source still fall in the range you've given here? If so, it is worth mentioning where you believe FRB 121102 falls in this range.
+
+>>> Good point. We've split the last paragraph in two and added some discussion on this point.
 
 Conclusions:
 
 i. "astrophysical source." : astrophysical sources.
 
+>>> Done.
+
 ii. "FRB 121102 now serves as a new kind of standard by which FRBs are defined." : In a sense this is true, but this is a very strong statement given the unknown relation between FRB 121102 and the other FRBs that have not been seen to repeat. Please soften or remove this statement.
 
 iii. "That fact, ... about the FRB population." : If they are all the same. I reiterate my caution from Section 4.4 about generalizing this source too much at such an early stage in our understanding of the FRB population.
 
+>>> Reworded.
+
 iv. dN/dE : See comment from 3.2.2
+
+>>> Discussed above.
