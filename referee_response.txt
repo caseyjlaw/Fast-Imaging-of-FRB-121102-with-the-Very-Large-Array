@@ -1,6 +1,6 @@
 General comments:
 
-We thank the referee for a thorough review and suggestions for improvement.
+We thank the referee for a thoughtful review and suggestions for improvement.
 
 
 Responses start with ">>>"
@@ -18,8 +18,7 @@ Please also use the full references for the items noted under the \software comm
 emcee (Foreman-Mackey et al. 2013)
 
 >>> Done. Thanks for the reminder.
-
->>> We left the latex shortcut for the source name ("\frb") in the title during submission. That has been changed to the full name, "FRB 121102".
+>>> We accidentally left the latex shortcut for the source name ("\frb") in the title during submission. That has been changed to the full name, "FRB 121102".
 
 ============
 Responses to the referee
@@ -39,7 +38,7 @@ General comments on the manuscript:
 
 2. While the simultaneous detection of an FRB pulse at multiple frequencies is indeed quite interesting I would argue that the _non-detections_ while observing with the VLA and other telescopes is also extremely important and stick out to me as a key result of this paper. This isn't well highlighted in the abstract or the text of the paper and throughout the manuscript these non-detections are not presented in a straightforward way. The observations are reported as "simultaneous coverage" without mention of detection or non-detection (although non-detection is implied). In a revised version of the manuscript it would be valuable to see these non-detections presented more centrally and directly -- see individual sections for locations where this would be particularly helpful to the reader.
 
->>> Thank you for helping highlight the most interesting part of the analysis. We will work to raise the profile of the nondetection results.
+>>> Thank you for helping highlight the most interesting part of the analysis. We will work to raise the profile of the nondetection results as suggested.
 
 3. In the text it is written that the Arecibo data are recorded with full Stokes polarization intensity. A bright (39-sigma) pulse was detected at Arecibo in this observing mode but no pulse polarization information is presented here. If pulse polarization information is available for this burst it should absolutely be included in this paper! If for some reason the polarization could not be calibrated or cannot be presented here the reason should be included somewhere in the manuscript.
 
@@ -76,13 +75,13 @@ Table 1: All times should be in the format HH:MM:SS, e.g. 03:25:29
 Table 1: Footnote ordering: Footnotes should be labeled in the order in which they appear, so footnote d should be relabeled as b and so on
 Table 1: Footnote wording: This relates to comment #2 at the beginning of this report. I believe it would be better to label these as "detection" and "non-detection" since this is what is implied by "coverage" and the lack of a * icon indicating detection.
 
->>> Done. The last point was a bit unclear to me. After rewording, I decided to use a letter footnote symbol for all nondetections and keep the * symbol to denote the Arecibo detection.
+>>> Done. The last comment was a bit unclear to me. After rewording, I decided to use a letter footnote symbol for all nondetections and keep the * symbol to denote the Arecibo detection.
 
 2.1 VLA:
 
 A. It would be nice to see the details contained in paragraph 2 of this subsection (as well as the observing setup description paragraphs of other subsections) summarized in a table with information like center observing frequency, bandwidth, time resolution, frequency resolution, dispersion smearing, sensitivity, FWHM, etc.
 
->>>
+>>> We have added a new table that summarizes the observing setup for all telescopes discussed here. We also made some small cuts to the text that summarized the observing setup to improve readability and remove some redundancy with this new table.
 
 i. "256 channels" : 256 frequency channels
 
@@ -100,7 +99,7 @@ iii. "The transient search starts ... and proceeds slower than real-time" : plea
 
 i. Please include a citation for the PUPPI pulsar backend if there is one.
 
->>>
+>>> Done.
 
 ii. "Three of those observations ... coverage of VLA bursts and one of those Arecibo observations detected the VLA burst" : This is unclear as it is currently written. It would be better to write up front how many simultaneous observations detected no coincident pulses and how many observations did.
 
@@ -114,7 +113,7 @@ i. Please include a citation for the S60mm receiver if there is one.
 
 ii. Please provide the width of the frequency channels in the Effelsberg setup (in the text and in an observing details table).
 
->>> 
+>>> Done.
 
 2.4 LWA:
 

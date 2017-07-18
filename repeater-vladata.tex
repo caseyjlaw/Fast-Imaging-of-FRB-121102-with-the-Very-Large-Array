@@ -169,19 +169,21 @@ In Section \ref{sec:obs}, we describe the multi-telescope observing campaign and
 \end{center}
 \end{figure*}
 
-The data presented here were obtained from multiple programs and telescopes with a goal of interferometrically localizing \frb\ with the VLA. We coordinated observing between the VLA, Arecibo, Effelsberg, LWA1, and AMI-LA telescopes, as shown in Figure \ref{fig:sched} and Table \ref{tab:obs}. Below, we summarize these observations, with a focus on those conducted simultaneously with VLA burst detections from \frb.
+The data presented here were obtained from multiple programs and telescopes with a goal of interferometrically localizing \frb\ with the VLA. We coordinated observing between the VLA, Arecibo, Effelsberg, LWA1, and AMI-LA telescopes, as shown in Figure \ref{fig:sched} and Table \ref{tab:obs}. Table \ref{tab:setup} summarizes the instrument configurations for all observations presented here.
 
 Computational (Jupyter) notebooks to reproduce the transient detection, localization, and analysis presented here can be found at \url{https://github.com/caseyjlaw/FRB121102}. Time cut-out visibility data and calibration products are available at \dataset[http://dx.doi.org/10.7910/DVN/TLDKXG]{https://doi.org/10.7910/DVN/TLDKXG}. Original VLA visibility data are available under NRAO program codes 16A-459 and 16A-496 and can be downloaded at \url{http://archive.nrao.edu}.
 
 \startlongtable
 \begin{deluxetable}{lcccc}
 \small
-\tablecaption{Table of VLA Observations \label{tab:obs}}
+\tablecaption{VLA Observations of \frb\ \label{tab:obs}}
 %\centering
 %\begin{tabular}{lcccccc}
+\tablehead{
+\colhead{MJD} & \colhead{Date/time} & \colhead{Duration} & \colhead{Freq.} & \colhead{Bursts} \\
+\colhead{} & \colhead{(ymd/hms)} & \colhead{(min)} & \colhead{(GHz)} & \colhead{}
+}
 \startdata
-MJD & Date/time & Duration & Freq. & Bursts \\
- & (ymd/hms) & (min) & (GHz) & \\ \hline
 57351 & 2015-11-25/03:25:29 & 60 & 1.4 & 0 \\
 57357 & 2015-12-01/05:31:31 & 60 & 1.4 & 0 \\
 57359 & 2015-12-03/02:53:57 & 60 & 1.4 & 0 \\
@@ -246,15 +248,36 @@ MJD & Date/time & Duration & Freq. & Bursts \\
 
 The \frb\ observing campaign started in November 2015 with a 10~hr campaign ($\sim1$~hr per session) observed at 1.4~GHz in the compact D configuration. In April through May 2016, we conducted a 40~hr campaign ($\sim2$~hr per session) at 3~GHz in the C and CnB configurations in coordination with Arecibo \citep{2016arXiv160308880S}. We concluded with a 40~hr, coordinated campaign ($\sim2$~hr per session) from August through September 2016 in the B configuration and during the move to the most extended A configuration. In the late-2016 campaign, the first 34 hours of VLA observations were made at 3~GHz, while the last 6 hours were observed at 6~GHz. These observing session times are inclusive of calibration and overhead, which typically amounts to 15\% of the total observing time.
 
-All VLA fast-sampled data were observed with 5~ms sampling, 256 frequency channels, and dual-circular polarization \citep{2015ApJ...807...16L}. The total bandwidths at L (1.4~GHz), S (3~GHz), and C (6~GHz) bands were 256, 1024, and 2048~MHz, respectively, corresponding to channel bandwidths of  1, 4, and 8~MHz. The dispersion smearing across a channel is $\sim1.7$, 0.7, and 0.2~ms in the same respective bands. The 3~GHz data were recorded in eight spectral windows with 32 channels each and had a sensitivity of 5~mJy in 5~ms ($1\sigma$).
+All VLA fast-sampled data were observed with 5~ms sampling, 256 frequency channels, and dual-circular polarization \citep{2015ApJ...807...16L}. As shown in Table \ref{tab:setup}, the L (1.4~GHz), S (3~GHz), and C (6~GHz) bands were used with channel resolutions that kept dispersion smearing well below the temporal resolution. All detections were made in the 3~GHz data, which were recorded in eight spectral windows with 32 channels each and had a sensitivity of 4~mJy in 5~ms ($1\sigma$).
 
 Observations in August and September were searched by a prototype version of \textit{realfast}\footnote{See \url{http://realfast.io} \citep{2017AAS...22933002L}.}, a real-time, fast imaging transient search system. The current prototype runs on CPU-based hardware that is normally dedicated to the VLA correlator; for this experiment, it runs the transient search pipeline software called \emph{rtpipe}\footnote{See \url{https://github.com/caseyjlaw/rtpipe} \citep{2015ApJ...807...16L}.}. Images were formed for each integration with DMs of 0, 546, 556.9, 560, and 565 pc cm$^{-3}$ and a time resampling grid of 5, 10, 20, 40, and 80 ms. This DM grid was chosen to maintain 90\% sensitivity to the nominal DM range of 540--570 pc cm$^{-3}$. Gain calibration was made from observations of J0555+3948 by an automated system (telcal), which uses phase-only calibration. A flux scale was calculated for each spectral window from an observation of 3C48 and applied to all burst spectra and has an accuracy of about 10\%.
 
 Burst detections and localizations were made within 5--10 hours of data being recorded. The transient search starts when data are recorded and proceeds at anywhere from 1 to 30 times slower than real-time, depending on the number of compute nodes available, array configuration, and number of DMs searched. For each trial DM, integration, and time scale, we form an image and calculate the S/N ratio for the peak pixel in the dirty image. We empirically identified S/N thresholds of 6.4 and 7.4 as useful to capture data quality statistics and candidates for inspection, respectively. The higher threshold is relatively unlikely to be triggered by thermal noise in this configuration, so \textit{realfast} generates a more detailed (and computationally intensive) candidate visualization that includes an image and spectrum. All visibilities are recorded so detailed analysis, including improved calibration and localization, can be conducted offline. 
 
+\begin{deluxetable*}{lcccccc}
+\tablecaption{Observing Configurations \label{tab:setup}}
+\startdata
+\tablehead{
+\colhead{Telescope} & \colhead{Freq. Center} & \colhead{Freq. Bandwidth} & \colhead{Freq. Resolution} & \colhead{Time resolution} & \colhead{DM smearing\tablenotemark{a}} & \colhead{Sensitivity} \\
+\colhead{}     & \colhead{(GHz)} & \colhead{(MHz)} & \colhead{(MHz)} & \colhead{(ms)} & \colhead{(ms)} & \colhead{($1\sigma$; Jy ms)}
+}
+LWA        & 0.062/0.078\tablenotemark{b} & 19.6 & 0.0048 & 160 & 83/43 & 9600 \\
+Arecibo    & 1.44 & 580 & 1.5625 & 0.01024 & 0.0\tablenotemark{c} & 0.004 \\
+VLA        & 1.4  & 256  & 1     & 5       & 1.7 & 0.050 \\
+VLA        & 3.0  & 1024 & 4     & 5       & 0.7 & 0.020 \\
+VLA        & 6.0  & 2048 & 8     & 5       & 0.2 & 0.013 \\
+Effelsberg & 4.85 & 100  & 0.8   & 0.0655 & 0.032 & 0.056 \\
+AMI-LA     & 15   & 5000 & 625   & 1e3     & 0.0 & 30 \\ \hline
+\enddata
+%\tablecomments{}
+\tablenotetext{a}{DM smearing calculated for nominal \frb\ DM of 560.5 pc cm$^{-3}$ at the center frequency.}
+\tablenotetext{b}{LWA1 observed with two independent bands with identical configurations and sensitivities.}
+\tablenotetext{c}{Arecibo data are coherently dedispersed to 560.5 pc cm$^{-3}$, so DM smearing is effectively eliminated.}
+\end{deluxetable*} 
+
 \subsection{Arecibo}
 
-Arecibo observed with the L-wide receiver using the PUPPI pulsar backend. The observational frequency range was 1.15 to 1.73~GHz and frequency resolution was 1.5625~MHz, which has a typical sensitivity of 2~mJy in 2~ms ($1\sigma$). We recorded intnsities of the each of the two orthogonal linear polarization signals and their cross product. Full Stokes polarization intensity spectra can then be generated with a time resolution of 10.24~$\mu$s. Each frequency channel was coherently dedispersed to 557~pc cm$^{-3}$, significantly reducing intra-channel dispersion smearing. The full width at half maximum (FWHM) beam size at band center is 3.3\arcmin.
+Arecibo observed with the L-wide receiver using the PUPPI pulsar backend \citep{2008SPIE.7019E..1DD,2010SPIE.7740E..0AF}. The observational frequency range was 1.15 to 1.73~GHz and frequency resolution was 1.5625~MHz, which has a typical sensitivity of 2~mJy in 2~ms ($1\sigma$). We recorded intnsities of the each of the two orthogonal linear polarization signals and their cross product. Full Stokes polarization intensity spectra can then be generated with a time resolution of 10.24~$\mu$s. Each frequency channel was coherently dedispersed to 557~pc cm$^{-3}$, significantly reducing intra-channel dispersion smearing. The full width at half maximum (FWHM) beam size at band center is 3.3\arcmin.
 
 In total, 11 Arecibo observations had some simultaneous coverage with the VLA. All of these observations were conducted after the VLA localization, so they were pointing directly at \frb. Three of those Arecibo observations detected no burst coincident with the VLA bursts, while one Arecibo observation detected a burst coincident with the VLA burst. 
 % During the first VLA burst with Arecibo coverage (MJD 57643), the PUPPI 1.4~GHz recording system failed so data were recorded at C band with the mock spectrometer. The C-band observations were recorded at frequencies from 4078 to 4245~MHz and had a sensitivity of 3.6~mJy in 2~ms ($1\sigma$). No detection was made in those Arecibo data. % levels set wrong. useless c-band ao data.
@@ -262,15 +285,15 @@ Overall, there were many more bursts detected at Arecibo than with the VLA, incl
 
 \subsection{Effelsberg}
 
-Effelsberg observations were conducted with the S60mm receiver and recorded total intensity spectra with the PFFTS backend in pulsar search mode. The observations had a time resolution of 65.5~$\mu$s and 128 frequency channels. The receiver has a system equivalent flux density of 18 Jy and a FWHM beam size of 2.4\arcmin\ at 4.85~GHz. 
+Effelsberg observations were conducted with the S60mm receiver and recorded total intensity spectra with the PFFTS backend in pulsar search mode with a time resolution of 65.5~$\mu$s. The receiver has a system equivalent flux density of 18 Jy and a FWHM beam size of 2.4\arcmin\ at 4.85~GHz. 
 
-Five Effelsberg observations were made pointing at the known location of \frb\ and had some simultaneous coverage with the VLA. Two of these observations were simultaneous with VLA bursts. The nominal receiver bandwidth is from 4.6 to 5.1~GHz, but a configuration error reduced effective bandwidth to 100~MHz centered at 4.85~GHz for both of these observations during VLA bursts. The sensitivity in these observations was about 28 mJy in 2 ms ($1\sigma$), which is two times worse than the full-bandwidth value. No burst was detected in either of the two observations that were simultaneous with a VLA burst detection.
+Five Effelsberg observations were made pointing at the known location of \frb\ and had some simultaneous coverage with the VLA. Two of these observations were simultaneous with VLA bursts, but made no detection. The nominal receiver bandwidth is from 4.6 to 5.1~GHz, but a configuration error reduced effective bandwidth to 100~MHz centered at 4.85~GHz for both of these observations during VLA bursts. The sensitivity in these observations was about 28 mJy in 2 ms ($1\sigma$), which is two times worse than the full-bandwidth value. No burst was detected in either of the two observations that were simultaneous with a VLA burst detection.
 
 \subsection{LWA1}
 
 Beginning in April 2016, VLA observations of \frb\ were simultaneously observed with LWA1 when possible.  The LWA1 observations were automatically scheduled through the Heuristic Automation for LWA1 (HAL) system.  The HAL system receives messages via the internet that signal the start of a VLA observation. If the source is visible and there are no high priority LWA1 observations scheduled, the HAL system automatically generates an observing schedule, re-configures the telescope, and alerts the observatory staff of the change. The time delay from HAL receiving a message to starting an observation is typically one to two minutes.
 
-The LWA1 observations consisted of a single phased-array beam centered on the location of \frb\ with two 4096-channel spectral windows spanning frequencies from 52.2--71.8~MHz and 68.2--87.8~MHz. The observations were taken in a spectrometer mode with a channel size of 4.8~kHz and a sample time of 160~ms. The integration time was set to be equal to the dispersion smearing across a single channel at 50~MHz for DM$\approx560$\ pc cm$^{-3}$. 
+The LWA1 observations consisted of a single phased-array beam centered on the location of \frb\ with two 4096-channel spectral windows spanning frequencies from 52.2--71.8~MHz and 68.2--87.8~MHz. The sample time of 160~ms was set to be equal to the dispersion smearing across a single channel at 50~MHz for DM$\approx560$\ pc cm$^{-3}$. 
 
 Two of the VLA detected pulses, on MJD 57648 and 57649, were not detected during simultaneous observations with LWA1. We use the modeled LWA1 antenna sensitivity as a function of zenith angle to estimate an system equivalent flux density of 9.5 kJy and 8.7 kJy for the two bursts, respectively. The data were de-dispersed into time series with DMs ranging from 500 to 600 pc cm$^{-3}$\ using a step size of 1.0 pc cm$^{-3}$. Each spectral window was searched using PRESTO \citep{2001PhDT.......123R} with a boxcar matched-filtering width from the native time resolution up to 48 seconds. We also visually inspected the dedispersed time series for the DM range 557 to 560 pc cm$^{-3}$.
 
