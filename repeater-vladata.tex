@@ -164,7 +164,7 @@ In Section \ref{sec:obs}, we describe the multi-telescope observing campaign and
 \includegraphics[width=2\columnwidth]{timeline0.pdf}
 
 \includegraphics[width=2\columnwidth]{timeline.pdf}
-\caption{The top and bottom panels summarize the observations and detections of \frb\ in the 2015 and 2016 campaigns. Circles highlight observations that detected bursts from \frb\ with multiple burst detections indicated with a heavy line. The black dashed lines show the VLA burst detections with simultaneous coverage at other telescopes and the solid line shows the simultaneous burst detection. Circled observations with no line indicate bursts that did not have simultaneous observing coverage at the VLA. Days with observations are indicated with radio band designations 4, L, S, C, U referring to radio frequencies of 70~MHz, 1.4, 3, 4.5, and 15~GHz, respectively.
+\caption{The top and bottom panels summarize the observations and detections of \frb\ in the 2015 and 2016 campaigns. Circles highlight observations that detected bursts from \frb\ with multiple burst detections indicated with a heavy line. The black dashed lines show the VLA burst detections with simultaneous coverage at other telescopes and the solid line shows the simultaneous burst detection. Circled observations with no line indicate bursts that did not have simultaneous observing coverage at the VLA. Days with observations are indicated with radio band designations 4, L, S, C, U referring to radio frequencies of 70~MHz, 1.4, 3, 4.85, and 15~GHz, respectively.
 \label{fig:sched}}
 \end{center}
 \end{figure*}
@@ -237,7 +237,7 @@ Computational (Jupyter) notebooks to reproduce the transient detection, localiza
 \tablenotetext{a}{AMI-LA nondetection at 15~GHz.}
 \tablenotetext{b}{Arecibo nondetection at 1.4~GHz.}
 \tablenotetext{*}{Arecibo detection at 1.4~GHz.}
-\tablenotetext{c}{Effelsberg nondetection at 4.5~GHz.}
+\tablenotetext{c}{Effelsberg nondetection at 4.85~GHz.}
 \tablenotetext{d}{LWA1 nondetection near 62 and 78~MHz.}
 %\end{tabular}
 %\tablenotetext{a}{}
@@ -266,13 +266,14 @@ Arecibo    & 1.44 & 580 & 1.5625 & 0.01024 & 0.0\tablenotemark{c} & 0.004 \\
 VLA        & 1.4  & 256  & 1     & 5       & 1.7 & 0.050 \\
 VLA        & 3.0  & 1024 & 4     & 5       & 0.7 & 0.020 \\
 VLA        & 6.0  & 2048 & 8     & 5       & 0.2 & 0.013 \\
-Effelsberg & 4.85 & 100  & 0.8   & 0.0655 & 0.032 & 0.056 \\
+Effelsberg & 4.85 & 500\tablenotemark{d}  & 3.4   & 0.0655 & 0.032 & 0.056 \\
 AMI-LA     & 15   & 5000 & 625   & 1e3     & 0.0 & 30 \\ \hline
 \enddata
 %\tablecomments{}
 \tablenotetext{a}{DM smearing calculated for nominal \frb\ DM of 560.5 pc cm$^{-3}$ at the center frequency.}
 \tablenotetext{b}{LWA1 observed with two independent bands with identical configurations and sensitivities.}
 \tablenotetext{c}{Arecibo data are coherently dedispersed to 560.5 pc cm$^{-3}$, so DM smearing is effectively eliminated.}
+\tablenotetext{d}{Effelsberg recorded 500~MHz of bandwidth, but a filter reduced the effective bandwidth to 100~GHz for the two days with coincident VLA FRB detections (MJD 57648 and 57649).}
 \end{deluxetable*} 
 
 \subsection{Arecibo}
@@ -327,14 +328,14 @@ The regridded dynamic spectrum has an apparent DM error that is evident both as 
 \end{center}
 \end{figure}
 
-Figure \ref{fig:multi} shows coarse spectra built from integrated flux densities measured (or limited) for the three VLA bursts with observing coverage by Arecibo or Effelsberg. The burst on MJD 57648 was detected with VLA and Arecibo with significances of 25$\sigma$\ and 39$\sigma$, which corresponds to peak flux densities in 5~ms of $111\pm5$\ mJy and $14\pm0.4$\ mJy at 3 and 1.4~GHz, respectively. The VLA observations under-resolve the pulses in time, so to compare these values, we assume a typical pulse width of 2~ms. Under this assumption, the VLA and Arecibo integrated flux densities are $278\pm13$\ and $57\pm2$\ mJy at 3 and 1.4~GHz, respectively. Assuming a power law flux density model ($S_{\nu} \propto \nu^{\alpha}$), we find a spectral index $\alpha=2.1$. This is inconsistent with the spectral index limit implied by the Effelsberg nondetection at 4.5~GHz ($\alpha<-1.7$\ for a 2~ms burst and $5\sigma$ limit).
+Figure \ref{fig:multi} shows coarse spectra built from integrated flux densities measured (or limited) for the three VLA bursts with observing coverage by Arecibo or Effelsberg. The burst on MJD 57648 was detected with VLA and Arecibo with significances of 25$\sigma$\ and 39$\sigma$, which corresponds to peak flux densities in 5~ms of $111\pm5$\ mJy and $14\pm0.4$\ mJy at 3 and 1.4~GHz, respectively. The VLA observations under-resolve the pulses in time, so to compare these values, we assume a typical pulse width of 2~ms. Under this assumption, the VLA and Arecibo integrated flux densities are $278\pm13$\ and $57\pm2$\ mJy at 3 and 1.4~GHz, respectively. Assuming a power law flux density model ($S_{\nu} \propto \nu^{\alpha}$), we find a spectral index $\alpha=2.1$. This is inconsistent with the spectral index limit implied by the Effelsberg nondetection at 4.85~GHz ($\alpha<-1.7$\ for a 2~ms burst and $5\sigma$ limit).
 
-Overall, the burst detections and nondetections show that burst spectra are not well described by a power-law model. Two Arecibo nondetections and two Effelsberg nondetections of VLA bursts place mutually inconsistent lower and upper limits on the spectral index. The Arecibo and Effelsberg upper limits at 1.4 and 4.5~GHz, respectively, limit all burst spectral indices $\alpha_{1.4/3}>+4.9$ and $\alpha_{3/4.5}<-2.7$. These are consistent with limits from the LWA1 and AMI-LA, which require $\alpha_{0.07/3}>-2.4$\ and $\alpha_{3/15}<1.5$ for bursts on MJD 57643 and 57649 (the brightest VLA bursts with observing coverage), respectively. The strictest limits on $\alpha_{1.4/3}$\ and $\alpha_{3/4.5}$\ are both derived from the burst on MJD 57649, which shows that a power law model is inappropriate even for a single burst.
+Overall, the burst detections and nondetections show that burst spectra are not well described by a power-law model. Two Arecibo nondetections and two Effelsberg nondetections of VLA bursts place mutually inconsistent lower and upper limits on the spectral index. The Arecibo and Effelsberg upper limits at 1.4 and 4.85~GHz, respectively, limit all burst spectral indices $\alpha_{1.4/3}>+4.9$ and $\alpha_{3/4.85}<-2.7$. These are consistent with limits from the LWA1 and AMI-LA, which require $\alpha_{0.07/3}>-2.4$\ and $\alpha_{3/15}<1.5$ for bursts on MJD 57643 and 57649 (the brightest VLA bursts with observing coverage), respectively. The strictest limits on $\alpha_{1.4/3}$\ and $\alpha_{3/4.85}$\ are both derived from the burst on MJD 57649, which shows that a power law model is inappropriate even for a single burst.
 
 \begin{figure*}[htb]
 \begin{center}
  \includegraphics[width=2\columnwidth]{multispec.pdf}
- \caption{Broadband spectral measurements and limits for three bursts of \frb\ with observing coverage by Arecibo or Effelsberg. Upper limits assume a pulse width of 2~ms and a $5\sigma$ detection threshold. Measurements (dots) and limits (triangles) are shown for Arecibo, VLA, and Effelsberg at 1.4, 3, and 4.5~GHz, respectively; limits from LWA1 and AMI-LA are not visible on this scale. Errors in flux density are comparable to the symbol size and are not shown. Overlapping points are offset by tens of MHz in frequency for clarity.
+ \caption{Broadband spectral measurements and limits for three bursts of \frb\ with observing coverage by Arecibo or Effelsberg. Upper limits assume a pulse width of 2~ms and a $5\sigma$ detection threshold. Measurements (dots) and limits (triangles) are shown for Arecibo, VLA, and Effelsberg at 1.4, 3, and 4.85~GHz, respectively; limits from LWA1 and AMI-LA are not visible on this scale. Errors in flux density are comparable to the symbol size and are not shown. Overlapping points are offset by tens of MHz in frequency for clarity.
  \label{fig:multi}}
 \end{center}
 \end{figure*}
