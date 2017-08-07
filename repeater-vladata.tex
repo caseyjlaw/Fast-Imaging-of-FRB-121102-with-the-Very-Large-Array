@@ -250,7 +250,7 @@ The \frb\ observing campaign started in November 2015 with a 10~hr campaign ($\s
 
 All VLA fast-sampled data were observed with 5~ms sampling, 256 frequency channels, and dual-circular polarization \citep{2015ApJ...807...16L}. As shown in Table \ref{tab:setup}, the L (1.4~GHz), S (3~GHz), and C (6~GHz) bands were used with channel resolutions that kept dispersion smearing well below the temporal resolution. All detections were made in the 3~GHz data, which were recorded in eight spectral windows with 32 channels each and had a sensitivity of 4~mJy in 5~ms ($1\sigma$).
 
-Observations in August and September were searched by a prototype version of \textit{realfast}\footnote{See \url{http://realfast.io} \citep{2017AAS...22933002L}.}, a real-time, fast imaging transient search system. The current prototype runs on CPU-based hardware that is normally dedicated to the VLA correlator; for this experiment, it runs the transient search pipeline software called \emph{rtpipe}\footnote{See \url{https://github.com/caseyjlaw/rtpipe} \citep{2015ApJ...807...16L}.}. Images were formed for each integration with DMs of 0, 546, 556.9, 560, and 565 pc cm$^{-3}$ and a time resampling grid of 5, 10, 20, 40, and 80 ms. This DM grid was chosen to maintain 90\% sensitivity to the nominal DM range of 540--570 pc cm$^{-3}$. Gain calibration was made from observations of J0555+3948 by an automated system (telcal), which uses phase-only calibration. A flux scale was calculated for each spectral window from an observation of 3C48 and applied to all burst spectra and has an accuracy of about 10\%.
+Observations in August and September were searched by a prototype version of \textit{realfast}\footnote{See \url{http://realfast.io} \citep{2017AAS...22933002L}.}, a real-time, fast imaging transient search system. The current prototype runs on CPU-based hardware that is normally dedicated to the VLA correlator; for this experiment, it runs the transient search pipeline software called \emph{rtpipe} \citep{2017ascl.soft06002L}. Images were formed for each integration with DMs of 0, 546, 556.9, 560, and 565 pc cm$^{-3}$ and a time resampling grid of 5, 10, 20, 40, and 80 ms. This DM grid was chosen to maintain 90\% sensitivity to the nominal DM range of 540--570 pc cm$^{-3}$. Gain calibration was made from observations of J0555+3948 by an automated system (telcal), which uses phase-only calibration. A flux scale was calculated for each spectral window from an observation of 3C48 and applied to all burst spectra and has an accuracy of about 10\%.
 
 Burst detections and localizations were made within 5--10 hours of data being recorded. The transient search starts when data are recorded and proceeds at anywhere from 1 to 30 times slower than real-time, depending on the number of compute nodes available, array configuration, and number of DMs searched. For each trial DM, integration, and time scale, we form an image and calculate the S/N ratio for the peak pixel in the dirty image. We empirically identified S/N thresholds of 6.4 and 7.4 as useful to capture data quality statistics and candidates for inspection, respectively. The higher threshold is relatively unlikely to be triggered by thermal noise in this configuration, so \textit{realfast} generates a more detailed (and computationally intensive) candidate visualization that includes an image and spectrum. All visibilities are recorded so detailed analysis, including improved calibration and localization, can be conducted offline. 
 
@@ -431,7 +431,7 @@ Our approach simultaneously models the spectral and temporal evolution of the bu
 \end{center}
 \end{figure*}
 
-While most bursts are modeled with well-defined parameter probability distributions, one burst is an outlier. Figure \ref{fig:corner} shows the scatter plot matrix \citep{corner} for the MCMC run on burst 57646. Two clusters of samples are identified for this burst: one narrow, low-DM and one wide, high-DM. This shows that the model is not appropriate for this burst and could indicate that the burst can be decomposed into two subbursts.
+While most bursts are modeled with well-defined parameter probability distributions, one burst is an outlier. Figure \ref{fig:corner} shows the scatter plot matrix \citep{corner} for the MCMC run on burst 57646. Two clusters of samples are identified for this burst: one narrow, low-DM and one wide, high-DM. This shows that the model is not appropriate for this burst and could indicate that the burst can be decomposed into two subbursts, as has been noted before for \frb\ \citet{2016Natur.531..202S, 2016arXiv160308880S}.
 
 \subsubsection{Dispersion}
 
@@ -565,7 +565,7 @@ VMK acknowledges support from NSERC, CIFAR, the Canada Research Chair Program an
 
 \facility{EVLA, Arecibo, Effelsberg, LWA, AMI}
 
-\software{\emph{rtpipe}, \emph{realfast}, pwkit \citep{2017ascl.soft04001W}, emcee \citep{2013PASP..125..306F}}
+\software{\emph{rtpipe} \citep{2017ascl.soft06002L}, \emph{realfast}, pwkit \citep{2017ascl.soft04001W}, emcee \citep{2013PASP..125..306F}}
 
 \bibliography{fasttrants.bib}
 
